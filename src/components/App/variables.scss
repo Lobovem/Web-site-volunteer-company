@@ -24,3 +24,19 @@ $color-green: #36B98F;
 //background
 $gradient-main: linear-gradient(99.7deg, #025FA7 5.07%, #1682D4 32.97%, #00B0D0 60.87%, #09D3F6 88.76%, #42E3FF 116.66%);
 $gradient-hover: linear-gradient(98.35deg, #025FA7 5.18%, #1682D4 46.68%, #00B0D0 88.18%, #09D3F6 129.69%, #42E3FF 171.19%);
+$background-white: #fff;
+
+//layout
+$width-1440: min(100% - 80px, 1440px);
+$width-1330: min(100% - 80px, 1330px);
+$width-1195: min(100% - 80px, 1195px);
+
+//screen
+$ul: 1921px;
+$xl: 1500px;
+$lg: 1100px;
+$md: 850px;
+$sm: 621px;
+$xs: 480px;
+$xx: 420px;
+$ux: 321px;

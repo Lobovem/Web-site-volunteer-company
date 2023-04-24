@@ -5,7 +5,8 @@ function App() {
   return (
     <>
       <div className={s.App}>TEST</div>
-      <Btn title="детальніше"></Btn>
+      <Btn title="детальніше" nameClass="btn"></Btn>
+      <Btn title="задонатити" nameClass="btn-secondary"></Btn>
     </>
   );
 }

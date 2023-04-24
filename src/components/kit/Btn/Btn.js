@@ -1,9 +1,9 @@
 import s from './btn.module.scss';
 
 export const Btn = (props) => {
-  const { title, onClick } = props;
+  const { title, onClick, nameClass } = props;
   return (
-    <button className={s.btn} type="button" onClick={onClick}>
+    <button className={s[nameClass]} type="button" onClick={onClick}>
       {title}
     </button>
   );
