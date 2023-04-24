@@ -1,0 +1,22 @@
+//reset default styles
+@import-normalize;
+//import fonts
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+//import variables
+@import './src/components/App/variables.scss';
+
+
+
+html {
+  margin: 0;
+  font-family: $font-family;
+  font-size: 16px;
+  font-style: normal;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+} */

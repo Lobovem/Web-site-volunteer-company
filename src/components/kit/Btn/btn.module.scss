@@ -1,0 +1,22 @@
+@import './src/components/App/variables.scss';
+
+
+.btn {
+  font-size: 14px;
+  background: $gradient-main;
+  border-radius: 60px;
+  width: 220px;
+  height: 60px;
+  font-family: $font-family;
+  font-weight: $font-weight-500;
+  font-size: $font-size-14;
+  line-height: 17px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $color-white;
+
+
+
+}
