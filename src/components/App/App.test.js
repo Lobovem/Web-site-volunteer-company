@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders app component', () => {
-  render(<App />);
-  const title = screen.getByText(/TEST/i);
-  expect(title).toBeInTheDocument();
+describe('App', () => {
+  test('renders app component', () => {
+    // eslint-disable-next-line testing-library/render-result-naming-convention
+    const component = render(<App />);
+    expect(component).toMatchSnapshot();
+  });
 });

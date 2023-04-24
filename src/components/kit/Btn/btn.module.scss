@@ -1,7 +1,7 @@
 @import './src/components/App/variables.scss';
 
-
 .btn {
+  position: relative;
   font-size: 14px;
   background: $gradient-main;
   border-radius: 60px;
@@ -16,7 +16,27 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: $color-white;
+  z-index: 1000;
 
 
+  &:before {
+    content: "";
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1000;
+    background: $gradient-hover;
+    border-radius: 60px;
+  }
 
+  &:hover:before {
+    opacity: 1;
+    z-index: -1000;
+
+  }
 }

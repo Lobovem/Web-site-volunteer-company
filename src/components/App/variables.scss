@@ -1,12 +1,26 @@
-//fonts
+//fonts-family
 $font-family: 'Rubik', sans-serif;
+
+//fonts-weight
 $font-weight-400: 400;
 $font-weight-500: 500;
 $font-weight-600: 600;
 
+//font-size
 $font-size-14: 14px;
+$font-size-18: 18px;
+$font-size-24: 24px;
+$font-size-38: 38px;
 
 //color
 $color-white: #fff;
+$color-main: #025FA7;
+$color-grey: #F3F3F3;
+$color-grey-light: #025fa714;
+$color-yellow: #FFD500;
+$color-red: #C82E37;
+$color-green: #36B98F;
+
 //background
 $gradient-main: linear-gradient(99.7deg, #025FA7 5.07%, #1682D4 32.97%, #00B0D0 60.87%, #09D3F6 88.76%, #42E3FF 116.66%);
+$gradient-hover: linear-gradient(98.35deg, #025FA7 5.18%, #1682D4 46.68%, #00B0D0 88.18%, #09D3F6 129.69%, #42E3FF 171.19%);
