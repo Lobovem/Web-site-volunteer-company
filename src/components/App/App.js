@@ -1,12 +1,9 @@
-import { Btn } from '../kit/Btn/Btn';
-import s from './app.module.scss';
+import { Header } from '../header/Header';
 
 function App() {
   return (
     <>
-      <div className={s.App}>TEST</div>
-      <Btn title="детальніше" nameClass="btn"></Btn>
-      <Btn title="задонатити" nameClass="btn-secondary"></Btn>
+      <Header></Header>
     </>
   );
 }

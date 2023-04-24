@@ -1,0 +1,16 @@
+@import './mixins_media.module.scss';
+@import '../components/App/variables.scss';
+
+.layout {
+  width: min(100% - 30px, 1440px);
+  margin-inline: auto;
+
+  @include md-min {
+    width: min(100% - 40px, 1440px);
+  }
+
+  @include lg-min {
+    width: min(100% - 80px, 1440px);
+  }
+
+}

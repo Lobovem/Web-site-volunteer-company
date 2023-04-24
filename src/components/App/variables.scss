@@ -8,13 +8,17 @@ $font-weight-600: 600;
 
 //font-size
 $font-size-14: 14px;
+$font-size-16: 16px;
 $font-size-18: 18px;
 $font-size-24: 24px;
 $font-size-38: 38px;
 
 //color
 $color-white: #fff;
+$color-black: #000000;
+
 $color-main: #025FA7;
+$color-hover: #1b9cff;
 $color-grey: #F3F3F3;
 $color-grey-light: #025fa714;
 $color-yellow: #FFD500;
@@ -33,9 +37,9 @@ $width-1195: min(100% - 80px, 1195px);
 
 //screen
 $ul: 1921px;
-$xl: 1500px;
-$lg: 1100px;
-$md: 850px;
+$xl: 1400px;
+$lg: 1000px;
+$md: 870px;
 $sm: 621px;
 $xs: 480px;
 $xx: 420px;

@@ -1,0 +1,40 @@
+@import '../App/variables';
+@import '../../styles/mixins_media.module.scss';
+
+
+.burger {
+  width: 40px;
+  height: 40px;
+  background: $color-main;
+  position: relative;
+  cursor: pointer;
+
+  @include md-min {
+    display: none;
+  }
+
+  &__line {
+    position: absolute;
+    left: 6px;
+    display: flex;
+    width: 70%;
+    height: 2px;
+    transition: 0.25s ease-in-out;
+    opacity: 1;
+    background-color: $color-white;
+
+    &:nth-of-type(1) {
+      top: 25%;
+    }
+
+    &:nth-of-type(2) {
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &:nth-of-type(3) {
+      bottom: 25%;
+    }
+  }
+
+}

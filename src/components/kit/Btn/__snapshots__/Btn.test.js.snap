@@ -6,14 +6,14 @@ Object {
   "baseElement": <body>
     <div>
       <button
-        class="btn"
+        class="undefined"
         type="button"
       />
     </div>
   </body>,
   "container": <div>
     <button
-      class="btn"
+      class="undefined"
       type="button"
     />
   </div>,
