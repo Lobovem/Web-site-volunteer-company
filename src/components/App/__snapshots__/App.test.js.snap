@@ -11,15 +11,16 @@ Object {
         <div
           class="header__wrap"
         >
-          <div
+          <a
             class="logoMain"
+            href="./"
           >
             <img
               alt="ukraine-flag.png"
               class="logoMain__img"
               src="logo-main.svg"
             />
-          </div>
+          </a>
           <div
             class="header__menuWrap"
           >
@@ -122,15 +123,16 @@ Object {
       <div
         class="header__wrap"
       >
-        <div
+        <a
           class="logoMain"
+          href="./"
         >
           <img
             alt="ukraine-flag.png"
             class="logoMain__img"
             src="logo-main.svg"
           />
-        </div>
+        </a>
         <div
           class="header__menuWrap"
         >

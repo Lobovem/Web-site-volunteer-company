@@ -8,6 +8,7 @@
   background: $color-main;
   position: relative;
   cursor: pointer;
+  z-index: 100;
 
   @include md-min {
     display: none;
@@ -37,4 +38,27 @@
     }
   }
 
+  &.active {
+    right: 0;
+  }
+
+  &.active span {
+    z-index: 1000;
+
+    &:nth-of-type(1) {
+      top: 47%;
+
+      transform: rotate(135deg);
+    }
+
+    &:nth-of-type(2) {
+      left: -50px;
+      opacity: 0;
+    }
+
+    &:nth-of-type(3) {
+      top: 47%;
+      transform: rotate(-135deg);
+    }
+  }
 }

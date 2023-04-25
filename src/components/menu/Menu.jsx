@@ -1,6 +1,6 @@
 import s from './menu.module.scss';
 
-export const Menu = (props) => {
+export const Menu = ({ state }) => {
   const item = [
     { id: 1, title: 'Про нас', link: '/about' },
     { id: 2, title: 'Новини', link: '/news' },
@@ -10,7 +10,7 @@ export const Menu = (props) => {
   ];
 
   return (
-    <nav className={s.menu}>
+    <nav className={state ? `${s.menu} ${s.active}` : s.menu}>
       <ul className={s.menu__list}>
         {item.map((item) => {
           return (
