@@ -5,6 +5,187 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
+      <div
+        class="body"
+      >
+        <header
+          class="header layout"
+        >
+          <div
+            class="header__wrap"
+          >
+            <a
+              class="logoMain"
+              href="./"
+            >
+              <img
+                alt="ukraine-flag.png"
+                class="logoMain__img"
+                src="logo-main.svg"
+              />
+            </a>
+            <div
+              class="header__menuWrap"
+            >
+              <div
+                class="burger"
+              >
+                <span
+                  class="burger__line"
+                />
+                <span
+                  class="burger__line"
+                />
+                <span
+                  class="burger__line"
+                />
+              </div>
+              <nav
+                class="menu"
+              >
+                <ul
+                  class="menu__list"
+                >
+                  <li
+                    class="menu__item"
+                  >
+                    <a
+                      class="menu__link"
+                      href="/about"
+                    >
+                      Про нас
+                    </a>
+                  </li>
+                  <li
+                    class="menu__item"
+                  >
+                    <a
+                      class="menu__link"
+                      href="/news"
+                    >
+                      Новини
+                    </a>
+                  </li>
+                  <li
+                    class="menu__item"
+                  >
+                    <a
+                      class="menu__link"
+                      href="/get-help"
+                    >
+                      Отримати допомогу
+                    </a>
+                  </li>
+                  <li
+                    class="menu__item"
+                  >
+                    <a
+                      class="menu__link"
+                      href="/help"
+                    >
+                      Допомогти
+                    </a>
+                  </li>
+                  <li
+                    class="menu__item"
+                  >
+                    <a
+                      class="menu__link"
+                      href="/contacts"
+                    >
+                      Контакти
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <div
+                class="langWrap"
+              >
+                <a
+                  class="langWrap__link langWrap__link_active"
+                  href="/"
+                >
+                  UA
+                </a>
+                <a
+                  class="langWrap__link"
+                  href="/"
+                >
+                  EN
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div
+          class="banner layout"
+        >
+          <img
+            alt=""
+            class="banner__img"
+            src="ukraine-flag.png"
+          />
+          <div
+            class="banner__textWrap"
+          >
+            <h1
+              class="banner__title"
+            >
+              Дуже важлива справа у дуже нелегкий час
+            </h1>
+            <p
+              class="descSection"
+            >
+              Робота фонду будується на простих людських цінностях, які спрямовані на підтримку та розвиток відкритого українського суспільства, та інвестицій в майбутнє України. Засновники Фонду - це звичайні підприємці та волонтери з міста Запоріжжя, небайдужі до чужої біди, проблем суспільства та Держави.
+            </p>
+            <button
+              class="btn"
+              type="button"
+            >
+              детальніше
+            </button>
+          </div>
+        </div>
+        <div
+          class="socialLine"
+        >
+          <div
+            class="socialLine__wrap"
+          >
+            <p
+              class="socialLine__title"
+            >
+              Ми в соціальних мережах
+            </p>
+            <div
+              class="socialLine__socialWrap"
+            >
+              <a
+                href="/"
+              >
+                <img
+                  alt="facebook.svg"
+                  src="facebook.svg"
+                />
+              </a>
+              <a
+                href="/"
+              >
+                <img
+                  alt="instagram.svg"
+                  src="instagram.svg"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="body"
+    >
       <header
         class="header layout"
       >
@@ -114,118 +295,69 @@ Object {
           </div>
         </div>
       </header>
-    </div>
-  </body>,
-  "container": <div>
-    <header
-      class="header layout"
-    >
       <div
-        class="header__wrap"
+        class="banner layout"
       >
-        <a
-          class="logoMain"
-          href="./"
-        >
-          <img
-            alt="ukraine-flag.png"
-            class="logoMain__img"
-            src="logo-main.svg"
-          />
-        </a>
+        <img
+          alt=""
+          class="banner__img"
+          src="ukraine-flag.png"
+        />
         <div
-          class="header__menuWrap"
+          class="banner__textWrap"
         >
-          <div
-            class="burger"
+          <h1
+            class="banner__title"
           >
-            <span
-              class="burger__line"
-            />
-            <span
-              class="burger__line"
-            />
-            <span
-              class="burger__line"
-            />
-          </div>
-          <nav
-            class="menu"
+            Дуже важлива справа у дуже нелегкий час
+          </h1>
+          <p
+            class="descSection"
           >
-            <ul
-              class="menu__list"
-            >
-              <li
-                class="menu__item"
-              >
-                <a
-                  class="menu__link"
-                  href="/about"
-                >
-                  Про нас
-                </a>
-              </li>
-              <li
-                class="menu__item"
-              >
-                <a
-                  class="menu__link"
-                  href="/news"
-                >
-                  Новини
-                </a>
-              </li>
-              <li
-                class="menu__item"
-              >
-                <a
-                  class="menu__link"
-                  href="/get-help"
-                >
-                  Отримати допомогу
-                </a>
-              </li>
-              <li
-                class="menu__item"
-              >
-                <a
-                  class="menu__link"
-                  href="/help"
-                >
-                  Допомогти
-                </a>
-              </li>
-              <li
-                class="menu__item"
-              >
-                <a
-                  class="menu__link"
-                  href="/contacts"
-                >
-                  Контакти
-                </a>
-              </li>
-            </ul>
-          </nav>
+            Робота фонду будується на простих людських цінностях, які спрямовані на підтримку та розвиток відкритого українського суспільства, та інвестицій в майбутнє України. Засновники Фонду - це звичайні підприємці та волонтери з міста Запоріжжя, небайдужі до чужої біди, проблем суспільства та Держави.
+          </p>
+          <button
+            class="btn"
+            type="button"
+          >
+            детальніше
+          </button>
+        </div>
+      </div>
+      <div
+        class="socialLine"
+      >
+        <div
+          class="socialLine__wrap"
+        >
+          <p
+            class="socialLine__title"
+          >
+            Ми в соціальних мережах
+          </p>
           <div
-            class="langWrap"
+            class="socialLine__socialWrap"
           >
             <a
-              class="langWrap__link langWrap__link_active"
               href="/"
             >
-              UA
+              <img
+                alt="facebook.svg"
+                src="facebook.svg"
+              />
             </a>
             <a
-              class="langWrap__link"
               href="/"
             >
-              EN
+              <img
+                alt="instagram.svg"
+                src="instagram.svg"
+              />
             </a>
           </div>
         </div>
       </div>
-    </header>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

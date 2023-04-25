@@ -1,6 +1,6 @@
-import s from './lang.module.scss';
+import s from './langSite.module.scss';
 
-export const Lang = (props) => {
+export const LangSite = (props) => {
   const { href } = props;
 
   return (

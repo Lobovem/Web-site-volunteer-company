@@ -4,6 +4,6 @@ import { appReducer } from './reducer';
 
 export const store = configureStore({
   reducer: {
-    todoList: appReducer.reducer,
+    app: appReducer.reducer,
   },
 });

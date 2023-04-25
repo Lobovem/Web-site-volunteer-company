@@ -1,5 +1,5 @@
-@import '../App/variables';
-@import '../../styles/mixins_media.module.scss';
+@import './src/styles/mixins_media.module.scss';
+@import './src/styles/variables.module.scss';
 
 .menu {
 
@@ -40,15 +40,20 @@
     }
 
     @include lg-min {
-      gap: 35px;
+      gap: 30px;
     }
+
 
     @media screen and (min-width: 1100px) {
       margin-right: 100px;
     }
 
+    @media screen and (min-width: 1200px) {
+      gap: 40px;
+    }
+
     @include xl-min {
-      margin-right: 166px;
+      // margin-right: 166px;
     }
   }
 
@@ -76,7 +81,7 @@
       font-size: $font-size-14;
     }
 
-    @media screen and (min-width: 1150px) {
+    @media screen and (min-width: 1200px) {
       font-size: $font-size-16;
       padding: 10px 5px;
     }

@@ -1,7 +1,9 @@
-@import './src/components/App/variables.scss';
+@import './src/styles/mixins_media.module.scss';
+@import './src/styles/variables.module.scss';
 
 .btn {
   position: relative;
+  border: none;
   font-size: 14px;
   background: $gradient-main;
   border-radius: 60px;
@@ -45,7 +47,7 @@
   color: $color-main;
   font-size: 14px;
   border-radius: 60px;
-  border: $color-white;
+  border: none;
   width: 220px;
   height: 60px;
   font-family: $font-family;

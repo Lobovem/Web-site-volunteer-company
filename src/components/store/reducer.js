@@ -1,32 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  todoListState: [],
+  burgerMenuState: false,
 };
 
 export const appReducer = createSlice({
-  name: 'todoList',
+  name: 'app',
   initialState: initialState,
   reducers: {
-    // add_todo: (state, action) => {
-    //   state.todoListState = [
-    //     ...state.todoListState,
-    //     {
-    //       id: Math.random(),
-    //       task: action.payload,
-    //       complete: false,
-    //       isEditing: false,
-    //     },
-    //   ];
-    // },
-    // delete_todo: (state, action) => {
-    //   state.todoListState = state.todoListState.filter((todo) => todo.id !== action.payload.id);
-    // },
+    isOpenBurgerMenu: (state, action) => {
+      state.burgerMenuState = !state.burgerMenuState;
+    },
   },
 });
 
-// export const userInputSelector = (state) => state.todoList.inputState;
-// export const todoListSelector = (state) => state.todoList.todoListState;
+export const burgerMenuSelector = (state) => state.app.burgerMenuState;
 
-// export const { add_todo } = todoReducer.actions;
+export const { isOpenBurgerMenu } = appReducer.actions;
 export default appReducer.reducer;

@@ -1,5 +1,5 @@
-@import '../../styles/mixins_media.module.scss';
-@import '../App/variables';
+@import './src/styles/mixins_media.module.scss';
+@import './src/styles/variables.module.scss';
 
 .header {
 
@@ -17,8 +17,5 @@
     justify-content: space-between;
     gap: 15px;
 
-    @include lg-min {
-      // gap: 150px
-    }
   }
 }

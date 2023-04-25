@@ -1,6 +1,10 @@
+import { useSelector } from 'react-redux';
+import { burgerMenuSelector } from '../store/reducer';
 import s from './menu.module.scss';
 
-export const Menu = ({ state }) => {
+export const Menu = () => {
+  const burgerMenu = useSelector(burgerMenuSelector);
+
   const item = [
     { id: 1, title: 'Про нас', link: '/about' },
     { id: 2, title: 'Новини', link: '/news' },
@@ -10,7 +14,7 @@ export const Menu = ({ state }) => {
   ];
 
   return (
-    <nav className={state ? `${s.menu} ${s.active}` : s.menu}>
+    <nav className={!burgerMenu ? s.menu : `${s.menu} ${s.active}`}>
       <ul className={s.menu__list}>
         {item.map((item) => {
           return (

@@ -1,5 +1,5 @@
-@import './mixins_media.module.scss';
-@import '../components/App/variables.scss';
+@import './src/styles/mixins_media.module.scss';
+@import './src/styles/variables.module.scss';
 
 .layout {
   width: min(100% - 30px, 1440px);

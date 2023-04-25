@@ -1,0 +1,66 @@
+@import './src/styles/mixins_media.module.scss';
+@import './src/styles/variables.module.scss';
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+
+  @include md-min {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  @include lg-min {
+    gap: 100px;
+  }
+
+
+  &__img {
+    width: 100%;
+    height: 100%;
+
+    @include md-min {
+      order: 1;
+      width: 50%
+    }
+  }
+
+  &__title {
+    font-weight: $font-weight-500;
+    font-size: $font-size-32;
+    line-height: 32px;
+    color: $color-white;
+
+    mix-blend-mode: normal;
+    background: $gradient-main;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (min-width: 1300px) {
+      font-size: 64px;
+      line-height: 64px;
+    }
+  }
+}
+
+.descSection {
+  font-size: $font-size-14;
+  line-height: 18px;
+  mix-blend-mode: normal;
+
+  @include md-min {
+    margin-bottom: 30px;
+  }
+
+  @include lg-min {
+    margin-bottom: 50px;
+    font-size: $font-size-16;
+  }
+
+  @include xl-min {
+    margin-bottom: 70px;
+  }
+}
