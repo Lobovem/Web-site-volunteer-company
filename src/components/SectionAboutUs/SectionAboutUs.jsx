@@ -1,6 +1,6 @@
 import { TitleSection } from '../TitleSection/TitleSection';
 import aboutUs from '../../img/aboutUs.jpg';
-import { TitleMain } from '../Title/TitleMain';
+import { TitleMain } from '../TitleMain/TitleMain';
 import s from './SectionAboutUs.module.scss';
 
 export const SectionAboutUs = () => {

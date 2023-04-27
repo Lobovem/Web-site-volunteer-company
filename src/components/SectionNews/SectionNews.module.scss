@@ -1,0 +1,42 @@
+@import './src/styles/MixinsMedia.module.scss';
+@import './src/styles/Variables.module.scss';
+@import './src/styles/MixinsLayout.module.scss';
+@import './src/styles/MixinsKit.module.scss';
+
+
+.sectionNews {
+
+  &__wrap {
+
+    @include layoutMain;
+    padding: 50px 0;
+
+    @include lg-min {
+      padding: 120px 0;
+    }
+  }
+
+  &__textWrap {}
+
+  &__title {
+    font-size: $font-size-14;
+    line-height: 21px;
+    color: $color-black;
+    mix-blend-mode: normal;
+  }
+
+  &__link {
+
+    font-weight: $font-weight-600;
+    font-size: $font-size-14;
+    line-height: 14px;
+    color: $color-main;
+    mix-blend-mode: normal;
+    text-decoration: none;
+    @include hoverAnimation;
+
+    &:hover {
+      color: $color-hover;
+    }
+  }
+}
