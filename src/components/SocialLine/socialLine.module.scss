@@ -35,7 +35,7 @@
     box-shadow: 0px 4px 15px rgba(2, 95, 167, 0.08);
     border-radius: 25px 0px 0px 0px;
     width: 185px;
-    height: 80px;
+    height: 60px;
     line-height: 19px;
     color: $color-white;
     mix-blend-mode: normal;
@@ -43,6 +43,7 @@
 
     @include md-min {
       width: 282px;
+      height: 80px;
     }
   }
 
@@ -50,7 +51,7 @@
     background: #FFFFFF;
     box-shadow: 0px 4px 15px rgba(2, 95, 167, 0.08);
     width: 144px;
-    height: 80px;
+    height: 60px;
     border-radius: 0px;
     display: flex;
     justify-content: center;
@@ -59,6 +60,7 @@
 
     @include md-min {
       width: 154px;
+      height: 80px;
     }
   }
 }
