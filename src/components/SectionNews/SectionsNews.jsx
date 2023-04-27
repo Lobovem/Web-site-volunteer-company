@@ -20,6 +20,7 @@ export const SectionNews = (props) => {
               Читати повністю
             </a>
           </div>
+
           <div className={s.sectionNews__slider}>
             <Slider></Slider>
           </div>

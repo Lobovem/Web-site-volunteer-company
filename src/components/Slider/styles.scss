@@ -1,0 +1,63 @@
+@import './src/styles/MixinsMedia.module.scss';
+@import './src/styles/Variables.module.scss';
+@import './src/styles/MixinsLayout.module.scss';
+@import './src/styles/MixinsKit.module.scss';
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.swiper-slide {
+  /* width: 40%; */
+}
+
+.swiper-button-prev {
+  color: green;
+}
+
+.swiper-button-next {
+  color: green;
+}
+
+.sliderWrap {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.sliderTitle {
+  font-weight: $font-weight-500;
+  font-size: $font-size-20;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-black;
+
+  mix-blend-mode: normal;
+  max-width: 260px;
+  text-align: left;
+
+  @include xl-min {
+    font-size: $font-size-24;
+    line-height: 24px;
+  }
+}
