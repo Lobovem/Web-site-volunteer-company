@@ -4,7 +4,6 @@
 
 .titleMain {
   margin: 0;
-  max-width: 186px;
   font-weight: $font-weight-500;
   font-size: $font-size-24;
   line-height: 24px;
@@ -18,7 +17,6 @@
 
   @include lg-min {
     margin-bottom: 40px;
-    max-width: 290px;
     font-size: $font-size-38;
     line-height: 38px;
   }

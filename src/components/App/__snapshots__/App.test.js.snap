@@ -234,29 +234,43 @@ Object {
             class="sectionNews__wrap"
           >
             <h2
+              class="sectionNews__decor"
+            >
+              Новини
+            </h2>
+            <h2
               class="titleSection"
             >
               Новини
             </h2>
             <div
-              class="sectionNews__textWrap"
+              class="sectionNews__inner"
             >
-              <h2
-                class="titleMain"
+              <div
+                class="sectionNews__textWrap"
               >
-                Нашою метою є вирішення нагальних проблем ЗСУ
-              </h2>
-              <p
-                class="sectionNews__title"
-              >
-                За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його структуру, з можливістю вставляти зовнішні посилання, але не тільки...
-              </p>
-              <a
-                class="sectionNews__link"
-                href="/"
-              >
-                Читати повністю
-              </a>
+                <h2
+                  class="titleMain"
+                >
+                  Нашою метою є вирішення нагальних проблем ЗСУ
+                </h2>
+                <p
+                  class="sectionNews__title"
+                >
+                  За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його структуру, з можливістю вставляти зовнішні посилання, але не тільки...
+                </p>
+                <a
+                  class="sectionNews__link"
+                  href="/"
+                >
+                  Читати повністю
+                </a>
+                <div
+                  class="sectionNews__slider"
+                >
+                  SLIDER
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -493,29 +507,43 @@ Object {
           class="sectionNews__wrap"
         >
           <h2
+            class="sectionNews__decor"
+          >
+            Новини
+          </h2>
+          <h2
             class="titleSection"
           >
             Новини
           </h2>
           <div
-            class="sectionNews__textWrap"
+            class="sectionNews__inner"
           >
-            <h2
-              class="titleMain"
+            <div
+              class="sectionNews__textWrap"
             >
-              Нашою метою є вирішення нагальних проблем ЗСУ
-            </h2>
-            <p
-              class="sectionNews__title"
-            >
-              За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його структуру, з можливістю вставляти зовнішні посилання, але не тільки...
-            </p>
-            <a
-              class="sectionNews__link"
-              href="/"
-            >
-              Читати повністю
-            </a>
+              <h2
+                class="titleMain"
+              >
+                Нашою метою є вирішення нагальних проблем ЗСУ
+              </h2>
+              <p
+                class="sectionNews__title"
+              >
+                За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його структуру, з можливістю вставляти зовнішні посилання, але не тільки...
+              </p>
+              <a
+                class="sectionNews__link"
+                href="/"
+              >
+                Читати повністю
+              </a>
+              <div
+                class="sectionNews__slider"
+              >
+                SLIDER
+              </div>
+            </div>
           </div>
         </div>
       </div>

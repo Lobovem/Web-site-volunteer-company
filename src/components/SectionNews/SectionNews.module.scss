@@ -7,12 +7,32 @@
 .sectionNews {
 
   &__wrap {
-
+    position: relative;
     @include layoutMain;
     padding: 50px 0;
 
     @include lg-min {
       padding: 120px 0;
+    }
+  }
+
+  &__decor {
+    display: none;
+
+    @include xl-min {
+      position: absolute;
+      display: block;
+      top: 250px;
+      left: -410px;
+      z-index: -1;
+      font-weight: $font-weight-500;
+      font-size: $font-size-165;
+      line-height: 165px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $color-grey;
+      mix-blend-mode: normal;
+      transform: rotate(-90deg);
     }
   }
 
@@ -26,13 +46,14 @@
   }
 
   &__link {
-
+    display: block;
     font-weight: $font-weight-600;
     font-size: $font-size-14;
     line-height: 14px;
     color: $color-main;
     mix-blend-mode: normal;
     text-decoration: none;
+    margin-bottom: 30px;
     @include hoverAnimation;
 
     &:hover {
