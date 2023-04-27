@@ -1,7 +1,10 @@
 @import './src/styles/mixins_media.module.scss';
 @import './src/styles/variables.module.scss';
+@import './src/styles/layout.module.scss';
+
 
 .banner {
+  @include layoutLarge;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

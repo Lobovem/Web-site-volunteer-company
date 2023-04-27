@@ -7,7 +7,7 @@ Object {
     <div>
       <div>
         <header
-          class="header layout"
+          class="header"
         >
           <div
             class="header__wrap"
@@ -116,7 +116,7 @@ Object {
           </div>
         </header>
         <div
-          class="banner layout"
+          class="banner"
         >
           <img
             alt=""
@@ -177,13 +177,67 @@ Object {
             </div>
           </div>
         </div>
+        <div
+          class="sectionAboutUs"
+        >
+          <div
+            class="sectionAboutUs__wrap"
+          >
+            <h2
+              class="titleSection"
+            >
+              український гуманітарний батальйон
+            </h2>
+            <div
+              class="sectionAboutUs__contentWrap"
+            >
+              <div
+                class="sectionAboutUs__imgWrap"
+              >
+                <img
+                  alt="aboutUs.jpg"
+                  class="sectionAboutUs__img"
+                  src="aboutUs.jpg"
+                />
+              </div>
+              <div
+                class="sectionAboutUs__textWrap"
+              >
+                <h2
+                  class="titleMain"
+                >
+                  <span
+                    class="titleMain__gradient"
+                  >
+                    Ми благодійний фонд
+                  </span>
+                </h2>
+                <p
+                  class="sectionAboutUs__desc"
+                >
+                  За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його структуру, з можливістю вставляти зовнішні посилання, але не тільки. Фактично, вставляючи будь -який фантастичний текст або відомий текст, це вірш, промова. Фактично, вставляючи будь -який фантастичний текст.
+                </p>
+                <h3
+                  class="sectionAboutUs__title"
+                >
+                  Що означає Lorem ipsum dolor?
+                </h3>
+                <p
+                  class="sectionAboutUs__desc"
+                >
+                  Коли йдеться про Lorem ipsum, використовуються різні вирази, а саме текст заповнення , вигаданий текст , сліпий текст або текст -заповнювач : коротше, його значення також може бути нульовим, але його корисність настільки ясна, що він проходить через століття і протистоїть іронічним та сучасним версіям, які з’явилися з появою Інтернету. Фактично, вставляючи будь -який фантастичний текст або відомий текст, це вірш, промова, Коли йдеться про Lorem ipsum, використовуються різні вирази, а саме текст заповнення , вигаданий текст , сліпий текст або текст -заповнювач : коротше, його значення також може бути нульовим, але його корисність настільки ясна, що він проходить через століття і протистоїть іронічним та сучасним.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div>
       <header
-        class="header layout"
+        class="header"
       >
         <div
           class="header__wrap"
@@ -292,7 +346,7 @@ Object {
         </div>
       </header>
       <div
-        class="banner layout"
+        class="banner"
       >
         <img
           alt=""
@@ -350,6 +404,60 @@ Object {
                 src="instagram.svg"
               />
             </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sectionAboutUs"
+      >
+        <div
+          class="sectionAboutUs__wrap"
+        >
+          <h2
+            class="titleSection"
+          >
+            український гуманітарний батальйон
+          </h2>
+          <div
+            class="sectionAboutUs__contentWrap"
+          >
+            <div
+              class="sectionAboutUs__imgWrap"
+            >
+              <img
+                alt="aboutUs.jpg"
+                class="sectionAboutUs__img"
+                src="aboutUs.jpg"
+              />
+            </div>
+            <div
+              class="sectionAboutUs__textWrap"
+            >
+              <h2
+                class="titleMain"
+              >
+                <span
+                  class="titleMain__gradient"
+                >
+                  Ми благодійний фонд
+                </span>
+              </h2>
+              <p
+                class="sectionAboutUs__desc"
+              >
+                За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його структуру, з можливістю вставляти зовнішні посилання, але не тільки. Фактично, вставляючи будь -який фантастичний текст або відомий текст, це вірш, промова. Фактично, вставляючи будь -який фантастичний текст.
+              </p>
+              <h3
+                class="sectionAboutUs__title"
+              >
+                Що означає Lorem ipsum dolor?
+              </h3>
+              <p
+                class="sectionAboutUs__desc"
+              >
+                Коли йдеться про Lorem ipsum, використовуються різні вирази, а саме текст заповнення , вигаданий текст , сліпий текст або текст -заповнювач : коротше, його значення також може бути нульовим, але його корисність настільки ясна, що він проходить через століття і протистоїть іронічним та сучасним версіям, які з’явилися з появою Інтернету. Фактично, вставляючи будь -який фантастичний текст або відомий текст, це вірш, промова, Коли йдеться про Lorem ipsum, використовуються різні вирази, а саме текст заповнення , вигаданий текст , сліпий текст або текст -заповнювач : коротше, його значення також може бути нульовим, але його корисність настільки ясна, що він проходить через століття і протистоїть іронічним та сучасним.
+              </p>
+            </div>
           </div>
         </div>
       </div>

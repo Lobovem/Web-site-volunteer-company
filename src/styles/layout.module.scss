@@ -1,7 +1,21 @@
 @import './src/styles/mixins_media.module.scss';
 @import './src/styles/variables.module.scss';
 
-.layout {
+@mixin layoutMain {
+  width: min(100% - 30px, 1195px);
+  margin-inline: auto;
+
+  @include md-min {
+    width: min(100% - 40px, 1195px);
+  }
+
+  @include lg-min {
+    width: min(100% - 80px, 1195px);
+  }
+
+}
+
+@mixin layoutLarge {
   width: min(100% - 30px, 1440px);
   margin-inline: auto;
 

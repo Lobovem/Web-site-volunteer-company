@@ -1,0 +1,73 @@
+@import './src/styles/mixins_media.module.scss';
+@import './src/styles/layout.module.scss';
+@import './src/styles/variables.module.scss';
+
+.sectionAboutUs {
+  background: $background-grey;
+
+  &__wrap {
+
+    @include layoutMain;
+    padding: 50px 0;
+
+    @include lg-min {
+      padding: 120px 0;
+    }
+  }
+
+  &__contentWrap {
+    @include lg-min {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+    }
+  }
+
+  &__textWrap {
+    @include lg-min {
+      flex-basis: 50%;
+    }
+  }
+
+  &__img {
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__imgWrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    @include lg-min {
+      display: block;
+      flex-basis: 50%;
+    }
+  }
+
+  &__title {
+    font-weight: $font-weight-500;
+    font-size: $font-size-18;
+    line-height: 18px;
+    color: $color-black;
+    mix-blend-mode: normal;
+
+    @include lg-min {
+      font-size: $font-size-24;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__desc {
+    font-size: $font-size-14;
+    line-height: 21px;
+    color: $color-black;
+    mix-blend-mode: normal;
+
+    @include lg-min {
+      margin-bottom: 50px;
+    }
+  }
+}

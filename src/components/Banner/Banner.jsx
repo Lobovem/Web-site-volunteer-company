@@ -1,13 +1,12 @@
 import { Btn } from '../kit/Btn/Btn';
 import flag from '../../img/ukraine-flag.png';
-import layout from '../../styles/layout.module.scss';
 import s from './banner.module.scss';
 import { SocialLine } from '../SocialLine/SocialLine';
 
 export const Banner = () => {
   return (
     <>
-      <div className={`${s.banner} ${layout.layout}`}>
+      <div className={s.banner}>
         <img className={s.banner__img} src={flag} alt="" />
         <div className={s.banner__textWrap}>
           <h1 className={s.banner__title}>Дуже важлива справа у дуже нелегкий час</h1>

@@ -3,6 +3,7 @@ import { burgerMenuSelector } from '../store/reducer';
 import { Header } from '../Header/Header';
 import { Banner } from '../Banner/Banner';
 import { useEffect } from 'react';
+import { SectionAboutUs } from '../SectionAboutUs/SectionAboutUs';
 
 function App() {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -19,6 +20,7 @@ function App() {
     <div>
       <Header></Header>
       <Banner></Banner>
+      <SectionAboutUs></SectionAboutUs>
     </div>
   );
 }
