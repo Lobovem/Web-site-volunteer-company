@@ -36,30 +36,15 @@
   }
 
   &__inner {
-
     @include xl-min {
       display: flex;
       gap: 60px;
     }
   }
 
-  &__slider {
-    // overflow-x: hidden;
-    // display: flex;
-    // justify-content: center;
-    max-width: 100%;
-
-    @include xl-min {
-      max-width: 850px;
-    }
-
-    // @include layoutMain
-  }
-
   &__textWrap {
     @include xl-min {
       max-width: 300px;
-
     }
   }
 

@@ -35,32 +35,32 @@ export const Slider = () => {
       >
         <SwiperSlide>
           <div className="sliderWrap">
-            <img src={slide} alt="slider-news-1.jpg" />
+            <img className="img" src={slide} alt="slider-news-1.jpg" />
             <h2 className="sliderTitle">Якась дуже важлива новина перша</h2>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sliderWrap">
-            <img src={slide2} alt="slider-news-2.jpg" />
+            <img className="img" src={slide2} alt="slider-news-2.jpg" />
             <h2 className="sliderTitle">Якась новина друга</h2>
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
           <div className="sliderWrap">
-            <img src={slide} alt="slider-news-1.jpg" />
+            <img className="img" src={slide} alt="slider-news-1.jpg" />
             <h2 className="sliderTitle">Якась дуже важлива новина перша</h2>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sliderWrap">
-            <img src={slide2} alt="slider-news-2.jpg" />
+            <img className="img" src={slide2} alt="slider-news-2.jpg" />
             <h2 className="sliderTitle">Якась новина друга</h2>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sliderWrap">
-            <img src={slide} alt="slider-news-1.jpg" />
+            <img className="img" src={slide} alt="slider-news-1.jpg" />
             <h2 className="sliderTitle">Якась дуже важлива новина перша</h2>
           </div>
         </SwiperSlide>

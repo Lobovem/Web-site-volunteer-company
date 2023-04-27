@@ -21,9 +21,7 @@ export const SectionNews = (props) => {
             </a>
           </div>
 
-          <div className={s.sectionNews__slider}>
-            <Slider></Slider>
-          </div>
+          <Slider></Slider>
         </div>
       </div>
     </div>
