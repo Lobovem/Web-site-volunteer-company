@@ -1,4 +1,4 @@
-import s from './titleMain.module.scss';
+import s from './TitleMain.module.scss';
 
 export const TitleMain = (props) => {
   const { title } = props;

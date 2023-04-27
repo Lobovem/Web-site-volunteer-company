@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { burgerMenuSelector, isOpenBurgerMenu } from '../../store/reducer';
-import s from './burger.module.scss';
+import s from './Burger.module.scss';
 
 export const Burger = () => {
   const burgerMenu = useSelector(burgerMenuSelector);

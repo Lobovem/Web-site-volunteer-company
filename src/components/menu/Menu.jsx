@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { burgerMenuSelector } from '../store/reducer';
-import s from './menu.module.scss';
+import s from './Menu.module.scss';
 
 export const Menu = () => {
   const burgerMenu = useSelector(burgerMenuSelector);

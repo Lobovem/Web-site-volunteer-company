@@ -1,4 +1,4 @@
-import s from './btn.module.scss';
+import s from './Btn.module.scss';
 
 export const Btn = (props) => {
   const { title, onClick, nameClass } = props;

@@ -1,7 +1,7 @@
 import { Btn } from '../kit/Btn/Btn';
 import flag from '../../img/ukraine-flag.png';
-import s from './banner.module.scss';
 import { SocialLine } from '../SocialLine/SocialLine';
+import s from './Banner.module.scss';
 
 export const Banner = () => {
   return (

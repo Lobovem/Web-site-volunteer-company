@@ -1,7 +1,7 @@
 import { TitleSection } from '../TitleSection/TitleSection';
 import aboutUs from '../../img/aboutUs.jpg';
-import s from './sectionAboutUs.module.scss';
 import { TitleMain } from '../Title/TitleMain';
+import s from './SectionAboutUs.module.scss';
 
 export const SectionAboutUs = () => {
   return (

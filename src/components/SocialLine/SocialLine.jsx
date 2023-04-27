@@ -1,6 +1,6 @@
-import s from './socialLine.module.scss';
 import facebook from '../../img/facebook.svg';
 import instagram from '../../img/instagram.svg';
+import s from './SocialLine.module.scss';
 
 export const SocialLine = () => {
   return (

@@ -1,4 +1,4 @@
-import s from './langSite.module.scss';
+import s from './LangSite.module.scss';
 
 export const LangSite = (props) => {
   const { href } = props;

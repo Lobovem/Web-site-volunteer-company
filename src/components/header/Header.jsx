@@ -2,7 +2,7 @@ import { LangSite } from '../LangSite/LangSite';
 import { Menu } from '../Menu/Menu';
 import { LogoMain } from '../LogoMain/LogoMain';
 import { Burger } from '../kit/Burger/Burger';
-import s from './header.module.scss';
+import s from './Header.module.scss';
 
 export const Header = () => {
   return (

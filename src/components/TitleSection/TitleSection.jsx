@@ -1,4 +1,4 @@
-import s from './titleSection.module.scss';
+import s from './TitleSection.module.scss';
 
 export const TitleSection = (props) => {
   const { title } = props;
