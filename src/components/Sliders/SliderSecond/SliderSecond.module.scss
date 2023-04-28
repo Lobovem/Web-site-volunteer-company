@@ -1,100 +1,90 @@
-@import './src/styles/MixinsMedia.module.scss';
-@import './src/styles/Variables.module.scss';
-@import './src/styles/MixinsLayout.module.scss';
-@import './src/styles/MixinsKit.module.scss';
+// @import './src/styles/MixinsMedia.module.scss';
+// @import './src/styles/Variables.module.scss';
+// @import './src/styles/MixinsLayout.module.scss';
+// @import './src/styles/MixinsKit.module.scss';
 
 
 
-.swiperSlider {
-  width: 100%;
-  // height: 100%;
+// .swiperSlider {
+//   width: 100%;
+//   // height: 100%;
 
-  &__wrap {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-  }
+//   &__wrap {
+//     display: flex;
+//     width: 100%;
+//     flex-direction: column;
+//   }
 
-  &__title {
-    font-weight: $font-weight-500;
-    font-size: $font-size-20;
-    line-height: 20px;
-    text-transform: uppercase;
-    color: $color-black;
+//   &__title {
+//     font-weight: $font-weight-500;
+//     font-size: $font-size-20;
+//     line-height: 20px;
+//     text-transform: uppercase;
+//     color: $color-black;
 
-    mix-blend-mode: normal;
-    max-width: 260px;
-    text-align: left;
+//     mix-blend-mode: normal;
+//     max-width: 260px;
+//     text-align: left;
 
-    @include xl-min {
-      font-size: $font-size-24;
-      line-height: 24px;
-    }
-  }
+//     @include xl-min {
+//       font-size: $font-size-24;
+//       line-height: 24px;
+//     }
+//   }
 
-  &__img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-  }
+//   &__img {
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//     border-radius: 15px;
+//   }
 
-  &__btnWrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-    position: relative;
-    z-index: 10;
+//   &__btnWrap {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     gap: 20px;
+//     margin-top: 30px;
+//     position: relative;
+//     z-index: 10;
 
-    @include xl-min {
-      margin-top: -80px;
-    }
-  }
+//     @include xl-min {
+//       margin-top: -80px;
+//     }
+//   }
 
-  &__btnPrev {
-    background: none;
-    border: none;
-    background: none;
-    border: none;
-    background-image: url("../../../img/btn-navigation-slide.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    z-index: 100;
+//   &__btnPrev {
+//     background: none;
+//     border: none;
+//     background: none;
+//     border: none;
+//     background-image: url("../../../img/btn-navigation-slide.svg");
+//     background-repeat: no-repeat;
+//     background-position: 50% 50%;
+//     width: 50px;
+//     height: 50px;
+//     position: relative;
+//     z-index: 100;
 
-    &:focus {
-      background-image: url("../../../img/btn-navigation-slide-active.svg");
-    }
-  }
+//     &:focus {
+//       background-image: url("../../../img/btn-navigation-slide-active.svg");
+//     }
+//   }
 
-  &__btnNext {
-    transform: rotate(180deg);
-    background: none;
-    border: none;
-    background-image: url("../../../img/btn-navigation-slide.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    width: 50px;
-    height: 50px;
-    transform: rotate(180deg);
+//   &__btnNext {
+//     transform: rotate(180deg);
+//     background: none;
+//     border: none;
+//     background-image: url("../../../img/btn-navigation-slide.svg");
+//     background-repeat: no-repeat;
+//     background-position: 50% 50%;
+//     width: 50px;
+//     height: 50px;
+//     transform: rotate(180deg);
 
-    &:focus {
-      background-image: url("../../../img/btn-navigation-slide-active.svg");
-    }
-  }
-}
-
-
-// .swiper-slide {
-//   text-align: center;
-//   font-size: $font-size-18;
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-start;
-//   flex-direction: column;
+//     &:focus {
+//       background-image: url("../../../img/btn-navigation-slide-active.svg");
+//     }
+//   }
 // }
