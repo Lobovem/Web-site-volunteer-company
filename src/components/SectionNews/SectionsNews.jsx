@@ -1,4 +1,5 @@
-import { Slider } from '../Slider/Slider';
+import { SliderFirst } from '../Sliders/SliderFirst/SliderFirstr';
+import { SliderSecond } from '../Sliders/SliderSecond/SliderSecond';
 import { TitleMain } from '../TitleMain/TitleMain';
 import { TitleSection } from '../TitleSection/TitleSection';
 import s from './SectionNews.module.scss';
@@ -21,7 +22,8 @@ export const SectionNews = () => {
             </a>
           </div>
 
-          <Slider></Slider>
+          <SliderFirst></SliderFirst>
+          <SliderSecond></SliderSecond>
         </div>
       </div>
     </div>

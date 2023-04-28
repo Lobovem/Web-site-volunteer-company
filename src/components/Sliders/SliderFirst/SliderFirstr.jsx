@@ -1,17 +1,16 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper';
 
-import slide from '../../img/slider-news-1.jpg';
-import slide2 from '../../img/slider-news-2.jpg';
-// import btn from '../../img/btn-left1.svg';
+import slide from '../../../img/slider-news-1.jpg';
+import slide2 from '../../../img/slider-news-2.jpg';
 
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import './styles.scss';
-import s from './Slider.module.scss';
+import s from './SliderFirst.module.scss';
 import { useRef, useState } from 'react';
 
-export const Slider = () => {
+export const SliderFirst = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -28,7 +27,7 @@ export const Slider = () => {
         autoplay={{
           delay: 2000,
           //option than disable autoplay slides (when click btn or manual changes sliders)
-          // disableOnInteraction: false,
+          disableOnInteraction: false,
         }}
         loop={true}
         onInit={() => setInit(true)}
@@ -86,6 +85,7 @@ export const Slider = () => {
             <h2 className={s.swiperSlider__title}>Якась дуже важлива новина перша</h2>
           </div>
         </SwiperSlide>
+
         <div className={s.swiperSlider__btnWrap}>
           <button className={s.swiperSlider__btnPrev} ref={prevRef}></button>
           <button className={s.swiperSlider__btnNext} ref={nextRef}></button>
