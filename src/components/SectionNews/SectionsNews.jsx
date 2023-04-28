@@ -23,7 +23,6 @@ export const SectionNews = () => {
           </div>
 
           <SliderFirst></SliderFirst>
-          <SliderSecond></SliderSecond>
         </div>
       </div>
     </div>
