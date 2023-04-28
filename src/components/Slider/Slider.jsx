@@ -1,18 +1,37 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper';
+import { Autoplay, Navigation } from 'swiper';
+
 import slide from '../../img/slider-news-1.jpg';
 import slide2 from '../../img/slider-news-2.jpg';
+// import btn from '../../img/btn-left1.svg';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
+import 'swiper/scss';
+import 'swiper/scss/navigation';
 import './styles.scss';
+import s from './Slider.module.scss';
+import { useRef, useState } from 'react';
 
 export const Slider = () => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
+  const [init, setInit] = useState();
+
   return (
     <>
       <Swiper
-        navigation
+        navigation={{
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
+          disabledClass: 'swiper-button-disabled',
+        }}
+        autoplay={{
+          delay: 2000,
+          //option than disable autoplay slides (when click btn or manual changes sliders)
+          // disableOnInteraction: false,
+        }}
+        loop={true}
+        onInit={() => setInit(true)}
         slidesPerView={1}
         centeredSlides={false}
         spaceBetween={10}
@@ -30,40 +49,47 @@ export const Slider = () => {
             spaceBetween: 30,
           },
         }}
-        modules={[Navigation]}
-        className="mySwiper"
+        modules={[Navigation, Autoplay]}
+        className={s.swiperSlider}
       >
         <SwiperSlide>
-          <div className="sliderWrap">
-            <img className="img" src={slide} alt="slider-news-1.jpg" />
-            <h2 className="sliderTitle">Якась дуже важлива новина перша</h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="sliderWrap">
-            <img className="img" src={slide2} alt="slider-news-2.jpg" />
-            <h2 className="sliderTitle">Якась новина друга</h2>
+          <div className={s.swiperSlider__wrap}>
+            <img className={s.swiperSlider__img} src={slide} alt="slider-news-1.jpg" />
+            <h2 className={s.swiperSlider__title}>Якась дуже важлива новина перша</h2>
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="sliderWrap">
-            <img className="img" src={slide} alt="slider-news-1.jpg" />
-            <h2 className="sliderTitle">Якась дуже важлива новина перша</h2>
+          <div className={s.swiperSlider__wrap}>
+            <img className={s.swiperSlider__img} src={slide2} alt="slider-news-2.jpg" />
+            <h2 className={s.swiperSlider__title}>Якась новина друга</h2>
           </div>
         </SwiperSlide>
+
         <SwiperSlide>
-          <div className="sliderWrap">
-            <img className="img" src={slide2} alt="slider-news-2.jpg" />
-            <h2 className="sliderTitle">Якась новина друга</h2>
+          <div className={s.swiperSlider__wrap}>
+            <img className={s.swiperSlider__img} src={slide} alt="slider-news-1.jpg" />
+            <h2 className={s.swiperSlider__title}>Якась дуже важлива новина перша</h2>
           </div>
         </SwiperSlide>
+
         <SwiperSlide>
-          <div className="sliderWrap">
-            <img className="img" src={slide} alt="slider-news-1.jpg" />
-            <h2 className="sliderTitle">Якась дуже важлива новина перша</h2>
+          <div className={s.swiperSlider__wrap}>
+            <img className={s.swiperSlider__img} src={slide2} alt="slider-news-2.jpg" />
+            <h2 className={s.swiperSlider__title}>Якась новина друга</h2>
           </div>
         </SwiperSlide>
+
+        <SwiperSlide>
+          <div className={s.sliderWrap}>
+            <img className={s.swiperSlider__img} src={slide} alt="slider-news-1.jpg" />
+            <h2 className={s.swiperSlider__title}>Якась дуже важлива новина перша</h2>
+          </div>
+        </SwiperSlide>
+        <div className={s.swiperSlider__btnWrap}>
+          <button className={s.swiperSlider__btnPrev} ref={prevRef}></button>
+          <button className={s.swiperSlider__btnNext} ref={nextRef}></button>
+        </div>
       </Swiper>
     </>
   );

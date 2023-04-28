@@ -3,7 +3,7 @@ import { TitleMain } from '../TitleMain/TitleMain';
 import { TitleSection } from '../TitleSection/TitleSection';
 import s from './SectionNews.module.scss';
 
-export const SectionNews = (props) => {
+export const SectionNews = () => {
   return (
     <div className={s.sectionNews}>
       <div className={s.sectionNews__wrap}>
