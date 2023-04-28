@@ -35,7 +35,7 @@
 //   content: "";
 // }
 
-/* @import './src/styles/MixinsMedia.module.scss'; */
+@import './src/styles/MixinsMedia.module.scss';
 /* @import './src/styles/Variables.module.scss'; */
 @import './src/styles/MixinsLayout.module.scss';
 /* @import './src/styles/MixinsKit.module.scss'; */
@@ -70,7 +70,11 @@ body {
 }
 
 .swiper-wrapper {
-  justify-content: center;
+
+  @include xl-min {
+    justify-content: center;
+
+  }
 }
 
 .swiper-slide {

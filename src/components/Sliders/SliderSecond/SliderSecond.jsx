@@ -118,6 +118,20 @@ export const SliderSecond = () => {
           rows: 2,
           fill: 'row',
         }}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            grid: {
+              rows: 1,
+            },
+          },
+          768: {
+            slidesPerView: 2,
+            grid: {
+              rows: 2,
+            },
+          },
+        }}
         spaceBetween={30}
         pagination={{
           clickable: true,
