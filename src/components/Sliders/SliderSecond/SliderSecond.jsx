@@ -95,7 +95,6 @@
 //   );
 // };
 
-import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -107,26 +106,44 @@ import 'swiper/css/pagination';
 import './styles.scss';
 
 // import required modules
-import { Grid, Pagination } from 'swiper';
+import { Grid } from 'swiper';
 
 export const SliderSecond = () => {
   return (
     <>
       <Swiper
-        slidesPerView={4}
+        slidesPerView={1}
         grid={{
-          rows: 2,
+          rows: 1,
           fill: 'row',
         }}
         breakpoints={{
-          320: {
-            slidesPerView: 1,
+          440: {
+            slidesPerView: 2,
+            spaceBetween: 20,
             grid: {
               rows: 1,
             },
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
+            spaceBetween: 20,
+            grid: {
+              rows: 1,
+            },
+          },
+
+          994: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            grid: {
+              rows: 1,
+            },
+          },
+
+          1400: {
+            slidesPerView: 4,
+            spaceBetween: 30,
             grid: {
               rows: 2,
             },
@@ -136,7 +153,7 @@ export const SliderSecond = () => {
         pagination={{
           clickable: true,
         }}
-        modules={[Grid, Pagination]}
+        modules={[Grid]}
         className="mySwiper"
       >
         <SwiperSlide>Slide 1</SwiperSlide>
