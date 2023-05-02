@@ -31,14 +31,16 @@
     flex-direction: column;
     align-items: center;
     list-style: none;
-    margin: 40px 0 40px 0;
     padding: 0;
     background: $color-white;
+    margin: 40px 0 40px 0;
 
     @include md-min {
       flex-direction: row;
       gap: 10px;
       background: none;
+      margin: 0;
+
     }
 
     @include lg-min {
