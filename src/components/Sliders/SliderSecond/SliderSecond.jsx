@@ -7,7 +7,7 @@
 // import 'swiper/scss';
 // import 'swiper/scss/navigation';
 // import './styles.scss';
-// import s from './SliderSecond.module.scss';
+import s from './SliderSecond.module.scss';
 // import { useRef, useState } from 'react';
 
 // export const SliderSecond = () => {
@@ -156,12 +156,47 @@ export const SliderSecond = () => {
         modules={[Grid]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>
+          <div className={s.wrap}>
+            <h2 className={s.title}>500 тонн</h2>
+            <p className={s.desc}>Гуманітарної допомоги видано більше ніж 15 000 ВПО, інвалідам та малозабезпеченим</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className={s.wrap}>
+            <h2 className={s.title}>56</h2>
+            <p className={s.desc}>Тепловізорів та прицілів загалом куплено для ЗСУ</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className={s.wrap}>
+            <h2 className={s.title}>120</h2>
+            <p className={s.desc}>Автівок передано до військових частин</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className={s.wrap}>
+            <h2 className={s.title}>64</h2>
+            <p className={s.desc}>Дронів закуплено та передано на потреби армії</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className={s.wrap}>
+            <h2 className={s.title}>4</h2>
+            <p className={s.desc}>Реанімобіля,вже передано на фронт та рятують життя наших героїв</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className={s.wrap}>
+            <h2 className={s.title}>64</h2>
+            <p className={s.desc}>Дронів закуплено та передано на потреби армії</p>
+          </div>
+        </SwiperSlide>
       </Swiper>
     </>
   );
