@@ -107,11 +107,18 @@ import './styles.scss';
 
 // import required modules
 import { Grid } from 'swiper';
+import { useRef, useState } from 'react';
 
 export const SliderSecond = () => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
+  const [init, setInit] = useState();
+
   return (
     <>
       <Swiper
+        onInit={() => setInit(true)}
         slidesPerView={1}
         grid={{
           rows: 1,
@@ -197,6 +204,11 @@ export const SliderSecond = () => {
             <p className={s.desc}>Дронів закуплено та передано на потреби армії</p>
           </div>
         </SwiperSlide>
+
+        <div className={s.swiperSlider__btnWrap}>
+          <button className={s.swiperSlider__btnPrev} ref={prevRef}></button>
+          <button className={s.swiperSlider__btnNext} ref={nextRef}></button>
+        </div>
       </Swiper>
     </>
   );

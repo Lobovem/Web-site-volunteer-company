@@ -89,12 +89,12 @@ export const SliderFirst = () => {
           </div>
         </SwiperSlide>
 
-        {/* <SwiperSlide className={s.swiperSlider__item}>
+        <SwiperSlide className={s.swiperSlider__item}>
           <div className={s.swiperSlider__wrap}>
             <img className={s.swiperSlider__img} src={slide2} alt="slider-news-2.jpg" />
             <h2 className={s.swiperSlider__title}>Якась новина друга</h2>
           </div>
-        </SwiperSlide> */}
+        </SwiperSlide>
 
         <div className={s.swiperSlider__btnWrap}>
           <button className={s.swiperSlider__btnPrev} ref={prevRef}></button>
