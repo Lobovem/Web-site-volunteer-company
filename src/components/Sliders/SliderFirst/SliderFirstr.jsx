@@ -26,7 +26,7 @@ export const SliderFirst = () => {
           disabledClass: 'swiper-button-disabled',
         }}
         autoplay={{
-          delay: 22200,
+          delay: 2000,
           //option than disable autoplay slides (when click btn or manual changes sliders)
           disableOnInteraction: false,
         }}
