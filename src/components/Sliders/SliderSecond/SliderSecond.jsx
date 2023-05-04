@@ -22,7 +22,7 @@ export const SliderSecond = () => {
           nextEl: nextRef.current,
           disabledClass: 'swiper-button-disabled',
         }}
-        loop={true}
+        // loop={true}
         autoplay={{
           delay: 22000,
           //option than disable autoplay slides (when click btn or manual changes sliders)
@@ -37,6 +37,7 @@ export const SliderSecond = () => {
           440: {
             slidesPerView: 2,
             spaceBetween: 20,
+            // loop: true,
             grid: {
               rows: 1,
             },
@@ -44,6 +45,7 @@ export const SliderSecond = () => {
           768: {
             slidesPerView: 3,
             spaceBetween: 20,
+            // loop: true,
             grid: {
               rows: 1,
             },
@@ -52,12 +54,14 @@ export const SliderSecond = () => {
           994: {
             slidesPerView: 4,
             spaceBetween: 20,
+            // loop: true,
             grid: {
               rows: 1,
             },
           },
 
           1400: {
+            // loop: true,
             slidesPerView: 4,
             spaceBetween: 30,
             grid: {

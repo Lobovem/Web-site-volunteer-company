@@ -48,6 +48,7 @@ export const SliderFirst = () => {
           },
           1400: {
             slidesPerView: 2.4,
+            centeredSlides: false,
             spaceBetween: 30,
             loop: true,
           },
