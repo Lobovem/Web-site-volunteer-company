@@ -18,11 +18,12 @@
   &__decor {
     display: none;
 
-    @include xl-min {
+    @media (min-width: 1440px) {
+
       position: absolute;
       display: block;
       top: 250px;
-      left: -415px;
+      left: -430px;
       z-index: -1;
       font-weight: $font-weight-500;
       font-size: $font-size-165;

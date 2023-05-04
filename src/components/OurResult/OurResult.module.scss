@@ -8,6 +8,7 @@
 
   &__wrap {
     padding: 50px 0;
+    @include layoutMain;
 
     @include lg-min {
       padding: 120px 0;
