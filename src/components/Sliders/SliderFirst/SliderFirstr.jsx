@@ -6,10 +6,10 @@ import slide2 from '../../../img/slider-news-2.jpg';
 
 import 'swiper/scss';
 import 'swiper/scss/navigation';
-import './styles.scss';
+// import './styles.scss';
 import s from './SliderFirst.module.scss';
 import { useRef, useState } from 'react';
-import { BtnSlider } from '../../kit/BtnSlider/BtnSlider';
+import { BtnSliders } from '../../kit/BtnSliders/BtnSliders';
 
 export const SliderFirst = () => {
   const prevRef = useRef(null);
@@ -20,7 +20,7 @@ export const SliderFirst = () => {
   return (
     <>
       <Swiper
-        className={s.swiperSlider}
+        className={s.slider}
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current,
@@ -56,49 +56,49 @@ export const SliderFirst = () => {
         }}
         modules={[Navigation, Autoplay]}
       >
-        <SwiperSlide className={s.swiperSlider__item}>
-          <div className={s.swiperSlider__wrap}>
-            <img className={s.swiperSlider__img} src={slide} alt="slider-news-1.jpg" />
-            <h2 className={s.swiperSlider__title}>Якась дуже важлива новина перша</h2>
+        <SwiperSlide className={s.slider__item}>
+          <div className={s.slider__itemWrap}>
+            <img className={s.slider__img} src={slide} alt="slider-news-1.jpg" />
+            <h2 className={s.slider__title}>Якась дуже важлива новина перша</h2>
           </div>
         </SwiperSlide>
 
-        <SwiperSlide className={s.swiperSlider__item}>
-          <div className={s.swiperSlider__wrap}>
-            <img className={s.swiperSlider__img} src={slide2} alt="slider-news-2.jpg" />
-            <h2 className={s.swiperSlider__title}>Якась новина друга</h2>
+        <SwiperSlide className={s.sslider_item}>
+          <div className={s.slider__itemWrap}>
+            <img className={s.slider__img} src={slide2} alt="slider-news-2.jpg" />
+            <h2 className={s.slider__title}>Якась новина друга</h2>
           </div>
         </SwiperSlide>
 
-        <SwiperSlide className={s.swiperSlider__item}>
-          <div className={s.swiperSlider__wrap}>
-            <img className={s.swiperSlider__img} src={slide} alt="slider-news-1.jpg" />
-            <h2 className={s.swiperSlider__title}>Якась дуже важлива новина перша</h2>
+        <SwiperSlide className={s.slider__item}>
+          <div className={s.slider__itemWrap}>
+            <img className={s.slider__img} src={slide} alt="slider-news-1.jpg" />
+            <h2 className={s.slider__title}>Якась дуже важлива новина перша</h2>
           </div>
         </SwiperSlide>
 
-        <SwiperSlide className={s.swiperSlider__item}>
-          <div className={s.swiperSlider__wrap}>
-            <img className={s.swiperSlider__img} src={slide2} alt="slider-news-2.jpg" />
-            <h2 className={s.swiperSlider__title}>Якась новина друга</h2>
+        <SwiperSlide className={s.slider__item}>
+          <div className={s.slider__itemWrap}>
+            <img className={s.slider__img} src={slide2} alt="slider-news-2.jpg" />
+            <h2 className={s.slider__title}>Якась новина друга</h2>
           </div>
         </SwiperSlide>
 
-        <SwiperSlide className={s.swiperSlider__item}>
-          <div className={s.swiperSlider__wrap}>
-            <img className={s.swiperSlider__img} src={slide} alt="slider-news-1.jpg" />
-            <h2 className={s.swiperSlider__title}>Якась дуже важлива новина перша</h2>
+        <SwiperSlide className={s.slider__item}>
+          <div className={s.slider__itemWrap}>
+            <img className={s.slider__img} src={slide} alt="slider-news-1.jpg" />
+            <h2 className={s.slider__title}>Якась дуже важлива новина перша</h2>
           </div>
         </SwiperSlide>
 
-        <SwiperSlide className={s.swiperSlider__item}>
-          <div className={s.swiperSlider__wrap}>
-            <img className={s.swiperSlider__img} src={slide2} alt="slider-news-2.jpg" />
-            <h2 className={s.swiperSlider__title}>Якась новина друга</h2>
+        <SwiperSlide className={s.slider__item}>
+          <div className={s.slider__itemWrap}>
+            <img className={s.slider__img} src={slide2} alt="slider-news-2.jpg" />
+            <h2 className={s.slider__title}>Якась новина друга</h2>
           </div>
         </SwiperSlide>
 
-        <BtnSlider nextRef={nextRef} prevRef={prevRef}></BtnSlider>
+        <BtnSliders nextRef={nextRef} prevRef={prevRef}></BtnSliders>
       </Swiper>
     </>
   );

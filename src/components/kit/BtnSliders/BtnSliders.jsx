@@ -1,6 +1,6 @@
-import s from './BtnSlider.module.scss';
+import s from './BtnSliders.module.scss';
 
-export const BtnSlider = ({ prevRef, nextRef }) => {
+export const BtnSliders = ({ prevRef, nextRef }) => {
   return (
     <div className={s.btnSlider}>
       <button className={s.btnSlider__prev} ref={prevRef}></button>

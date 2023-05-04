@@ -5,17 +5,14 @@
 
 .swiper {
   width: 100%;
-  // height: 100%;
   margin-left: auto;
   margin-right: auto;
-
   @include layoutMain;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: $font-size-18;
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   height: auto;

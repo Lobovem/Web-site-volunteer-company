@@ -6,7 +6,7 @@ import 'swiper/css/grid';
 import 'swiper/css/pagination';
 import './styles.scss';
 import s from './SliderSecond.module.scss';
-import { BtnSlider } from '../../kit/BtnSlider/BtnSlider';
+import { BtnSliders } from '../../kit/BtnSliders/BtnSliders';
 
 export const SliderSecond = () => {
   const prevRef = useRef(null);
@@ -120,7 +120,7 @@ export const SliderSecond = () => {
           </div>
         </SwiperSlide>
 
-        <BtnSlider nextRef={nextRef} prevRef={prevRef}></BtnSlider>
+        <BtnSliders nextRef={nextRef} prevRef={prevRef}></BtnSliders>
       </Swiper>
     </>
   );
