@@ -19,6 +19,7 @@ export const SliderFirst = () => {
   return (
     <>
       <Swiper
+        className={s.swiperSlider}
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current,
@@ -52,7 +53,6 @@ export const SliderFirst = () => {
           },
         }}
         modules={[Navigation, Autoplay]}
-        className={s.swiperSlider}
       >
         <SwiperSlide className={s.swiperSlider__item}>
           <div className={s.swiperSlider__wrap}>
@@ -83,11 +83,18 @@ export const SliderFirst = () => {
         </SwiperSlide>
 
         <SwiperSlide className={s.swiperSlider__item}>
-          <div className={s.sliderWrap}>
+          <div className={s.swiperSlider__wrap}>
             <img className={s.swiperSlider__img} src={slide} alt="slider-news-1.jpg" />
             <h2 className={s.swiperSlider__title}>Якась дуже важлива новина перша</h2>
           </div>
         </SwiperSlide>
+
+        {/* <SwiperSlide className={s.swiperSlider__item}>
+          <div className={s.swiperSlider__wrap}>
+            <img className={s.swiperSlider__img} src={slide2} alt="slider-news-2.jpg" />
+            <h2 className={s.swiperSlider__title}>Якась новина друга</h2>
+          </div>
+        </SwiperSlide> */}
 
         <div className={s.swiperSlider__btnWrap}>
           <button className={s.swiperSlider__btnPrev} ref={prevRef}></button>

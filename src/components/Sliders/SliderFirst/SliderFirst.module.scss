@@ -10,10 +10,21 @@
   display: block !important;
   // height: 100%;
 
+  @include xl-min {
+    padding-bottom: 50px !important;
+
+  }
+
   &__wrap {
     display: flex;
     width: 100%;
     flex-direction: column;
+    // height: 100% !important;
+
+    @include xl-min {
+      // padding-bottom: 120px;
+
+    }
   }
 
   &__title {
@@ -36,7 +47,7 @@
   &__img {
     display: block;
     width: 100%;
-    height: 100%;
+    // height: 100%;
     object-fit: cover;
     border-radius: 15px;
   }
@@ -51,7 +62,8 @@
     z-index: 10;
 
     @include xl-min {
-      margin-top: -80px;
+      // margin-top: -80px;
+      margin-top: 0px;
     }
   }
 
