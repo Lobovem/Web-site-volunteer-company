@@ -53,8 +53,7 @@
 .swiper-wrapper {
 
   @include xl-min {
-    justify-content: center;
-
+    // justify-content: center;
   }
 }
 
@@ -70,3 +69,9 @@
   align-content: stretch;
   align-items: stretch;
 }
+
+// .sliderWrapper {
+//   @include xl-min {
+//     justify-content: center !important;
+//   }
+// }
