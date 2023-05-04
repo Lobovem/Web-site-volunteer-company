@@ -25,7 +25,7 @@ export const SliderFirst = () => {
           disabledClass: 'swiper-button-disabled',
         }}
         autoplay={{
-          delay: 2000,
+          delay: 22200,
           //option than disable autoplay slides (when click btn or manual changes sliders)
           disableOnInteraction: false,
         }}
@@ -38,48 +38,51 @@ export const SliderFirst = () => {
           440: {
             slidesPerView: 2,
             spaceBetween: 20,
+            loop: true,
           },
           768: {
             slidesPerView: 3,
             spaceBetween: 20,
+            loop: true,
           },
           1400: {
             slidesPerView: 2.4,
             spaceBetween: 30,
+            loop: true,
           },
         }}
         modules={[Navigation, Autoplay]}
         className={s.swiperSlider}
       >
-        <SwiperSlide>
+        <SwiperSlide className={s.swiperSlider__item}>
           <div className={s.swiperSlider__wrap}>
             <img className={s.swiperSlider__img} src={slide} alt="slider-news-1.jpg" />
             <h2 className={s.swiperSlider__title}>Якась дуже важлива новина перша</h2>
           </div>
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide className={s.swiperSlider__item}>
           <div className={s.swiperSlider__wrap}>
             <img className={s.swiperSlider__img} src={slide2} alt="slider-news-2.jpg" />
             <h2 className={s.swiperSlider__title}>Якась новина друга</h2>
           </div>
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide className={s.swiperSlider__item}>
           <div className={s.swiperSlider__wrap}>
             <img className={s.swiperSlider__img} src={slide} alt="slider-news-1.jpg" />
             <h2 className={s.swiperSlider__title}>Якась дуже важлива новина перша</h2>
           </div>
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide className={s.swiperSlider__item}>
           <div className={s.swiperSlider__wrap}>
             <img className={s.swiperSlider__img} src={slide2} alt="slider-news-2.jpg" />
             <h2 className={s.swiperSlider__title}>Якась новина друга</h2>
           </div>
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide className={s.swiperSlider__item}>
           <div className={s.sliderWrap}>
             <img className={s.swiperSlider__img} src={slide} alt="slider-news-1.jpg" />
             <h2 className={s.swiperSlider__title}>Якась дуже важлива новина перша</h2>

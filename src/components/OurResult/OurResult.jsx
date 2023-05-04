@@ -4,7 +4,7 @@ import s from './OurResult.module.scss';
 
 export const OurResult = () => {
   return (
-    <div>
+    <div className={s.ourResult}>
       <TitleSection title="Наші результати"></TitleSection>
       <SliderSecond></SliderSecond>
     </div>

@@ -6,7 +6,8 @@
 
 
 .swiperSlider {
-  width: 100%;
+  // width: 100%;
+  display: block !important;
   // height: 100%;
 
   &__wrap {
