@@ -7,6 +7,7 @@ import { SectionAboutUs } from '../SectionAboutUs/SectionAboutUs';
 import { SectionNews } from '../SectionNews/SectionsNews';
 import { OurResult } from '../OurResult/OurResult';
 import { WaySupport } from '../WaySupport/WaySupport';
+import { Donate } from '../Donate/Donate';
 
 function App() {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -27,6 +28,7 @@ function App() {
       <SectionNews></SectionNews>
       <OurResult></OurResult>
       <WaySupport></WaySupport>
+      <Donate></Donate>
     </div>
   );
 }
