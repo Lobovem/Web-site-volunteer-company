@@ -16,13 +16,15 @@
   }
 
   &__decor {
+    margin: 0;
+    padding: 0;
     display: none;
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1500px) {
 
       position: absolute;
       display: block;
-      top: 250px;
+      top: 380px;
       left: -430px;
       z-index: -1;
       font-weight: $font-weight-500;

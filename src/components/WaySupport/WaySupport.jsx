@@ -6,7 +6,7 @@ export const WaySupport = () => {
   return (
     <div className={s.waySupport}>
       <div className={s.waySupport__wrap}>
-        <h2 className={s.waySupport__decor}>Підтримка</h2>
+        <h3 className={s.waySupport__decor}>Підтримка</h3>
         <TitleSection title="напрямки підтримки"></TitleSection>
         <SliderThird></SliderThird>
       </div>

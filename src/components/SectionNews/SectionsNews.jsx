@@ -8,7 +8,7 @@ export const SectionNews = () => {
   return (
     <div className={s.sectionNews}>
       <div className={s.sectionNews__wrap}>
-        <h2 className={s.sectionNews__decor}>Новини</h2>
+        <h3 className={s.sectionNews__decor}>Новини</h3>
         <TitleSection title="Новини"></TitleSection>
         <div className={s.sectionNews__inner}>
           <div className={s.sectionNews__textWrap}>
