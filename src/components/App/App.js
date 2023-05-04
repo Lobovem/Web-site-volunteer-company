@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { SectionAboutUs } from '../SectionAboutUs/SectionAboutUs';
 import { SectionNews } from '../SectionNews/SectionsNews';
 import { OurResult } from '../OurResult/OurResult';
+import { WaySupport } from '../WaySupport/WaySupport';
 
 function App() {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -25,6 +26,7 @@ function App() {
       <SectionAboutUs></SectionAboutUs>
       <SectionNews></SectionNews>
       <OurResult></OurResult>
+      <WaySupport></WaySupport>
     </div>
   );
 }

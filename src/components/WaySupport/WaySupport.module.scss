@@ -3,10 +3,11 @@
 @import './src/styles/MixinsLayout.module.scss';
 @import './src/styles/MixinsKit.module.scss';
 
-.ourResult {
-  background: $color-grey;
+
+.waySupport {
 
   &__wrap {
+    @include layoutMain;
     padding: 50px 0;
 
     @include lg-min {

@@ -5,8 +5,10 @@ import s from './OurResult.module.scss';
 export const OurResult = () => {
   return (
     <div className={s.ourResult}>
-      <TitleSection title="Наші результати"></TitleSection>
-      <SliderSecond></SliderSecond>
+      <div className={s.ourResult__wrap}>
+        <TitleSection title="Наші результати"></TitleSection>
+        <SliderSecond></SliderSecond>
+      </div>
     </div>
   );
 };
