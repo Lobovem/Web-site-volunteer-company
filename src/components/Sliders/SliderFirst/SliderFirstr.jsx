@@ -9,6 +9,7 @@ import 'swiper/scss/navigation';
 import './styles.scss';
 import s from './SliderFirst.module.scss';
 import { useRef, useState } from 'react';
+import { BtnSlider } from '../../kit/BtnSlider/BtnSlider';
 
 export const SliderFirst = () => {
   const prevRef = useRef(null);
@@ -97,10 +98,7 @@ export const SliderFirst = () => {
           </div>
         </SwiperSlide>
 
-        <div className={s.swiperSlider__btnWrap}>
-          <button className={s.swiperSlider__btnPrev} ref={prevRef}></button>
-          <button className={s.swiperSlider__btnNext} ref={nextRef}></button>
-        </div>
+        <BtnSlider nextRef={nextRef} prevRef={prevRef}></BtnSlider>
       </Swiper>
     </>
   );
