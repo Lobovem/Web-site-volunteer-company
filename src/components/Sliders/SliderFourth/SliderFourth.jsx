@@ -31,7 +31,6 @@ export const SliderFourth = () => {
           nextEl: nextRef.current,
           disabledClass: 'swiper-button-disabled',
         }}
-        wrapperClass={s.slider__wrapper}
         loop={true}
         centeredSlides={true}
         slidesPerView={1.3}
@@ -66,7 +65,7 @@ export const SliderFourth = () => {
 
           994: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 40,
             centeredSlides: false,
             loop: true,
             grid: {

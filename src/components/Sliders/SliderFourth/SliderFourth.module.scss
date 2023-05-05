@@ -54,10 +54,17 @@
     height: auto;
     margin: 0 auto;
 
-    @include xl-min {
-      width: 238px;
-      border-radius: 120px;
+    @include lg-min {
+      width: 200px;
+      border-radius: 100px;
+      bottom: -120px;
+    }
 
+    @include xl-min {
+      width: 240px;
+      border-radius: 120px;
+      right: -450px;
+      bottom: -100px;
     }
   }
 
@@ -101,8 +108,12 @@
     margin-bottom: 50px;
     // margin-top: auto;
 
+    @include lg-min {
+      margin-bottom: 60px;
+    }
+
     @include xl-min {
-      margin-bottom: 40px;
+      margin-bottom: 80px;
     }
   }
 }
