@@ -5,6 +5,10 @@
 
 .slider {
 
+  @include xl-min {
+    overflow: visible;
+
+  }
 
   @media (min-width: 768px) {
     @include layoutMain;
@@ -42,9 +46,9 @@
 
   &__img {
     position: absolute;
-    bottom: -120px;
-    // left: 0;
-    right: -50px;
+    bottom: -80px;
+    left: 0;
+    right: 0px;
     width: 163px;
     border-radius: 80px;
     height: auto;
