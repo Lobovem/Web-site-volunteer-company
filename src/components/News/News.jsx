@@ -2,9 +2,9 @@ import { SliderFirst } from '../Sliders/SliderFirst/SliderFirstr';
 import { SliderSecond } from '../Sliders/SliderSecond/SliderSecond';
 import { TitleMain } from '../TitleMain/TitleMain';
 import { TitleSection } from '../TitleSection/TitleSection';
-import s from './SectionNews.module.scss';
+import s from './News.module.scss';
 
-export const SectionNews = () => {
+export const News = () => {
   return (
     <div className={s.sectionNews}>
       <div className={s.sectionNews__wrap}>

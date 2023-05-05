@@ -1,0 +1,104 @@
+@import './src/styles/MixinsMedia.module.scss';
+@import './src/styles/Variables.module.scss';
+@import './src/styles/MixinsLayout.module.scss';
+@import './src/styles/MixinsKit.module.scss';
+
+.slider {
+
+
+  @media (min-width: 768px) {
+    @include layoutMain;
+  }
+
+  &__wrapper {
+    // margin-left: 100px;
+    // padding-left: 100px;
+
+    @include xl-min {
+      justify-content: center !important;
+    }
+  }
+
+
+
+  &__itemWrap {
+    position: relative;
+    border-radius: 15px;
+    width: 100%;
+    background: $color-grey;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 15px rgba(2, 95, 167, 0.08);
+
+    @media(min-width: 768px) {
+      padding: 70px 40px;
+    }
+
+    @include xl-min {
+      padding: 70px 70px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: -120px;
+    // left: 0;
+    right: -50px;
+    width: 163px;
+    border-radius: 80px;
+    height: auto;
+    margin: 0 auto;
+
+    @include xl-min {
+      width: 238px;
+      border-radius: 120px;
+
+    }
+  }
+
+  &__title {
+    font-weight: $font-weight-500;
+    font-size: $font-size-20;
+    line-height: 20px;
+    background: $gradient-main;
+    text-transform: uppercase;
+    margin: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media(min-width: 768px) {}
+
+    @include xl-min {
+      font-size: $font-size-24;
+      line-height: 24px;
+    }
+  }
+
+  &__position {
+    font-weight: $font-weight-400;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 20px;
+
+    @include xl-min {
+      font-size: $font-size-18;
+      line-height: 18px;
+    }
+  }
+
+
+  &__desc {
+    font-size: $font-size-14;
+    line-height: 21px;
+    color: $color-black;
+    mix-blend-mode: normal;
+    text-align: center;
+    margin-bottom: 50px;
+    // margin-top: auto;
+
+    @include xl-min {
+      margin-bottom: 40px;
+    }
+  }
+}

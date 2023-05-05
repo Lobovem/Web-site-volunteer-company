@@ -15,7 +15,7 @@ export const Donate = () => {
           <h2 className={s.donate__mainTitle}>Маленькі кроки ведуть нас до великої ПЕРЕМОГИ!</h2>
           <p className={s.donate__mainDesc}>Кожна гривня для нас дуже важлива, тому зробити свій внесок ви можете саме зараз</p>
 
-          <Btn title="задонатити" nameClass="btn"></Btn>
+          <Btn title="задонатити" className="btn"></Btn>
         </div>
       </div>
     </div>

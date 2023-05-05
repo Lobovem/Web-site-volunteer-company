@@ -3,11 +3,12 @@ import { burgerMenuSelector } from '../store/reducer';
 import { Header } from '../Header/Header';
 import { Banner } from '../Banner/Banner';
 import { useEffect } from 'react';
-import { SectionAboutUs } from '../SectionAboutUs/SectionAboutUs';
-import { SectionNews } from '../SectionNews/SectionsNews';
+import { AboutUs } from '../AboutUs/AboutUs';
+import { News } from '../News/News';
 import { OurResult } from '../OurResult/OurResult';
 import { WaySupport } from '../WaySupport/WaySupport';
 import { Donate } from '../Donate/Donate';
+import { Teams } from '../Teams/Teams';
 
 function App() {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -24,11 +25,12 @@ function App() {
     <div>
       <Header></Header>
       <Banner></Banner>
-      <SectionAboutUs></SectionAboutUs>
-      <SectionNews></SectionNews>
+      <AboutUs></AboutUs>
+      <News></News>
       <OurResult></OurResult>
       <WaySupport></WaySupport>
       <Donate></Donate>
+      <Teams></Teams>
     </div>
   );
 }

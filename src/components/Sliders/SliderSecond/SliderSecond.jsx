@@ -120,7 +120,7 @@ export const SliderSecond = () => {
           </div>
         </SwiperSlide>
 
-        <BtnSliders nextRef={nextRef} prevRef={prevRef}></BtnSliders>
+        <BtnSliders nextRef={nextRef} prevRef={prevRef} className={'btnSlider'}></BtnSliders>
       </Swiper>
     </>
   );

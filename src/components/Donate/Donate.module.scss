@@ -11,11 +11,11 @@
     padding: 50px 0;
 
     @include sm-min {
-      max-width: 640px;
+      // max-width: 640px;
     }
 
     @include lg-min {
-      max-width: 100%;
+      // max-width: 100%;
       padding: 120px 0;
     }
   }
