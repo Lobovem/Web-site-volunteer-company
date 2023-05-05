@@ -41,6 +41,8 @@
 
     @include xl-min {
       padding: 70px 70px;
+      margin-left: 150px;
+      margin-bottom: 150px;
     }
   }
 
@@ -63,7 +65,8 @@
     @include xl-min {
       width: 240px;
       border-radius: 120px;
-      right: -450px;
+      // right: -450px;
+      left: -450px;
       bottom: -100px;
     }
   }
@@ -113,7 +116,7 @@
     }
 
     @include xl-min {
-      margin-bottom: 80px;
+      margin-bottom: 40px;
     }
   }
 }

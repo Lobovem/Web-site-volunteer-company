@@ -75,7 +75,7 @@ export const SliderFourth = () => {
 
           1400: {
             slidesPerView: 2,
-            spaceBetween: 150,
+            spaceBetween: 0,
             centeredSlides: false,
             loop: true,
             grid: {
