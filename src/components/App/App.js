@@ -9,6 +9,7 @@ import { OurResult } from '../OurResult/OurResult';
 import { WaySupport } from '../WaySupport/WaySupport';
 import { Donate } from '../Donate/Donate';
 import { Teams } from '../Teams/Teams';
+import { Contacts } from '../Contacts/Contacts';
 
 function App() {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -31,6 +32,7 @@ function App() {
       <WaySupport></WaySupport>
       <Donate></Donate>
       <Teams></Teams>
+      <Contacts></Contacts>
     </div>
   );
 }
