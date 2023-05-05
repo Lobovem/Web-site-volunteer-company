@@ -12,9 +12,9 @@ export const Contacts = () => {
           <iframe
             className={s.contacts__map}
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.803122326351!2d36.21800665182715!3d50.015045226420746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a1234e73cbdb%3A0xcdfc0bda6e6ba6bc!2z0YPQuy4g0JrQvtGB0LzQuNGH0LXRgdC60LDRjywgMjEsINCl0LDRgNGM0LrQvtCyLCDQpdCw0YDRjNC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2MTAwMA!5e0!3m2!1sru!2sua!4v1677322704623!5m2!1sru!2sua"
-            frameborder="0"
+            frameBorder="0"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            ferrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
 

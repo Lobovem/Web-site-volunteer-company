@@ -10,6 +10,7 @@ import { WaySupport } from '../WaySupport/WaySupport';
 import { Donate } from '../Donate/Donate';
 import { Teams } from '../Teams/Teams';
 import { Contacts } from '../Contacts/Contacts';
+import { Form } from '../Form/Form';
 
 function App() {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -33,6 +34,7 @@ function App() {
       <Donate></Donate>
       <Teams></Teams>
       <Contacts></Contacts>
+      <Form></Form>
     </div>
   );
 }
