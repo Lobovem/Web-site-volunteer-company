@@ -1,13 +1,31 @@
 import { Btn } from '../kit/Btn/Btn';
 import photo from '../../img/form-photo.jpg';
+import sending from '../../img/form-sending.svg';
 import s from './Form.module.scss';
+import { useState } from 'react';
 
 export const Form = () => {
-  const onSubmit = (e) => {
-    e.preventDefault();
-    console.log('submit');
+  const [sendState, setSendState] = useState(false);
+  const [inputDataForm, setInputDataForm] = useState({ name: '', email: '', textarea: '' });
+  const [dataForm, setDataForm] = useState([]);
+
+  const handleChangeState = () => {
+    setSendState(!sendState);
+    setTimeout(setSendState, 3000);
   };
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    handleChangeState();
+    setDataForm(inputDataForm);
+    setInputDataForm('');
+  };
+
+  const handleChange = (e) => {
+    setInputDataForm({ ...inputDataForm, [e.target.name]: e.target.value });
+  };
+
+  console.log('dataForm', dataForm);
   return (
     <div className={s.form}>
       <div className={s.form__wrap}>
@@ -15,29 +33,38 @@ export const Form = () => {
           <img className={s.form__img} src={photo} alt="" />
         </div>
 
-        <form className={s.form__inner} onSubmit={onSubmit} method="post" action="/">
-          <h2 className={s.form__title}>зв'яжіться з нами</h2>
-          <p className={s.form__desc}>Форма зворотнього зв'язку</p>
-
-          <label className={s.form__inputTitle} htmlFor="name">
-            Імʼя
-          </label>
-          <input className={s.form__input} type="text" name="name" id="name" />
-
-          <label className={s.form__inputTitle} htmlFor="email">
-            Email
-          </label>
-          <input className={s.form__input} type="email" name="email" id="email" />
-
-          <label className={s.form__inputTitle} htmlFor="area">
-            Коментар
-          </label>
-          <textarea className={s.form__textArea} name="textarea" id="area"></textarea>
-
-          <div className={s.form__btnWrap}>
-            <Btn title="надіслати" className="btn" onClick={onSubmit} type="submit"></Btn>
+        {false ? (
+          <div className={s.form__sending}>
+            <img className={s.form__sendingImg} src={sending} alt="form-sending.svg" />
+            <p className={s.form__sendingTitle}>
+              <span>вітаємо!</span> дані успішно відправлені!
+            </p>
           </div>
-        </form>
+        ) : (
+          <form className={s.form__inner} onSubmit={onSubmit} method="post" action="/">
+            <h2 className={s.form__title}>зв'яжіться з нами</h2>
+            <p className={s.form__desc}>Форма зворотнього зв'язку</p>
+
+            <label className={s.form__inputTitle} htmlFor="name">
+              Імʼя
+            </label>
+            <input className={s.form__input} type="text" name="name" id="name" required value={inputDataForm.name} onChange={handleChange} />
+
+            <label className={s.form__inputTitle} htmlFor="email">
+              Email
+            </label>
+            <input className={s.form__input} type="email" name="email" id="email" required value={inputDataForm.email} onChange={handleChange} />
+
+            <label className={s.form__inputTitle} htmlFor="area">
+              Коментар
+            </label>
+            <textarea className={s.form__textArea} name="textarea" id="area" required value={inputDataForm.textarea} onChange={handleChange}></textarea>
+
+            <div className={s.form__btnWrap}>
+              <Btn title="надіслати" className="btn" onClick={onSubmit} type="submit"></Btn>
+            </div>
+          </form>
+        )}
       </div>
     </div>
   );

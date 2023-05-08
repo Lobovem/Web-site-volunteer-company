@@ -42,6 +42,8 @@
     padding: 40px 50px;
     box-shadow: 0px 4px 15px rgba(2, 95, 167, 0.08);
     border-radius: 15px;
+    min-height: 550px;
+
 
     @media(min-width: 750px) {
       padding: 40px 30px;
@@ -112,6 +114,7 @@
     border-radius: 5px;
     padding: 10px;
     min-height: 100px;
+    margin-bottom: 50px;
 
     @include lg-min {
       margin-bottom: 40px;
@@ -125,5 +128,35 @@
 
   &__btnWrap {
     margin: 0 auto;
+  }
+
+  &__sending {
+    background: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 4px 15px rgba(2, 95, 167, 0.08);
+    border-radius: 15px;
+    min-height: 550px;
+  }
+
+  &__sendingImg {
+    max-width: 100px;
+  }
+
+  &__sendingTitle {
+    text-align: center;
+    font-weight: $font-weight-500;
+    font-size: $font-size-24;
+    line-height: 24px;
+    text-transform: uppercase;
+    mix-blend-mode: normal;
+    max-width: 370px;
+
+    span {
+      color: $color-main;
+
+    }
   }
 }
