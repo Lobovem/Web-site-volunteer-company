@@ -1,8 +1,8 @@
 import { Btn } from '../kit/Btn/Btn';
 import photo from '../../img/form-photo.jpg';
 import sending from '../../img/form-sending.svg';
-import s from './Form.module.scss';
 import { useState } from 'react';
+import s from './Form.module.scss';
 
 export const Form = () => {
   const [sendState, setSendState] = useState(false);
@@ -17,8 +17,8 @@ export const Form = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     handleChangeState();
-    setDataForm(inputDataForm);
-    setInputDataForm('');
+    setDataForm([...dataForm, inputDataForm]);
+    setInputDataForm({ name: '', email: '', textarea: '' });
   };
 
   const handleChange = (e) => {
@@ -26,6 +26,7 @@ export const Form = () => {
   };
 
   console.log('dataForm', dataForm);
+  console.log('inputDataForm', inputDataForm);
   return (
     <div className={s.form}>
       <div className={s.form__wrap}>
@@ -53,7 +54,16 @@ export const Form = () => {
             <label className={s.form__inputTitle} htmlFor="email">
               Email
             </label>
-            <input className={s.form__input} type="email" name="email" id="email" required value={inputDataForm.email} onChange={handleChange} />
+            <input
+              className={s.form__input}
+              type="email"
+              name="email"
+              id="email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              value={inputDataForm.email}
+              onChange={handleChange}
+            />
 
             <label className={s.form__inputTitle} htmlFor="area">
               Коментар
