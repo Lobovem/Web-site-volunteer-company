@@ -35,7 +35,7 @@ export const Form = () => {
           <textarea className={s.form__textArea} name="textarea" id="area"></textarea>
 
           <div className={s.form__btnWrap}>
-            <Btn title="надіслати" className="btn" onClick={onSubmit}></Btn>
+            <Btn title="надіслати" className="btn" onClick={onSubmit} type="submit"></Btn>
           </div>
         </form>
       </div>
