@@ -33,7 +33,7 @@ export const Form = () => {
           <img className={s.form__img} src={photo} alt="" />
         </div>
 
-        {false ? (
+        {sendState ? (
           <div className={s.form__sending}>
             <img className={s.form__sendingImg} src={sending} alt="form-sending.svg" />
             <p className={s.form__sendingTitle}>
@@ -61,7 +61,7 @@ export const Form = () => {
             <textarea className={s.form__textArea} name="textarea" id="area" required value={inputDataForm.textarea} onChange={handleChange}></textarea>
 
             <div className={s.form__btnWrap}>
-              <Btn title="надіслати" className="btn" onClick={onSubmit} type="submit"></Btn>
+              <Btn title="надіслати" className="btn" type="submit"></Btn>
             </div>
           </form>
         )}
