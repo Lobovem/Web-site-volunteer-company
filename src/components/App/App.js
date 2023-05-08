@@ -11,6 +11,7 @@ import { Donate } from '../Donate/Donate';
 import { Teams } from '../Teams/Teams';
 import { Contacts } from '../Contacts/Contacts';
 import { Form } from '../Form/Form';
+import { Footer } from '../Footer/Footer';
 
 function App() {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -35,6 +36,7 @@ function App() {
       <Teams></Teams>
       <Contacts></Contacts>
       <Form></Form>
+      <Footer></Footer>
     </div>
   );
 }

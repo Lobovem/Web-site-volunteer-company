@@ -12,7 +12,7 @@ export const Header = () => {
         <div className={s.header__menuWrap}>
           <Burger></Burger>
           <Menu></Menu>
-          <LangSite href="/"></LangSite>
+          <LangSite href="#"></LangSite>
         </div>
       </div>
     </header>

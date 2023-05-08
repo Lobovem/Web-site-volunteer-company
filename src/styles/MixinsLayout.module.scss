@@ -29,3 +29,16 @@
   }
 
 }
+
+@mixin layoutMaxPadding {
+  width: min(100% - 120px, 1195px);
+  margin-inline: auto;
+
+  @include sm-min {
+    width: min(100% - 40px, 1195px);
+  }
+
+  @include lg-min {
+    width: min(100% - 80px, 1195px);
+  }
+}
