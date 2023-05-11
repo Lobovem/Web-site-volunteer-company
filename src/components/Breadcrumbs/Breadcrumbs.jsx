@@ -8,8 +8,8 @@ import s from './Breadcrumbs.module.scss';
 export const Breadcrumbs = () => {
   const routes = [
     { path: '/', breadcrumb: 'Головна' },
-    { path: '/AboutUs', breadcrumb: 'О нас' },
-    // { path: '/example', breadcrumb: 'Custom Example' },
+    { path: '/aboutUs', breadcrumb: 'О нас' },
+    { path: '/news', breadcrumb: 'Новини' },
   ];
 
   const breadcrumbs = useBreadcrumbs(routes);

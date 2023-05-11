@@ -7,7 +7,7 @@ export const Menu = () => {
   const burgerMenu = useSelector(burgerMenuSelector);
 
   const menuList = [
-    { id: 1, title: 'Про нас', link: '/AboutUs' },
+    { id: 1, title: 'Про нас', link: '/aboutUs' },
     { id: 2, title: 'Новини', link: '/news' },
     { id: 3, title: 'Отримати допомогу', link: '/get-help' },
     { id: 4, title: 'Допомогти', link: '/help' },
