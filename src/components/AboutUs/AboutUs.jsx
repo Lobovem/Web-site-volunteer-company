@@ -3,17 +3,18 @@ import aboutUs from '../../img/aboutUs.jpg';
 import { TitleMain } from '../TitleMain/TitleMain';
 import s from './AboutUs.module.scss';
 
-export const AboutUs = () => {
+export const AboutUs = ({ children }) => {
   return (
     <div className={s.aboutUs}>
       <div className={s.aboutUs__wrap}>
-        <TitleSection title="український гуманітарний батальйон"></TitleSection>
+        {/* <TitleSection title="український гуманітарний батальйон"></TitleSection> */}
+        {children}
         <div className={s.aboutUs__contentWrap}>
           <div className={s.aboutUs__imgWrap}>
             <img className={s.aboutUs__img} src={aboutUs} alt="aboutUs.jpg" />
           </div>
           <div className={s.aboutUs__textWrap}>
-            <TitleMain title="Ми благодійний фонд"></TitleMain>
+            <TitleMain title="Міжнародний благодійний фонд “Український гуманітарний батальйон”"></TitleMain>
             <p className={s.aboutUs__desc}>
               За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його
               структуру, з можливістю вставляти зовнішні посилання, але не тільки. Фактично, вставляючи будь -який фантастичний текст або відомий текст, це

@@ -1,12 +1,13 @@
 import { useSelector } from 'react-redux';
 import { burgerMenuSelector } from '../store/reducer';
 import s from './Menu.module.scss';
+import { Link } from 'react-router-dom';
 
 export const Menu = () => {
   const burgerMenu = useSelector(burgerMenuSelector);
 
   const menuList = [
-    { id: 1, title: 'Про нас', link: '/about' },
+    { id: 1, title: 'Про нас', link: '/AboutUs' },
     { id: 2, title: 'Новини', link: '/news' },
     { id: 3, title: 'Отримати допомогу', link: '/get-help' },
     { id: 4, title: 'Допомогти', link: '/help' },
@@ -19,9 +20,9 @@ export const Menu = () => {
         {menuList.map((item) => {
           return (
             <li key={item.id} className={s.menu__item}>
-              <a className={s.menu__link} href={item.link}>
+              <Link to={item.link} className={s.menu__link}>
                 {item.title}
-              </a>
+              </Link>
             </li>
           );
         })}

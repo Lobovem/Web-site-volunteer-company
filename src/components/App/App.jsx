@@ -14,6 +14,11 @@ import { Teams } from '../Teams/Teams';
 import { Contacts } from '../Contacts/Contacts';
 import { Form } from '../Form/Form';
 import { Footer } from '../Footer/Footer';
+// import { Breadcrumbs } from '../Breadcrumbs/Breadcrumb';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; //importing routing elements
+// import { ErrorPage } from './components/ErrorPage';
+import { PageAboutUs } from '../PageAboutUs/PageAboutUs';
+import { TitleSection } from '../TitleSection/TitleSection';
 import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs';
 
 function App() {
@@ -29,19 +34,45 @@ function App() {
 
   return (
     <div>
-      <PageHome>
-        <Header></Header>
-        <Banner></Banner>
-        <AboutUs></AboutUs>
-        <News></News>
-        <OurResult></OurResult>
-        <WaySupport></WaySupport>
-        <Donate></Donate>
-        <Teams></Teams>
-        <Contacts></Contacts>
-        <Form></Form>
-        <Footer></Footer>
-      </PageHome>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <PageHome>
+              <Header></Header>
+              <Banner></Banner>
+              <AboutUs>
+                <TitleSection title="український гуманітарний батальйон"></TitleSection>
+              </AboutUs>
+              <News></News>
+              <OurResult></OurResult>
+              <WaySupport></WaySupport>
+              <Donate></Donate>
+              <Teams></Teams>
+              <Contacts></Contacts>
+              <Form></Form>
+              <Footer></Footer>
+            </PageHome>
+          }
+        />
+        <Route
+          path="/AboutUs"
+          element={
+            <PageAboutUs>
+              <Header></Header>
+              <Breadcrumbs></Breadcrumbs>
+              <AboutUs>
+                <TitleSection title="про нас"></TitleSection>
+              </AboutUs>
+              <Teams></Teams>
+              <Donate></Donate>
+              <Footer></Footer>
+            </PageAboutUs>
+          }
+        />
+        {/* <Route path="/listFotos" element={<ListFotos />} /> */}
+        {/* <Route path="*" element={<ErrorPage />} /> */}
+      </Routes>
     </div>
   );
 }

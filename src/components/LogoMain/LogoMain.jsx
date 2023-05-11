@@ -1,11 +1,12 @@
 import React from 'react';
 import logo from '../../img/logo-main.svg';
 import s from './LogoMain.module.scss';
+import { Link } from 'react-router-dom';
 
 export const LogoMain = () => {
   return (
-    <a className={s.logoMain} href="./">
-      <img className={s.logoMain__img} src={logo} alt="ukraine-flag.png" />
-    </a>
+    <Link to="/" className={s.logoMain}>
+      <img src={logo} alt="ukraine-flag.png" />
+    </Link>
   );
 };
