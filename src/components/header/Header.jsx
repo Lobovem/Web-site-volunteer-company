@@ -4,17 +4,20 @@ import { LogoMain } from '../LogoMain/LogoMain';
 import { Burger } from '../kit/Burger/Burger';
 import s from './Header.module.scss';
 
-export const Header = () => {
+export const Header = ({ children }) => {
   return (
-    <header className={s.header}>
-      <div className={s.header__wrap}>
-        <LogoMain></LogoMain>
-        <div className={s.header__menuWrap}>
-          <Burger></Burger>
-          <Menu></Menu>
-          <LangSite href="#"></LangSite>
+    <>
+      <header className={s.header}>
+        <div className={s.header__wrap}>
+          <LogoMain></LogoMain>
+          <div className={s.header__menuWrap}>
+            <Burger></Burger>
+            <Menu></Menu>
+            <LangSite href="#"></LangSite>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+      {children}
+    </>
   );
 };

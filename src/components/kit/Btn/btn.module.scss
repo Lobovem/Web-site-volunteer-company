@@ -19,6 +19,7 @@
   text-transform: uppercase;
   color: $color-white;
   z-index: 1000;
+  cursor: pointer;
 
   &:before {
     content: "";
@@ -58,6 +59,7 @@
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  cursor: pointer;
 
   &:hover {
     background: $color-white;
