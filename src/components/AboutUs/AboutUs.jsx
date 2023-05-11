@@ -1,4 +1,3 @@
-import { TitleSection } from '../TitleSection/TitleSection';
 import aboutUs from '../../img/aboutUs.jpg';
 import { TitleMain } from '../TitleMain/TitleMain';
 import s from './AboutUs.module.scss';
@@ -7,7 +6,6 @@ export const AboutUs = ({ children }) => {
   return (
     <div className={s.aboutUs}>
       <div className={s.aboutUs__wrap}>
-        {/* <TitleSection title="український гуманітарний батальйон"></TitleSection> */}
         {children}
         <div className={s.aboutUs__contentWrap}>
           <div className={s.aboutUs__imgWrap}>

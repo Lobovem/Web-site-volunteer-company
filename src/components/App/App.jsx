@@ -15,7 +15,7 @@ import { Contacts } from '../Contacts/Contacts';
 import { Form } from '../Form/Form';
 import { Footer } from '../Footer/Footer';
 // import { Breadcrumbs } from '../Breadcrumbs/Breadcrumb';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; //importing routing elements
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; //importing routing elements
 // import { ErrorPage } from './components/ErrorPage';
 import { PageAboutUs } from '../PageAboutUs/PageAboutUs';
 import { TitleSection } from '../TitleSection/TitleSection';
@@ -57,6 +57,9 @@ function App() {
         />
         <Route
           path="/AboutUs"
+          // handle={{
+          //   crumb: () => 'GENERAL',
+          // }}
           element={
             <PageAboutUs>
               <Header></Header>

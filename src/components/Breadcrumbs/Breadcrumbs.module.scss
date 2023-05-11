@@ -2,3 +2,22 @@
 @import './src/styles/Variables.module.scss';
 @import './src/styles/MixinsLayout.module.scss';
 @import './src/styles/MixinsKit.module.scss';
+
+.breadcrumbs {
+
+  @include layoutLarge;
+  padding: 10px 0;
+  display: flex;
+  gap: 10px;
+
+  &__link {
+    text-decoration: none;
+    color: $color-black;
+    font-weight: $font-weight-400;
+    font-size: $font-size-14;
+    line-height: 14px;
+    color: $color-main;
+    mix-blend-mode: normal;
+  }
+
+}
