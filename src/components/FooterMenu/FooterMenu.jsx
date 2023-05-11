@@ -1,4 +1,4 @@
-import s from './FootetMenu.module.scss';
+import s from './FooterMenu.module.scss';
 
 export const FooterMenu = () => {
   const menuList = [

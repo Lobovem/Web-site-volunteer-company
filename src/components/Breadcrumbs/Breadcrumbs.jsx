@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import s from './Breadcrumbs.module.scss';
 
-export const CustomPropsBreadcrumb = ({ someProp }) => <span>{someProp}</span>;
+// export const CustomPropsBreadcrumb = ({ someProp }) => <span>{someProp}</span>;
 
 export const Breadcrumbs = () => {
   const routes = [
@@ -13,11 +13,17 @@ export const Breadcrumbs = () => {
   ];
 
   const breadcrumbs = useBreadcrumbs(routes);
+  console.log(breadcrumbs);
+  console.log(breadcrumbs[0].location.pathname);
 
   return (
     <div className={s.breadcrumbs}>
-      {breadcrumbs.map(({ match, breadcrumb }) => (
-        <Link className={s.breadcrumbs__link} key={match.pathname} to={match.pathname}>
+      {breadcrumbs.map(({ location, match, breadcrumb }) => (
+        <Link
+          className={location.pathname === match.pathname ? s.breadcrumbs__link : `${s.breadcrumbs__link} ${s.breadcrumbs__link_active}`}
+          key={match.pathname}
+          to={match.pathname}
+        >
           {breadcrumb}
         </Link>
       ))}

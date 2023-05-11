@@ -20,7 +20,7 @@ export const FooterContacts = () => {
 
         <div className={s.contacts__adressBox}>
           <img className={s.contacts__img} src={adress} alt="icon-adress.svg" />
-          <adress className={s.contacts__desc}>м. Харків, вул.Космічна, буд. 21, оф. 529</adress>
+          <address className={s.contacts__desc}>м. Харків, вул.Космічна, буд. 21, оф. 529</address>
         </div>
       </div>
     </div>

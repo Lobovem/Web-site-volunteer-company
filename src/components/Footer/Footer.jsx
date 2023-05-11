@@ -1,4 +1,4 @@
-import { FooterMenu } from '../FootetMenu/FootetMenu';
+import { FooterMenu } from '../FooterMenu/FooterMenu';
 import s from './Footer.module.scss';
 
 import logo from '../../img/logo-second.png';

@@ -19,7 +19,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 // import { ErrorPage } from './components/ErrorPage';
 import { PageAboutUs } from '../PageAboutUs/PageAboutUs';
 import { TitleSection } from '../TitleSection/TitleSection';
-import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs';
+import { Breadcrumbs, CustomPropsBreadcrumb } from '../Breadcrumbs/Breadcrumbs';
 
 function App() {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -57,9 +57,7 @@ function App() {
         />
         <Route
           path="/AboutUs"
-          // handle={{
-          //   crumb: () => 'GENERAL',
-          // }}
+          // breadcrumb="Custom Example"
           element={
             <PageAboutUs>
               <Header></Header>
