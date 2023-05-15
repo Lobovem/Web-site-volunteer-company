@@ -26,6 +26,7 @@ import {
   TeamsWithHOC,
   WayWithHOC,
 } from '../SectionHOC/SectionHOC';
+import { PaginatedItems } from '../Pagination/PaginatedItems';
 
 function App() {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -130,12 +131,10 @@ function App() {
               <Header></Header>
               <Breadcrumbs></Breadcrumbs>
 
-              <NewAllWithHOC
-                titleSection="новини"
-                classNameSectionWrap="sectionWrapShort"
-                classNameTitleSection="titleSection"
-                classNameSection="sectionAlt"
-              ></NewAllWithHOC>
+              <NewAllWithHOC titleSection="новини" classNameSectionWrap="sectionWrapShort" classNameTitleSection="titleSection" classNameSection="sectionAlt">
+                <PaginatedItems itemsPerPage={3}></PaginatedItems>
+              </NewAllWithHOC>
+
               <Footer></Footer>
             </PageNews>
           }

@@ -3,7 +3,7 @@
 @import './src/styles/MixinsLayout.module.scss';
 @import './src/styles/MixinsKit.module.scss';
 
-.sectionNews {
+.NewsAll {
   position: relative;
 
   &__decor {
@@ -26,47 +26,6 @@
       color: $color-grey;
       mix-blend-mode: normal;
       transform: rotate(-90deg);
-    }
-  }
-
-  &__inner {
-    @include xl-min {
-      display: flex;
-      gap: 60px;
-    }
-  }
-
-  &__textWrap {
-    @include xl-min {
-      max-width: 300px;
-    }
-  }
-
-  &__desc {
-    font-size: $font-size-14;
-    line-height: 21px;
-    color: $color-black;
-    mix-blend-mode: normal;
-
-    @include xl-min {
-      margin-bottom: 50px;
-
-    }
-  }
-
-  &__link {
-    display: block;
-    font-weight: $font-weight-600;
-    font-size: $font-size-14;
-    line-height: 14px;
-    color: $color-main;
-    mix-blend-mode: normal;
-    text-decoration: none;
-    margin-bottom: 30px;
-    @include hoverAnimation;
-
-    &:hover {
-      color: $color-hover;
     }
   }
 }
