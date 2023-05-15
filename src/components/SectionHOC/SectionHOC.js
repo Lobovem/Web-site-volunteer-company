@@ -6,7 +6,7 @@ import { WaySupport } from '../WaySupport/WaySupport';
 import { Donate } from '../Donate/Donate';
 import { Teams } from '../Teams/Teams';
 import { Contacts } from '../Contacts/Contacts';
-import { Form } from 'react-router-dom';
+import { Form } from '../Form/Form';
 import { Pagination } from '../Pagination/Pagination';
 import s from './SectionHOC.module.scss';
 
@@ -20,12 +20,12 @@ export const SectionHOC = (Component) => (props) =>
     </section>
   );
 
-export const AboutUsWithHOC = SectionHOC(AboutUs);
-export const NewsWithHOC = SectionHOC(News);
-export const OurRulesWithHOC = SectionHOC(OurResult);
-export const WayWithHOC = SectionHOC(WaySupport);
-export const DonateWithHOC = SectionHOC(Donate);
-export const TeamsWithHOC = SectionHOC(Teams);
-export const ContactsWithHOC = SectionHOC(Contacts);
-export const FormWithHOC = SectionHOC(Form);
-export const PaginationWithHOC = SectionHOC(Pagination);
+export const AboutUsWithLayout = SectionHOC(AboutUs);
+export const NewsWithLayout = SectionHOC(News);
+export const OurRulesWithLayout = SectionHOC(OurResult);
+export const WayWithLayout = SectionHOC(WaySupport);
+export const DonateWithLayout = SectionHOC(Donate);
+export const TeamsWithLayout = SectionHOC(Teams);
+export const ContactsWithLayout = SectionHOC(Contacts);
+export const FormWithLayout = SectionHOC(Form);
+export const PaginationWithLayout = SectionHOC(Pagination);

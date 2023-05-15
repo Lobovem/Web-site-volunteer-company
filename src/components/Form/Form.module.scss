@@ -4,12 +4,7 @@
 @import './src/styles/MixinsKit.module.scss';
 
 .form {
-  background: $color-grey;
-
   &__wrap {
-    @include layoutMain;
-    padding-bottom: 125px;
-
     @media(min-width: 750px) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -18,7 +13,7 @@
 
     @include lg-min {
       gap: 50px;
-      padding-bottom: 250px;
+      padding-bottom: 50px;
 
     }
   }

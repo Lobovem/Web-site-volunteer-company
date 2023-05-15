@@ -15,20 +15,18 @@ import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs';
 import { PageNews } from '../PageNews/PageNews';
 import { ErrorPage } from '../PageError/ErrorPage';
 import {
-  AboutUsWithHOC,
-  PaginationWithHOC,
-  ContactsWithHOC,
-  DonateWithHOC,
-  NewsWithHOC,
-  OurRulesWithHOC,
-  TeamsWithHOC,
-  WayWithHOC,
+  AboutUsWithLayout,
+  PaginationWithLayout,
+  ContactsWithLayout,
+  DonateWithLayout,
+  NewsWithLayout,
+  OurRulesWithLayout,
+  TeamsWithLayout,
+  WayWithLayout,
+  FormWithLayout,
 } from '../SectionHOC/SectionHOC';
-import { Pagination } from '../Pagination/Pagination';
-// import { Pagination } from '../Pagination/Pagination';
-// import { NewsAll } from '../NewsList/NewsList';
 
-function App() {
+export const App = () => {
   const burgerMenu = useSelector(burgerMenuSelector);
 
   useEffect(() => {
@@ -48,52 +46,57 @@ function App() {
             <PageHome>
               <Header></Header>
               <Banner></Banner>
-              <AboutUsWithHOC
+              <AboutUsWithLayout
                 titleSection="український гуманітарний батальйон"
                 classNameSectionWrap="sectionWrap"
                 classNameTitleSection="titleSection"
                 classNameSection="section"
-              ></AboutUsWithHOC>
+              ></AboutUsWithLayout>
 
-              <NewsWithHOC
+              <NewsWithLayout
                 titleSection="новини"
                 classNameSectionWrap="sectionWrap"
                 classNameTitleSection="titleSection"
                 classNameSection="sectionAlt"
-              ></NewsWithHOC>
+              ></NewsWithLayout>
 
-              <OurRulesWithHOC
+              <OurRulesWithLayout
                 titleSection="наші результати"
                 classNameSectionWrap="sectionWrap"
                 classNameTitleSection="titleSection"
                 classNameSection="section"
-              ></OurRulesWithHOC>
+              ></OurRulesWithLayout>
 
-              <WayWithHOC
+              <WayWithLayout
                 titleSection="напрямки підтримки"
                 classNameSectionWrap="sectionWrap"
                 classNameTitleSection="titleSection"
                 classNameSection="sectionAlt"
-              ></WayWithHOC>
+              ></WayWithLayout>
 
-              <DonateWithHOC classNameSectionWrap="sectionWrap" classNameTitleSection="visuallyHidden" classNameSection="section"></DonateWithHOC>
+              <DonateWithLayout classNameSectionWrap="sectionWrap" classNameTitleSection="visuallyHidden" classNameSection="section"></DonateWithLayout>
 
-              <TeamsWithHOC
+              <TeamsWithLayout
                 titleSection="команда"
                 classNameSectionWrap="sectionWrapAlt"
                 classNameTitleSection="titleSection"
                 classNameSection="sectionShort"
-              ></TeamsWithHOC>
+              ></TeamsWithLayout>
 
-              <ContactsWithHOC
+              <ContactsWithLayout
                 titleSection="контакти"
                 classNameSectionWrap="sectionWrap"
                 classNameTitleSection="titleSection"
                 classNameSection="section"
-              ></ContactsWithHOC>
+              ></ContactsWithLayout>
 
-              <Form></Form>
-              {/* <FormWithHOC></FormWithHOC> */}
+              {/* <Form></Form> */}
+              <FormWithLayout
+                titleSection="форма зворотнього зв'язку"
+                classNameSectionWrap="sectionWrapShort"
+                classNameTitleSection="visuallyHidden"
+                classNameSection="section"
+              ></FormWithLayout>
               <Footer></Footer>
             </PageHome>
           }
@@ -104,21 +107,21 @@ function App() {
             <PageAboutUs>
               <Header></Header>
               <Breadcrumbs></Breadcrumbs>
-              <AboutUsWithHOC
+              <AboutUsWithLayout
                 titleSection="про нас"
                 classNameSectionWrap="sectionWrapShort"
                 classNameTitleSection="titleSection"
                 classNameSection="section"
-              ></AboutUsWithHOC>
+              ></AboutUsWithLayout>
 
-              <TeamsWithHOC
+              <TeamsWithLayout
                 titleSection="команда"
                 classNameSectionWrap="sectionWrapAlt"
                 classNameTitleSection="titleSection"
                 classNameSection="sectionShort"
-              ></TeamsWithHOC>
+              ></TeamsWithLayout>
 
-              <DonateWithHOC classNameSectionWrap="sectionWrap" classNameTitleSection="visuallyHidden" classNameSection="section"></DonateWithHOC>
+              <DonateWithLayout classNameSectionWrap="sectionWrap" classNameTitleSection="visuallyHidden" classNameSection="section"></DonateWithLayout>
 
               <Footer></Footer>
             </PageAboutUs>
@@ -131,13 +134,13 @@ function App() {
               <Header></Header>
               <Breadcrumbs></Breadcrumbs>
 
-              <PaginationWithHOC
+              <PaginationWithLayout
                 titleSection="новини"
                 classNameSectionWrap="sectionWrapShort"
                 classNameTitleSection="titleSection"
                 classNameSection="sectionAlt"
                 itemsPerPage={3}
-              ></PaginationWithHOC>
+              ></PaginationWithLayout>
               {/* <Pagination itemsPerPage={3}></Pagination> */}
 
               <Footer></Footer>
@@ -148,6 +151,4 @@ function App() {
       </Routes>
     </div>
   );
-}
-
-export default App;
+};
