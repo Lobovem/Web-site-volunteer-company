@@ -1,39 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
-import s from './PaginatedItems.module.scss';
-import { TitleMain } from '../TitleMain/TitleMain';
 
 // Example items, to simulate fetching from another resources.
 import data from '../../data/data.json';
-
-const NewsAll = ({ currentItems }) => {
-  return (
-    <div className={s.NewsAll}>
-      <h3 className={s.NewsAll__decor}>Новини</h3>
-      <div className={s.news__wrap}>
-        {currentItems &&
-          currentItems.map((item) => (
-            <div className={s.news__inner}>
-              <div className={s.news__imgWrap}>
-                <img className={s.news__img} src={item.photo} alt="news.jpg" />
-              </div>
-
-              <div className={s.news__textBox}>
-                <div className={s.news__textWrap}>
-                  <TitleMain title={item.title}></TitleMain>
-                  <p className={s.news__desc}>{item.desc}</p>
-                </div>
-
-                <a className={s.news__link} href="/">
-                  Читати повністю
-                </a>
-              </div>
-            </div>
-          ))}
-      </div>
-    </div>
-  );
-};
+import s from './PaginatedItems.module.scss';
+import { NewsAll } from '../NewsAll/NewsAll';
 
 export const PaginatedItems = ({ itemsPerPage }) => {
   // Here we use item offsets; we could also use page offsets
