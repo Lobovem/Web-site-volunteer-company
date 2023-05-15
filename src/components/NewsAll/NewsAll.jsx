@@ -1,5 +1,4 @@
 import { TitleMain } from '../TitleMain/TitleMain';
-// import data from '../../data/data.json';
 import s from './NewsAll.module.scss';
 
 export const NewsAll = ({ currentItems }) => {

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
-
 // Example items, to simulate fetching from another resources.
 import data from '../../data/data.json';
-import s from './PaginatedItems.module.scss';
+import s from './Pagination.module.scss';
 import { NewsAll } from '../NewsAll/NewsAll';
 
-export const PaginatedItems = ({ itemsPerPage }) => {
+export const Pagination = ({ itemsPerPage }) => {
   // Here we use item offsets; we could also use page offsets
   // following the API or data you're working with.
   const [item, setItem] = useState(0);
