@@ -21,6 +21,7 @@ import { PageAboutUs } from '../PageAboutUs/PageAboutUs';
 import { TitleSection } from '../TitleSection/TitleSection';
 import { Breadcrumbs, CustomPropsBreadcrumb } from '../Breadcrumbs/Breadcrumbs';
 import { PageNews } from '../PageNews/PageNews';
+import { ErrorPage } from '../PageError/ErrorPage';
 
 function App() {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -77,12 +78,11 @@ function App() {
             <PageNews>
               <Header></Header>
               <Breadcrumbs></Breadcrumbs>
-              <News></News>
               <Footer></Footer>
             </PageNews>
           }
         />
-        {/* <Route path="*" element={<ErrorPage />} /> */}
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
   );
