@@ -22,7 +22,7 @@ import { TitleSection } from '../TitleSection/TitleSection';
 import { Breadcrumbs, CustomPropsBreadcrumb } from '../Breadcrumbs/Breadcrumbs';
 import { PageNews } from '../PageNews/PageNews';
 import { ErrorPage } from '../PageError/ErrorPage';
-import { AboutUsWithHOC, DonateWithHOC, NewsWithHOC, OurRulesWithHOC, WayWithHOC } from '../SectionHOC/SectionHOC';
+import { AboutUsWithHOC, DonateWithHOC, NewsWithHOC, OurRulesWithHOC, TeamsWithHOC, WayWithHOC } from '../SectionHOC/SectionHOC';
 
 function App() {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -45,15 +45,36 @@ function App() {
               <Header></Header>
               <Banner></Banner>
               <AboutUsWithHOC
+                clasNameSectionWrap="sectionWrap"
                 titleSection="український гуманітарний батальйон"
                 classNameTitleSection="titleSection"
                 classNameSection="section"
               ></AboutUsWithHOC>
-              <NewsWithHOC titleSection="новини" classNameTitleSection="titleSection" classNameSection="sectionAlt"></NewsWithHOC>
-              <OurRulesWithHOC titleSection="наші результати" classNameTitleSection="titleSection" classNameSection="section"></OurRulesWithHOC>
-              <WayWithHOC titleSection="напрямки підтримки" classNameTitleSection="titleSection" classNameSection="sectionAlt"></WayWithHOC>
-              <DonateWithHOC classNameTitleSection="visuallyHidden" classNameSection="section"></DonateWithHOC>
-              <Teams></Teams>
+              <NewsWithHOC
+                clasNameSectionWrap="sectionWrap"
+                titleSection="новини"
+                classNameTitleSection="titleSection"
+                classNameSection="sectionAlt"
+              ></NewsWithHOC>
+              <OurRulesWithHOC
+                clasNameSectionWrap="sectionWrap"
+                titleSection="наші результати"
+                classNameTitleSection="titleSection"
+                classNameSection="section"
+              ></OurRulesWithHOC>
+              <WayWithHOC
+                clasNameSectionWrap="sectionWrap"
+                titleSection="напрямки підтримки"
+                classNameTitleSection="titleSection"
+                classNameSection="sectionAlt"
+              ></WayWithHOC>
+              <DonateWithHOC clasNameSectionWrap="sectionWrap" classNameTitleSection="visuallyHidden" classNameSection="section"></DonateWithHOC>
+              <TeamsWithHOC
+                clasNameSectionWrap="sectionWrapAlt"
+                titleSection="команда"
+                classNameTitleSection="titleSection"
+                classNameSection="sectionShort"
+              ></TeamsWithHOC>
               <Contacts></Contacts>
               <Form></Form>
               <Footer></Footer>
