@@ -1,10 +1,11 @@
-import { useSelector } from 'react-redux';
-import { burgerMenuSelector } from '../../store/reducer';
+import { useDispatch, useSelector } from 'react-redux';
+import { burgerMenuSelector, isOpenBurgerMenu } from '../../store/reducer';
 import s from './Menu.module.scss';
 import { Link } from 'react-router-dom';
 
 export const Menu = () => {
   const burgerMenu = useSelector(burgerMenuSelector);
+  const dispatch = useDispatch();
 
   const menuList = [
     { id: 1, title: 'Про нас', link: '/aboutUs' },
@@ -16,7 +17,7 @@ export const Menu = () => {
 
   return (
     <nav className={!burgerMenu ? s.menu : `${s.menu} ${s.active}`}>
-      <ul className={s.menu__list}>
+      <ul className={s.menu__list} onClick={() => dispatch(isOpenBurgerMenu())}>
         {menuList.map((item) => {
           return (
             <li key={item.id} className={s.menu__item}>
