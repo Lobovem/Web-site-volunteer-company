@@ -20,7 +20,7 @@
     font-weight: $font-weight-400;
     font-size: $font-size-14;
     line-height: 14px;
-    color: $color-main;
+    color: $color-grey-dark;
     mix-blend-mode: normal;
     cursor: pointer;
 
@@ -29,21 +29,23 @@
     }
 
     &_active {
-      color: $color-grey-dark;
-      ;
+      color: $color-main;
+      pointer-events: none;
+
+      &::after {
+        position: absolute;
+        content: '';
+        top: 4px;
+        left: -16px;
+
+        width: 6px;
+        height: 6px;
+        border-radius: 3px;
+        background: $color-grey-dark;
+      }
     }
 
-    &::after {
-      position: absolute;
-      content: '';
-      top: 4px;
-      right: -16px;
 
-      width: 6px;
-      height: 6px;
-      border-radius: 3px;
-      background: $color-grey-dark;
-    }
   }
 
 
