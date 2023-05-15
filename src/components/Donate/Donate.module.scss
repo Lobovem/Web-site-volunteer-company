@@ -4,21 +4,6 @@
 @import './src/styles/MixinsKit.module.scss';
 
 .donate {
-  background: $color-grey;
-
-  &__wrap {
-    @include layoutMain;
-    padding: 50px 0;
-
-    @include sm-min {
-      // max-width: 640px;
-    }
-
-    @include lg-min {
-      // max-width: 100%;
-      padding: 120px 0;
-    }
-  }
 
   &__header {
     background: $gradient-main;

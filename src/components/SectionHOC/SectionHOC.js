@@ -3,12 +3,14 @@ import { AboutUs } from '../AboutUs/AboutUs';
 import s from './SectionHOC.module.scss';
 import { News } from '../News/News';
 import { OurResult } from '../OurResult/OurResult';
+import { WaySupport } from '../WaySupport/WaySupport';
+import { Donate } from '../Donate/Donate';
 
 export const SectionHOC = (Component) => (props) =>
   (
     <section className={s[props.classNameSection]}>
       <div className={s.sectionWrap}>
-        <h1 className={s.titleSection}>{props.titleSection}</h1>
+        <h1 className={s[props.classNameTitleSection]}>{props.titleSection}</h1>
         <Component {...props} />
       </div>
     </section>
@@ -17,3 +19,5 @@ export const SectionHOC = (Component) => (props) =>
 export const AboutUsWithHOC = SectionHOC(AboutUs);
 export const NewsWithHOC = SectionHOC(News);
 export const OurRulesWithHOC = SectionHOC(OurResult);
+export const WayWithHOC = SectionHOC(WaySupport);
+export const DonateWithHOC = SectionHOC(Donate);

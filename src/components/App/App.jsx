@@ -22,7 +22,7 @@ import { TitleSection } from '../TitleSection/TitleSection';
 import { Breadcrumbs, CustomPropsBreadcrumb } from '../Breadcrumbs/Breadcrumbs';
 import { PageNews } from '../PageNews/PageNews';
 import { ErrorPage } from '../PageError/ErrorPage';
-import { AboutUsWithHOC, NewsWithHOC, OurRulesWithHOC } from '../SectionHOC/SectionHOC';
+import { AboutUsWithHOC, DonateWithHOC, NewsWithHOC, OurRulesWithHOC, WayWithHOC } from '../SectionHOC/SectionHOC';
 
 function App() {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -44,11 +44,15 @@ function App() {
             <PageHome>
               <Header></Header>
               <Banner></Banner>
-              <AboutUsWithHOC titleSection="український гуманітарний батальйон" classNameSection="section"></AboutUsWithHOC>
-              <NewsWithHOC titleSection="новини" classNameSection="sectionAlt"></NewsWithHOC>
-              <OurRulesWithHOC titleSection="наші результати" classNameSection="section"></OurRulesWithHOC>
-              <WaySupport></WaySupport>
-              <Donate></Donate>
+              <AboutUsWithHOC
+                titleSection="український гуманітарний батальйон"
+                classNameTitleSection="titleSection"
+                classNameSection="section"
+              ></AboutUsWithHOC>
+              <NewsWithHOC titleSection="новини" classNameTitleSection="titleSection" classNameSection="sectionAlt"></NewsWithHOC>
+              <OurRulesWithHOC titleSection="наші результати" classNameTitleSection="titleSection" classNameSection="section"></OurRulesWithHOC>
+              <WayWithHOC titleSection="напрямки підтримки" classNameTitleSection="titleSection" classNameSection="sectionAlt"></WayWithHOC>
+              <DonateWithHOC classNameTitleSection="visuallyHidden" classNameSection="section"></DonateWithHOC>
               <Teams></Teams>
               <Contacts></Contacts>
               <Form></Form>

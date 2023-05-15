@@ -5,16 +5,7 @@
 
 
 .waySupport {
-
-  &__wrap {
-    position: relative;
-    @include layoutMain;
-    padding: 50px 0;
-
-    @include lg-min {
-      padding: 120px 0;
-    }
-  }
+  position: relative;
 
   &__decor {
     display: none;
@@ -24,9 +15,9 @@
     @media (min-width: 1500px) {
       position: absolute;
       display: block;
-      top: 520px;
+      top: 290px;
       right: -570px;
-      z-index: -1;
+      z-index: 0;
       font-weight: $font-weight-500;
       font-size: $font-size-165;
       line-height: 165px;
