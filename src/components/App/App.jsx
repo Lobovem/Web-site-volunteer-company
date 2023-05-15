@@ -16,7 +16,16 @@ import { PageAboutUs } from '../PageAboutUs/PageAboutUs';
 import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs';
 import { PageNews } from '../PageNews/PageNews';
 import { ErrorPage } from '../PageError/ErrorPage';
-import { AboutUsWithHOC, ContactsWithHOC, DonateWithHOC, NewsWithHOC, OurRulesWithHOC, TeamsWithHOC, WayWithHOC } from '../SectionHOC/SectionHOC';
+import {
+  AboutUsWithHOC,
+  ContactsWithHOC,
+  DonateWithHOC,
+  NewAllWithHOC,
+  NewsWithHOC,
+  OurRulesWithHOC,
+  TeamsWithHOC,
+  WayWithHOC,
+} from '../SectionHOC/SectionHOC';
 
 function App() {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -40,44 +49,44 @@ function App() {
               <Banner></Banner>
               <AboutUsWithHOC
                 titleSection="український гуманітарний батальйон"
-                clasNameSectionWrap="sectionWrap"
+                classNameSectionWrap="sectionWrap"
                 classNameTitleSection="titleSection"
                 classNameSection="section"
               ></AboutUsWithHOC>
 
               <NewsWithHOC
                 titleSection="новини"
-                clasNameSectionWrap="sectionWrap"
+                classNameSectionWrap="sectionWrap"
                 classNameTitleSection="titleSection"
                 classNameSection="sectionAlt"
               ></NewsWithHOC>
 
               <OurRulesWithHOC
                 titleSection="наші результати"
-                clasNameSectionWrap="sectionWrap"
+                classNameSectionWrap="sectionWrap"
                 classNameTitleSection="titleSection"
                 classNameSection="section"
               ></OurRulesWithHOC>
 
               <WayWithHOC
                 titleSection="напрямки підтримки"
-                clasNameSectionWrap="sectionWrap"
+                classNameSectionWrap="sectionWrap"
                 classNameTitleSection="titleSection"
                 classNameSection="sectionAlt"
               ></WayWithHOC>
 
-              <DonateWithHOC clasNameSectionWrap="sectionWrap" classNameTitleSection="visuallyHidden" classNameSection="section"></DonateWithHOC>
+              <DonateWithHOC classNameSectionWrap="sectionWrap" classNameTitleSection="visuallyHidden" classNameSection="section"></DonateWithHOC>
 
               <TeamsWithHOC
                 titleSection="команда"
-                clasNameSectionWrap="sectionWrapAlt"
+                classNameSectionWrap="sectionWrapAlt"
                 classNameTitleSection="titleSection"
                 classNameSection="sectionShort"
               ></TeamsWithHOC>
 
               <ContactsWithHOC
                 titleSection="контакти"
-                clasNameSectionWrap="sectionWrap"
+                classNameSectionWrap="sectionWrap"
                 classNameTitleSection="titleSection"
                 classNameSection="section"
               ></ContactsWithHOC>
@@ -95,20 +104,20 @@ function App() {
               <Header></Header>
               <Breadcrumbs></Breadcrumbs>
               <AboutUsWithHOC
-                titleSection="український гуманітарний батальйон"
-                clasNameSectionWrap="sectionWrap"
+                titleSection="про нас"
+                classNameSectionWrap="sectionWrapShort"
                 classNameTitleSection="titleSection"
                 classNameSection="section"
               ></AboutUsWithHOC>
 
               <TeamsWithHOC
                 titleSection="команда"
-                clasNameSectionWrap="sectionWrapAlt"
+                classNameSectionWrap="sectionWrapAlt"
                 classNameTitleSection="titleSection"
                 classNameSection="sectionShort"
               ></TeamsWithHOC>
 
-              <DonateWithHOC clasNameSectionWrap="sectionWrap" classNameTitleSection="visuallyHidden" classNameSection="section"></DonateWithHOC>
+              <DonateWithHOC classNameSectionWrap="sectionWrap" classNameTitleSection="visuallyHidden" classNameSection="section"></DonateWithHOC>
 
               <Footer></Footer>
             </PageAboutUs>
@@ -120,6 +129,13 @@ function App() {
             <PageNews>
               <Header></Header>
               <Breadcrumbs></Breadcrumbs>
+
+              <NewAllWithHOC
+                titleSection="новини"
+                classNameSectionWrap="sectionWrapShort"
+                classNameTitleSection="titleSection"
+                classNameSection="sectionAlt"
+              ></NewAllWithHOC>
               <Footer></Footer>
             </PageNews>
           }

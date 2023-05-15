@@ -6,6 +6,10 @@
   background: $background-grey;
 }
 
+.sectionAlt {
+  background: $background-white;
+}
+
 .sectionWrap {
   @include layoutMain;
   padding: 50px 0;
@@ -21,6 +25,15 @@
 
   @include lg-min {
     padding: 120px 0 50px 0;
+  }
+}
+
+.sectionWrapShort {
+  @include layoutMain;
+  padding: 50px 0;
+
+  @include lg-min {
+    padding: 60px 0 120px 0;
   }
 }
 
