@@ -5,12 +5,10 @@ import { PageHome } from '../PageHome/PageHome';
 
 import { Header } from '../Header/Header';
 import { Banner } from '../Banner/Banner';
-import { Donate } from '../Donate/Donate';
-import { Teams } from '../Teams/Teams';
 import { Form } from '../Form/Form';
 import { Footer } from '../Footer/Footer';
 // import { Breadcrumbs } from '../Breadcrumbs/Breadcrumb';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; //importing routing elements
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; //importing routing elements
 // import { ErrorPage } from './components/ErrorPage';
 import { PageAboutUs } from '../PageAboutUs/PageAboutUs';
 import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs';
@@ -18,15 +16,17 @@ import { PageNews } from '../PageNews/PageNews';
 import { ErrorPage } from '../PageError/ErrorPage';
 import {
   AboutUsWithHOC,
+  PaginationWithHOC,
   ContactsWithHOC,
   DonateWithHOC,
-  NewAllWithHOC,
   NewsWithHOC,
   OurRulesWithHOC,
   TeamsWithHOC,
   WayWithHOC,
 } from '../SectionHOC/SectionHOC';
 import { Pagination } from '../Pagination/Pagination';
+// import { Pagination } from '../Pagination/Pagination';
+// import { NewsAll } from '../NewsList/NewsList';
 
 function App() {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -131,9 +131,14 @@ function App() {
               <Header></Header>
               <Breadcrumbs></Breadcrumbs>
 
-              <NewAllWithHOC titleSection="новини" classNameSectionWrap="sectionWrapShort" classNameTitleSection="titleSection" classNameSection="sectionAlt">
-                <Pagination itemsPerPage={3}></Pagination>
-              </NewAllWithHOC>
+              <PaginationWithHOC
+                titleSection="новини"
+                classNameSectionWrap="sectionWrapShort"
+                classNameTitleSection="titleSection"
+                classNameSection="sectionAlt"
+                itemsPerPage={3}
+              ></PaginationWithHOC>
+              {/* <Pagination itemsPerPage={3}></Pagination> */}
 
               <Footer></Footer>
             </PageNews>

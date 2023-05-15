@@ -1,6 +1,5 @@
 import React from 'react';
 import { AboutUs } from '../AboutUs/AboutUs';
-import s from './SectionHOC.module.scss';
 import { News } from '../News/News';
 import { OurResult } from '../OurResult/OurResult';
 import { WaySupport } from '../WaySupport/WaySupport';
@@ -8,7 +7,8 @@ import { Donate } from '../Donate/Donate';
 import { Teams } from '../Teams/Teams';
 import { Contacts } from '../Contacts/Contacts';
 import { Form } from 'react-router-dom';
-import { NewsAll } from '../NewsAll/NewsAll';
+import { Pagination } from '../Pagination/Pagination';
+import s from './SectionHOC.module.scss';
 
 export const SectionHOC = (Component) => (props) =>
   (
@@ -28,4 +28,4 @@ export const DonateWithHOC = SectionHOC(Donate);
 export const TeamsWithHOC = SectionHOC(Teams);
 export const ContactsWithHOC = SectionHOC(Contacts);
 export const FormWithHOC = SectionHOC(Form);
-export const NewAllWithHOC = SectionHOC(NewsAll);
+export const PaginationWithHOC = SectionHOC(Pagination);

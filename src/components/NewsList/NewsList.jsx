@@ -1,7 +1,7 @@
 import { TitleMain } from '../TitleMain/TitleMain';
-import s from './NewsAll.module.scss';
+import s from './NewsList.module.scss';
 
-export const NewsAll = ({ currentItems }) => {
+export const NewsList = ({ currentItems }) => {
   return (
     <div className={s.news}>
       <h3 className={s.news__decor}>Новини</h3>
