@@ -22,7 +22,7 @@ import { TitleSection } from '../TitleSection/TitleSection';
 import { Breadcrumbs, CustomPropsBreadcrumb } from '../Breadcrumbs/Breadcrumbs';
 import { PageNews } from '../PageNews/PageNews';
 import { ErrorPage } from '../PageError/ErrorPage';
-import { AboutUsWithHOC, DonateWithHOC, NewsWithHOC, OurRulesWithHOC, TeamsWithHOC, WayWithHOC } from '../SectionHOC/SectionHOC';
+import { AboutUsWithHOC, ContactsWithHOC, DonateWithHOC, NewsWithHOC, OurRulesWithHOC, TeamsWithHOC, WayWithHOC } from '../SectionHOC/SectionHOC';
 
 function App() {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -45,37 +45,49 @@ function App() {
               <Header></Header>
               <Banner></Banner>
               <AboutUsWithHOC
-                clasNameSectionWrap="sectionWrap"
                 titleSection="український гуманітарний батальйон"
+                clasNameSectionWrap="sectionWrap"
                 classNameTitleSection="titleSection"
                 classNameSection="section"
               ></AboutUsWithHOC>
+
               <NewsWithHOC
-                clasNameSectionWrap="sectionWrap"
                 titleSection="новини"
+                clasNameSectionWrap="sectionWrap"
                 classNameTitleSection="titleSection"
                 classNameSection="sectionAlt"
               ></NewsWithHOC>
+
               <OurRulesWithHOC
-                clasNameSectionWrap="sectionWrap"
                 titleSection="наші результати"
+                clasNameSectionWrap="sectionWrap"
                 classNameTitleSection="titleSection"
                 classNameSection="section"
               ></OurRulesWithHOC>
+
               <WayWithHOC
-                clasNameSectionWrap="sectionWrap"
                 titleSection="напрямки підтримки"
+                clasNameSectionWrap="sectionWrap"
                 classNameTitleSection="titleSection"
                 classNameSection="sectionAlt"
               ></WayWithHOC>
+
               <DonateWithHOC clasNameSectionWrap="sectionWrap" classNameTitleSection="visuallyHidden" classNameSection="section"></DonateWithHOC>
+
               <TeamsWithHOC
-                clasNameSectionWrap="sectionWrapAlt"
                 titleSection="команда"
+                clasNameSectionWrap="sectionWrapAlt"
                 classNameTitleSection="titleSection"
                 classNameSection="sectionShort"
               ></TeamsWithHOC>
-              <Contacts></Contacts>
+
+              <ContactsWithHOC
+                titleSection="контакти"
+                clasNameSectionWrap="sectionWrap"
+                classNameTitleSection="titleSection"
+                classNameSection="section"
+              ></ContactsWithHOC>
+
               <Form></Form>
               <Footer></Footer>
             </PageHome>

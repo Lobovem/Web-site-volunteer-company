@@ -6,6 +6,8 @@ import { OurResult } from '../OurResult/OurResult';
 import { WaySupport } from '../WaySupport/WaySupport';
 import { Donate } from '../Donate/Donate';
 import { Teams } from '../Teams/Teams';
+import { Contacts } from '../Contacts/Contacts';
+import { Form } from 'react-router-dom';
 
 export const SectionHOC = (Component) => (props) =>
   (
@@ -23,3 +25,5 @@ export const OurRulesWithHOC = SectionHOC(OurResult);
 export const WayWithHOC = SectionHOC(WaySupport);
 export const DonateWithHOC = SectionHOC(Donate);
 export const TeamsWithHOC = SectionHOC(Teams);
+export const ContactsWithHOC = SectionHOC(Contacts);
+export const FormWithHOC = SectionHOC(Form);

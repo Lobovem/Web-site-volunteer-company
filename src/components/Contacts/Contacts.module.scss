@@ -4,16 +4,6 @@
 @import './src/styles/MixinsKit.module.scss';
 
 .contacts {
-  background: $color-grey;
-
-  &__wrap {
-    @include layoutMain;
-    padding: 50px 0;
-
-    @include lg-min {
-      padding: 120px 0;
-    }
-  }
 
   &__mapWrap {
     overflow: hidden;
