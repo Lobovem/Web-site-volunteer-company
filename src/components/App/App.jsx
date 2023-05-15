@@ -22,6 +22,7 @@ import { TitleSection } from '../TitleSection/TitleSection';
 import { Breadcrumbs, CustomPropsBreadcrumb } from '../Breadcrumbs/Breadcrumbs';
 import { PageNews } from '../PageNews/PageNews';
 import { ErrorPage } from '../PageError/ErrorPage';
+import { AboutUsWithHOC } from '../SectionHOC/SectionHOC';
 
 function App() {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -63,9 +64,10 @@ function App() {
             <PageAboutUs>
               <Header></Header>
               <Breadcrumbs></Breadcrumbs>
-              <AboutUs>
+              <AboutUsWithHOC titleSection="про нас" classNameSection="section"></AboutUsWithHOC>
+              {/* <AboutUs>
                 <TitleSection title="про нас"></TitleSection>
-              </AboutUs>
+              </AboutUs> */}
               <Teams></Teams>
               <Donate></Donate>
               <Footer></Footer>
