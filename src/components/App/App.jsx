@@ -5,21 +5,15 @@ import { PageHome } from '../PageHome/PageHome';
 
 import { Header } from '../Header/Header';
 import { Banner } from '../Banner/Banner';
-import { AboutUs } from '../AboutUs/AboutUs';
-import { News } from '../News/News';
-import { OurResult } from '../OurResult/OurResult';
-import { WaySupport } from '../WaySupport/WaySupport';
 import { Donate } from '../Donate/Donate';
 import { Teams } from '../Teams/Teams';
-import { Contacts } from '../Contacts/Contacts';
 import { Form } from '../Form/Form';
 import { Footer } from '../Footer/Footer';
 // import { Breadcrumbs } from '../Breadcrumbs/Breadcrumb';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; //importing routing elements
 // import { ErrorPage } from './components/ErrorPage';
 import { PageAboutUs } from '../PageAboutUs/PageAboutUs';
-import { TitleSection } from '../TitleSection/TitleSection';
-import { Breadcrumbs, CustomPropsBreadcrumb } from '../Breadcrumbs/Breadcrumbs';
+import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs';
 import { PageNews } from '../PageNews/PageNews';
 import { ErrorPage } from '../PageError/ErrorPage';
 import { AboutUsWithHOC, ContactsWithHOC, DonateWithHOC, NewsWithHOC, OurRulesWithHOC, TeamsWithHOC, WayWithHOC } from '../SectionHOC/SectionHOC';
@@ -89,6 +83,7 @@ function App() {
               ></ContactsWithHOC>
 
               <Form></Form>
+              {/* <FormWithHOC></FormWithHOC> */}
               <Footer></Footer>
             </PageHome>
           }

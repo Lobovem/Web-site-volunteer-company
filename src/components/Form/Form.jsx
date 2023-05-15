@@ -1,6 +1,6 @@
-import { Btn } from '../kit/Btn/Btn';
 import photo from '../../img/form-photo.jpg';
 import sending from '../../img/form-sending.svg';
+import { Btn } from '../kit/Btn/Btn';
 import { useState } from 'react';
 import s from './Form.module.scss';
 
@@ -25,8 +25,6 @@ export const Form = () => {
     setInputDataForm({ ...inputDataForm, [e.target.name]: e.target.value });
   };
 
-  console.log('dataForm', dataForm);
-  console.log('inputDataForm', inputDataForm);
   return (
     <div className={s.form}>
       <div className={s.form__wrap}>
@@ -60,7 +58,7 @@ export const Form = () => {
               name="email"
               id="email"
               required
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               value={inputDataForm.email}
               onChange={handleChange}
             />
