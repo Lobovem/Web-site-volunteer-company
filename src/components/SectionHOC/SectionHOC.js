@@ -1,6 +1,8 @@
 import React from 'react';
 import { AboutUs } from '../AboutUs/AboutUs';
 import s from './SectionHOC.module.scss';
+import { News } from '../News/News';
+import { OurResult } from '../OurResult/OurResult';
 
 export const SectionHOC = (Component) => (props) =>
   (
@@ -13,3 +15,5 @@ export const SectionHOC = (Component) => (props) =>
   );
 
 export const AboutUsWithHOC = SectionHOC(AboutUs);
+export const NewsWithHOC = SectionHOC(News);
+export const OurRulesWithHOC = SectionHOC(OurResult);

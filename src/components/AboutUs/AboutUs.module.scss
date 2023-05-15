@@ -4,18 +4,6 @@
 
 
 .aboutUs {
-  // background: $background-grey;
-
-  &__wrap {
-
-    @include layoutMain;
-    // padding: 50px 0;
-
-    // @include lg-min {
-    //   padding: 120px 0;
-    // }
-  }
-
   &__contentWrap {
     @include lg-min {
       display: flex;

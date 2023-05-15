@@ -4,16 +4,7 @@
 @import './src/styles/MixinsKit.module.scss';
 
 .sectionNews {
-
-  &__wrap {
-    position: relative;
-    @include layoutMain;
-    padding: 50px 0;
-
-    @include lg-min {
-      padding: 120px 0;
-    }
-  }
+  position: relative;
 
   &__decor {
     margin: 0;
@@ -24,9 +15,9 @@
 
       position: absolute;
       display: block;
-      top: 380px;
+      top: 150px;
       left: -430px;
-      z-index: -1;
+      z-index: 0;
       font-weight: $font-weight-500;
       font-size: $font-size-165;
       line-height: 165px;
@@ -39,8 +30,6 @@
   }
 
   &__inner {
-    // min-height: 650px;
-
     @include xl-min {
       display: flex;
       gap: 60px;
