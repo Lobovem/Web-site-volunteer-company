@@ -94,9 +94,22 @@ function App() {
             <PageAboutUs>
               <Header></Header>
               <Breadcrumbs></Breadcrumbs>
-              <AboutUsWithHOC titleSection="про нас" classNameSection="section"></AboutUsWithHOC>
-              <Teams></Teams>
-              <Donate></Donate>
+              <AboutUsWithHOC
+                titleSection="український гуманітарний батальйон"
+                clasNameSectionWrap="sectionWrap"
+                classNameTitleSection="titleSection"
+                classNameSection="section"
+              ></AboutUsWithHOC>
+
+              <TeamsWithHOC
+                titleSection="команда"
+                clasNameSectionWrap="sectionWrapAlt"
+                classNameTitleSection="titleSection"
+                classNameSection="sectionShort"
+              ></TeamsWithHOC>
+
+              <DonateWithHOC clasNameSectionWrap="sectionWrap" classNameTitleSection="visuallyHidden" classNameSection="section"></DonateWithHOC>
+
               <Footer></Footer>
             </PageAboutUs>
           }
