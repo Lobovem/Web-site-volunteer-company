@@ -1,0 +1,54 @@
+@import './src/styles/MixinsMedia.module.scss';
+@import './src/styles/Variables.module.scss';
+@import './src/styles/MixinsLayout.module.scss';
+@import './src/styles/MixinsKit.module.scss';
+
+.simpleNews {
+  position: relative;
+
+  &__decor {
+    margin: 0;
+    padding: 0;
+    display: none;
+
+    @media (min-width: 1500px) {
+
+      position: absolute;
+      display: block;
+      top: 150px;
+      left: -430px;
+      z-index: 0;
+      font-weight: $font-weight-500;
+      font-size: $font-size-165;
+      line-height: 165px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $color-grey;
+      mix-blend-mode: normal;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+
+    @include xl-min {
+      display: flex;
+      flex-direction: row;
+      gap: 60px;
+    }
+  }
+
+  &__text {
+    @include xl-min {
+      max-width: 250px;
+    }
+
+    font-size: $font-size-14;
+    line-height: 21px;
+    color: $color-black;
+    mix-blend-mode: normal;
+
+  }
+}

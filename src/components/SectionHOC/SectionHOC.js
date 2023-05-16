@@ -9,6 +9,7 @@ import { Contacts } from '../Contacts/Contacts';
 import { Form } from '../Form/Form';
 import { Pagination } from '../Pagination/Pagination';
 import s from './SectionHOC.module.scss';
+import { SimpleNews } from '../SimpleNews/SimpleNews';
 
 export const SectionHOC = (Component) => (props) =>
   (
@@ -29,3 +30,4 @@ export const TeamsWithLayout = SectionHOC(Teams);
 export const ContactsWithLayout = SectionHOC(Contacts);
 export const FormWithLayout = SectionHOC(Form);
 export const PaginationWithLayout = SectionHOC(Pagination);
+export const SimpleNewsnWithLayout = SectionHOC(SimpleNews);

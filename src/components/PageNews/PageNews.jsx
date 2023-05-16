@@ -10,7 +10,7 @@ export const PageNews = () => {
         classNameSectionWrap="sectionWrapShort"
         classNameTitleSection="titleSection"
         classNameSection="sectionAlt"
-        itemsPerPage={3}
+        itemsPerPage={5}
       ></PaginationWithLayout>
     </>
   );

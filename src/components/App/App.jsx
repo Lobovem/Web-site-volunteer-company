@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; //imp
 import { PageAboutUs } from '../PageAboutUs/PageAboutUs';
 import { PageNews } from '../PageNews/PageNews';
 import { PageError } from '../PageError/PageError';
+import { PageSimpleNews } from '../PageSimpleNews/PageSimpleNews';
 
 export const App = () => {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -27,6 +28,7 @@ export const App = () => {
         <Route path="/" element={<PageHome></PageHome>} />
         <Route path="/aboutUs" element={<PageAboutUs></PageAboutUs>} />
         <Route path="/news" element={<PageNews></PageNews>} />
+        <Route path="/news/simple-news" element={<PageSimpleNews></PageSimpleNews>} />
         <Route path="*" element={<PageError />} />
       </Routes>
       <Footer></Footer>
