@@ -1,21 +1,31 @@
+import { useParams } from 'react-router-dom';
 import { SliderFifth } from '../Sliders/SliderFifth/SliderFifth';
 import { YoutubeVideo } from '../YoutubeVideo/YoutubeVideo';
+import data from '../../data/data.json';
 import s from './SimpleNews.module.scss';
 
 export const SimpleNews = () => {
+  const { newsId } = useParams();
+  console.log('newsId=====>', newsId);
+
+  const news = data.filter((item) => item.id === newsId);
   return (
     <>
       <div className={s.simpleNews}>
-        <h3 className={s.simpleNews__decor}>Новини</h3>
-        <div className={s.simpleNews__wrap}>
-          <p className={s.simpleNews__text}>
-            За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його
-            структуру, з можливістю вставляти зовнішні посилання, але не тільки. Фактично, вставляючи будь -який фантастичний текст або відомий текст, це вірш,
-            промова, літературний уривок, текст пісні тощо, наш текстовий генератор забезпечить випадкове виділення термінів і кроків для створення власного
-            ексклюзивного Lorem Ipsum. Фактично...
-          </p>
-          <SliderFifth></SliderFifth>
-        </div>
+        {news.map((item) => (
+          <div>
+            <h1>{item.title}</h1>
+            <div className={s.simpleNews__wrap}>
+              <h3 className={s.simpleNews__decor}>Новини</h3>
+              {/* <div className={s.simpleNews__wrap}> */}
+              <div>
+                <p className={s.simpleNews__text}>{item.desc}</p>
+                {/* </div> */}
+              </div>
+              <SliderFifth></SliderFifth>
+            </div>
+          </div>
+        ))}
       </div>
       <YoutubeVideo></YoutubeVideo>
     </>

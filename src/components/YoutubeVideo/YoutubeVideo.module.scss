@@ -5,6 +5,8 @@
 
 .youtubeVideo {
 
+  @include layoutMain;
+
   &__wrapIframe {
     overflow: hidden;
     padding-bottom: 56.25%;

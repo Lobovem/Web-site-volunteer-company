@@ -8,8 +8,9 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { PageAboutUs } from '../PageAboutUs/PageAboutUs';
 import { PageNews } from '../PageNews/PageNews';
 import { PageError } from '../PageError/PageError';
-import { PageSimpleNews } from '../PageSimpleNews1/PageSimpleNews1';
+import { PageSimpleNews, PageSimpleNews1 } from '../PageSimpleNews/PageSimpleNews';
 import { PageGetHelp } from '../PageGetHelp/PageGetHelp';
+import { NewsList, Product } from '../NewsList/NewsList';
 
 export const App = () => {
   const burgerMenu = useSelector(burgerMenuSelector);
@@ -28,8 +29,8 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<PageHome />} />
         <Route path="/aboutUs" element={<PageAboutUs />} />
-        <Route path="/news/*" element={<PageNews />}></Route>
-        {/* <Route path="/news/simple-news" element={<PageSimpleNews />} /> */}
+        <Route path="/news" element={<PageNews />}></Route>
+        <Route path="/news/:newsId" element={<PageSimpleNews />} />
         <Route path="/get-help" element={<PageGetHelp />} />
         <Route path="*" element={<PageError />} />
       </Routes>
