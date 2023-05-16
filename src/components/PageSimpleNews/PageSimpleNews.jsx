@@ -16,7 +16,7 @@ export const PageSimpleNews = () => {
         titleSection="Допомогти"
         classNameSectionWrap="sectionWrapShortLarge"
         classNameTitleSection="visuallyHidden"
-        classNameSection="sectionAlt"
+        classNameSection="section"
       ></DonateWithLayout>
     </>
   );
