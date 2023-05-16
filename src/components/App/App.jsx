@@ -23,15 +23,15 @@ export const App = () => {
 
   return (
     <div>
-      <Header></Header>
+      <Header />
       <Routes>
-        <Route path="/" element={<PageHome></PageHome>} />
-        <Route path="/aboutUs" element={<PageAboutUs></PageAboutUs>} />
-        <Route path="/news" element={<PageNews></PageNews>} />
-        <Route path="/news/simple-news" element={<PageSimpleNews></PageSimpleNews>} />
+        <Route path="/" element={<PageHome />} />
+        <Route path="/aboutUs" element={<PageAboutUs />} />
+        <Route path="/news" element={<PageNews />} />
+        <Route path="/news/simple-news" element={<PageSimpleNews />} />
         <Route path="*" element={<PageError />} />
       </Routes>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };

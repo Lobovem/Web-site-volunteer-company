@@ -12,9 +12,9 @@ export const Footer = () => {
       <img className={s.footer__img} src={logo} alt="logo-second.png" />
       <div className={s.footer__wrap}>
         <div className={s.footer__inner}>
-          <FooterMenu></FooterMenu>
-          <FooterContacts></FooterContacts>
-          <FooterSocial></FooterSocial>
+          <FooterMenu />
+          <FooterContacts />
+          <FooterSocial />
 
           <div className={s.footer__descBox}>
             <p className={s.footer__desc}>
@@ -22,7 +22,7 @@ export const Footer = () => {
               структуру, з можливістю вставляти зовнішні посилання, але не тільки.
             </p>
             <div className={s.footer__btnBox}>
-              <Btn title="задонатити" type="button" className="btn-secondary"></Btn>
+              <Btn title="задонатити" type="button" className="btn-secondary" />
             </div>
           </div>
         </div>

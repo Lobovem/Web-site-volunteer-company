@@ -69,7 +69,7 @@ export const Form = () => {
             <textarea className={s.form__textArea} name="textarea" id="area" required value={inputDataForm.textarea} onChange={handleChange}></textarea>
 
             <div className={s.form__btnWrap}>
-              <Btn title="надіслати" className="btn" type="submit"></Btn>
+              <Btn title="надіслати" className="btn" type="submit" />
             </div>
           </form>
         )}

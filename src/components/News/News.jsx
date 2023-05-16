@@ -20,7 +20,7 @@ export const News = () => {
           </a>
         </div>
 
-        <SliderFirst></SliderFirst>
+        <SliderFirst />
       </div>
     </div>
   );

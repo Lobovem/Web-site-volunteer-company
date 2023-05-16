@@ -9,11 +9,11 @@ export const Header = ({ children }) => {
     <>
       <header className={s.header}>
         <div className={s.header__wrap}>
-          <LogoMain></LogoMain>
+          <LogoMain />
           <div className={s.header__menuWrap}>
-            <Burger></Burger>
-            <Menu></Menu>
-            <LangSite href="#"></LangSite>
+            <Burger />
+            <Menu />
+            <LangSite href="#" />
           </div>
         </div>
       </header>
