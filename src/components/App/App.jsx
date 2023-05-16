@@ -8,19 +8,17 @@ import { PageNews } from '../PageNews/PageNews';
 import { PageError } from '../PageError/PageError';
 import { PageSimpleNews } from '../PageSimpleNews/PageSimpleNews';
 import { PageGetHelp } from '../PageGetHelp/PageGetHelp';
-import { fetchListMenu } from '../../api/api';
+// import { fetchListMenu } from '../../api/api';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContent } from '../../redux/slice/contentSlice';
 
 export const App = () => {
-
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchContent());
   }, [dispatch]);
 
-  const contents = useSelector((state) => state.content.contents);
   const isLoading = useSelector((state) => state.content.isLoading);
   const error = useSelector((state) => state.content.error);
 
@@ -46,7 +44,6 @@ export const App = () => {
   //   return <div>Loading...</div>;
   // }
 
-
   // useEffect(() => {
   //   localStorage.setItem('baseData', JSON.stringify(baseData));
   // }, [baseData]);
@@ -61,13 +58,13 @@ export const App = () => {
 
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<PageHome />} />
-        <Route path="/about-us" element={<PageAboutUs />} />
-        <Route path="/news" element={<PageNews />}></Route>
-        <Route path="/news/:newsId" element={<PageSimpleNews />} />
-        <Route path="/get-help" element={<PageGetHelp />} />
+        {/* <Route path="/about-us" element={<PageAboutUs />} /> */}
+        {/* <Route path="/news" element={<PageNews />}></Route> */}
+        {/* <Route path="/news/:newsId" element={<PageSimpleNews />} /> */}
+        {/* <Route path="/get-help" element={<PageGetHelp />} /> */}
         <Route path="*" element={<PageError />} />
       </Routes>
       <Footer />
@@ -76,7 +73,6 @@ export const App = () => {
 };
 
 // function App() {
- 
 
 //   return (
 //     <div className="grid gap-4 grid-cols-2  md:grid-cols-4 lg:grid-cols-8  p-4">
