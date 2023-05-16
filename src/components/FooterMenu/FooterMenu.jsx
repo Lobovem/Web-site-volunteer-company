@@ -1,14 +1,9 @@
+import { useSelector } from 'react-redux';
+import { menuListSelector } from '../../store/reducer';
 import s from './FooterMenu.module.scss';
 
 export const FooterMenu = () => {
-  const menuList = [
-    { id: 1, title: 'Про нас', link: '/AboutUs' },
-    { id: 2, title: 'Новини', link: '/news' },
-    { id: 3, title: 'Отримати допомогу', link: '/get-help' },
-    { id: 4, title: 'Допомогти', link: '/help' },
-    { id: 5, title: 'Контакти', link: '/contacts' },
-    { id: 6, title: 'Звіти', link: '/result' },
-  ];
+  const menuList = useSelector(menuListSelector);
 
   return (
     <nav className={s.menu}>

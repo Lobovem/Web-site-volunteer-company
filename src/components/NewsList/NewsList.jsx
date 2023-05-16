@@ -33,8 +33,6 @@ export const NewsList = ({ currentItems }) => {
             </div>
           ))}
       </div>
-
-      {/* <Outlet /> */}
     </div>
   );
 };

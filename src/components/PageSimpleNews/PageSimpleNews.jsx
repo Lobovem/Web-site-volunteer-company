@@ -1,10 +1,7 @@
 import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs';
 import { DonateWithLayout, SimpleNewsnWithLayout } from '../SectionHOC/SectionHOC';
-import { SimpleNews } from '../SimpleNews/SimpleNews';
 
-export const PageSimpleNews = ({ news }) => {
-  console.log('news=====>', news);
-
+export const PageSimpleNews = () => {
   return (
     <>
       <Breadcrumbs></Breadcrumbs>
@@ -14,8 +11,6 @@ export const PageSimpleNews = ({ news }) => {
         classNameTitleSection="titleSection"
         classNameSection="sectionAlt"
       ></SimpleNewsnWithLayout>
-
-      {/* <SimpleNews /> */}
 
       <DonateWithLayout
         titleSection="Допомогти"
