@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { burgerMenuSelector, isOpenBurgerMenu } from '../../../store/reducer';
+import { burgerMenuSelector, dataSelector, isOpenBurgerMenu } from '../../../store/reducer';
 import s from './Burger.module.scss';
 
 export const Burger = () => {
-  const burgerMenu = useSelector(burgerMenuSelector);
+  const data = useSelector(dataSelector);
   const dispatch = useDispatch();
 
   // const handleClick = () => {
@@ -12,7 +12,7 @@ export const Burger = () => {
   // };
 
   return (
-    <div className={!burgerMenu ? s.burger : `${s.burger} ${s.active}`} onClick={() => dispatch(isOpenBurgerMenu())}>
+    <div className={!data.burgerMenuState ? s.burger : `${s.burger} ${s.active}`} onClick={() => dispatch(isOpenBurgerMenu())}>
       <span className={s.burger__line}></span>
       <span className={s.burger__line}></span>
       <span className={s.burger__line}></span>

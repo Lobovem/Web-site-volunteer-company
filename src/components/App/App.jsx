@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { burgerMenuSelector } from '../../store/reducer';
+import { burgerMenuSelector, dataSelector } from '../../store/reducer';
 import { useEffect, useState } from 'react';
 import { PageHome } from '../PageHome/PageHome';
 import { Header } from '../Header/Header';
@@ -10,25 +10,25 @@ import { PageNews } from '../PageNews/PageNews';
 import { PageError } from '../PageError/PageError';
 import { PageSimpleNews } from '../PageSimpleNews/PageSimpleNews';
 import { PageGetHelp } from '../PageGetHelp/PageGetHelp';
-import data from '../../data/data.json';
+// import data from '../../data/data.json';
 
 export const App = () => {
-  const [baseData, setbaseData] = useState(data);
-  console.log('baseData', baseData);
+  // const [baseData, setbaseData] = useState(data);
+  // console.log('baseData', baseData);
 
-  const burgerMenu = useSelector(burgerMenuSelector);
+  const data = useSelector(dataSelector);
+
+  // useEffect(() => {
+  //   localStorage.setItem('baseData', JSON.stringify(baseData));
+  // }, [baseData]);
 
   useEffect(() => {
-    localStorage.setItem('baseData', JSON.stringify(baseData));
-  }, [baseData]);
-
-  useEffect(() => {
-    if (burgerMenu) {
+    if (data.burgerMenuState) {
       document.body.classList.add('active');
     } else {
       document.body.classList.remove('active');
     }
-  }, [burgerMenu]);
+  }, [data.burgerMenuState]);
 
   return (
     <div>

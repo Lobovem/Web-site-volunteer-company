@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import ReactPaginate from 'react-paginate';
 // Example items, to simulate fetching from another resources.
-import data from '../../data/data.json';
+// import data from '../../data/data.json';
 import s from './Pagination.module.scss';
 import { NewsList } from '../NewsList/NewsList';
+import { useSelector } from 'react-redux';
+import { dataSelector, listMenuSelector } from '../../store/reducer';
 
 export const Pagination = ({ itemsPerPage }) => {
+  const data = useSelector(dataSelector);
   // console.log('currentItems ====>');
   // Here we use item offsets; we could also use page offsets
   // following the API or data you're working with.
@@ -15,13 +18,13 @@ export const Pagination = ({ itemsPerPage }) => {
   // (This could be items from props; or items loaded in a local state
   // from an API endpoint with useEffect and useState)
   const endOffset = item + itemsPerPage;
-  const currentItems = data.slice(item, endOffset);
+  const currentItems = data.listMenuData.slice(item, endOffset);
 
-  const pageCount = Math.ceil(data.length / itemsPerPage);
+  const pageCount = Math.ceil(data.listMenuData.length / itemsPerPage);
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % data.length;
+    const newOffset = (event.selected * itemsPerPage) % data.listMenuData.length;
     setItem(newOffset);
   };
 
