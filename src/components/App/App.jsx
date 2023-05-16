@@ -58,7 +58,7 @@ export const App = () => {
 
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <Routes>
         <Route path="/" element={<PageHome />} />
         {/* <Route path="/about-us" element={<PageAboutUs />} /> */}

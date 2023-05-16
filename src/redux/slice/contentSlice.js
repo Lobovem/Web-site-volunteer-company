@@ -4,6 +4,7 @@ const initialState = {
   menuList: [],
   isLoading: false,
   error: null,
+  burgerState: false,
 };
 
 export const fetchContent = createAsyncThunk('content/fetchContent', async () => {
@@ -22,7 +23,12 @@ export const fetchContent = createAsyncThunk('content/fetchContent', async () =>
 export const contentSlice = createSlice({
   name: 'content',
   initialState,
-  reducers: {},
+  reducers: {
+    changeBurgerState: (state, action) => {
+      state.burgerState = action.payload;
+    },
+  },
+
   extraReducers: (builder) => {
     builder.addCase(fetchContent.pending, (state) => {
       state.isLoading = true;
@@ -38,6 +44,9 @@ export const contentSlice = createSlice({
   },
 });
 
-export const menuListSelector = (state) => state.content.menuList;
+export const listMenuSelector = (state) => state.content.menuList;
+export const burgerMenuSelector = (state) => state.content.burgerState;
+
+export const { changeBurgerState } = contentSlice.actions;
 
 export default contentSlice.reducer;
