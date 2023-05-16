@@ -10,25 +10,39 @@ import { PageNews } from '../PageNews/PageNews';
 import { PageError } from '../PageError/PageError';
 import { PageSimpleNews } from '../PageSimpleNews/PageSimpleNews';
 import { PageGetHelp } from '../PageGetHelp/PageGetHelp';
+import { fetchUsers } from '../../api/api';
 // import data from '../../data/data.json';
 
 export const App = () => {
   // const [baseData, setbaseData] = useState(data);
   // console.log('baseData', baseData);
 
-  const data = useSelector(dataSelector);
+  // const data = useSelector(dataSelector);
+
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchUsers()
+      .then(setData)
+      .then(() => setLoading(false));
+  }, []); //[] скобки нужны, чтобы тело useEffect было запущено только один раз
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   // useEffect(() => {
   //   localStorage.setItem('baseData', JSON.stringify(baseData));
   // }, [baseData]);
 
-  useEffect(() => {
-    if (data.burgerMenuState) {
-      document.body.classList.add('active');
-    } else {
-      document.body.classList.remove('active');
-    }
-  }, [data.burgerMenuState]);
+  // useEffect(() => {
+  //   if (data.burgerMenuState) {
+  //     document.body.classList.add('active');
+  //   } else {
+  //     document.body.classList.remove('active');
+  //   }
+  // }, [data.burgerMenuState]);
 
   return (
     <div>

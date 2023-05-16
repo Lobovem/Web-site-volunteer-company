@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { burgerMenuSelector, isOpenBurgerMenu, listMenuSelector } from '../../store/reducer';
+import { burgerMenuSelector, burgerMenuState, isOpenBurgerMenu, listMenuSelector } from '../../store/reducer';
 import s from './Menu.module.scss';
 import { Link } from 'react-router-dom';
 
 export const Menu = () => {
   const dispatch = useDispatch();
-  const burgerMenu = useSelector(burgerMenuSelector);
+  const burgerMenu = useSelector(burgerMenuState);
   const listMenu = useSelector(listMenuSelector);
 
   return (
