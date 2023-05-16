@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
-import s from './FooterMenu.module.scss';
 import { listMenuSelector } from '../../redux/slice/contentSlice';
+import { Link } from 'react-router-dom';
+import s from './FooterMenu.module.scss';
 
 export const FooterMenu = () => {
   const listMenu = useSelector(listMenuSelector);
@@ -13,9 +14,9 @@ export const FooterMenu = () => {
           {listMenu.map((item) => {
             return (
               <li key={item.id} className={s.menu__item}>
-                <a className={s.menu__link} href={item.link}>
+                <Link className={s.menu__link} to={item.link}>
                   {item.title}
-                </a>
+                </Link>
               </li>
             );
           })}

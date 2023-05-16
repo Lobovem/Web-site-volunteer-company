@@ -8,8 +8,8 @@ import { Teams } from '../Teams/Teams';
 import { Contacts } from '../Contacts/Contacts';
 import { Form } from '../Form/Form';
 import { Pagination } from '../Pagination/Pagination';
-import s from './SectionHOC.module.scss';
 import { SimpleNews } from '../SimpleNews/SimpleNews';
+import s from './SectionHOC.module.scss';
 
 export const SectionHOC = (Component) => (props) =>
   (

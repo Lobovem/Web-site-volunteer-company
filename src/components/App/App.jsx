@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { PageHome } from '../PageHome/PageHome';
 import { Header } from '../Header/Header';
 import { Footer } from '../Footer/Footer';
@@ -10,13 +10,14 @@ import { PageSimpleNews } from '../PageSimpleNews/PageSimpleNews';
 import { PageGetHelp } from '../PageGetHelp/PageGetHelp';
 // import { fetchListMenu } from '../../api/api';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContent } from '../../redux/slice/contentSlice';
+import { fetchMenu, fetchNews } from '../../redux/slice/contentSlice';
 
 export const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchContent());
+    dispatch(fetchMenu());
+    dispatch(fetchNews());
   }, [dispatch]);
 
   const isLoading = useSelector((state) => state.content.isLoading);
@@ -48,41 +49,18 @@ export const App = () => {
   //   localStorage.setItem('baseData', JSON.stringify(baseData));
   // }, [baseData]);
 
-  // useEffect(() => {
-  //   if (data.burgerMenuState) {
-  //     document.body.classList.add('active');
-  //   } else {
-  //     document.body.classList.remove('active');
-  //   }
-  // }, [data.burgerMenuState]);
-
   return (
     <div>
       <Header />
       <Routes>
         <Route path="/" element={<PageHome />} />
-        {/* <Route path="/about-us" element={<PageAboutUs />} /> */}
-        {/* <Route path="/news" element={<PageNews />}></Route> */}
-        {/* <Route path="/news/:newsId" element={<PageSimpleNews />} /> */}
-        {/* <Route path="/get-help" element={<PageGetHelp />} /> */}
+        <Route path="/about-us" element={<PageAboutUs />} />
+        <Route path="/news" element={<PageNews />}></Route>
+        <Route path="/news/:newsId" element={<PageSimpleNews />} />
+        <Route path="/get-help" element={<PageGetHelp />} />
         <Route path="*" element={<PageError />} />
       </Routes>
       <Footer />
     </div>
   );
 };
-
-// function App() {
-
-//   return (
-//     <div className="grid gap-4 grid-cols-2  md:grid-cols-4 lg:grid-cols-8  p-4">
-//       {contents.map((content) => (
-//         <div key={content.id}>
-//           <img src={`${content.thumbnailUrl}`} alt={`${content.title}`} className="w-full h-full rounded" />
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
-
-// export default App;
