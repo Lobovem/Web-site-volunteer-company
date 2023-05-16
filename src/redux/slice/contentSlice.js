@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { useSelector } from 'react-redux';
 
 const initialState = {
   contents: [],
@@ -32,5 +31,7 @@ export const contentSlice = createSlice({
     });
   },
 });
+
+export const contentSelector = (state) => state.content.contents;
 
 export default contentSlice.reducer;
