@@ -9,7 +9,6 @@ import { listNewsSelector } from '../../redux/slice/contentSlice';
 
 export const Pagination = ({ itemsPerPage }) => {
   const listNews = useSelector(listNewsSelector);
-  console.log('listNews ====>', listNews);
 
   // console.log('currentItems ====>');
   // Here we use item offsets; we could also use page offsets
@@ -48,6 +47,7 @@ export const Pagination = ({ itemsPerPage }) => {
         pageLinkClassName={s.pagination__link}
         activeClassName={s.active}
         disabledLinkClassName={s.disabled}
+        onClick={() => window.scrollTo({ top: 150, behavior: 'smooth' })}
         // hrefBuilder={(pageNumber, pageCount) => (pageNumber <= 3 && pageNumber <= pageCount ? `/page/${pageNumber}` : '#')}
         // hrefAllControls
       />

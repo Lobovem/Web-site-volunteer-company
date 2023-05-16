@@ -13,8 +13,8 @@ export const Breadcrumbs = () => {
   ];
 
   const breadcrumbs = useBreadcrumbs(routes);
-  console.log(breadcrumbs);
-  console.log(breadcrumbs[0].location.pathname);
+  // console.log(breadcrumbs);
+  // console.log(breadcrumbs[0].location.pathname);
 
   return (
     <div className={s.breadcrumbs}>
