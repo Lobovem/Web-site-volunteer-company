@@ -30,7 +30,6 @@
   }
 
   &__wrap {
-    @include layoutMain;
     display: flex;
     flex-direction: column;
 

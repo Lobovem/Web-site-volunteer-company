@@ -1,13 +1,10 @@
-import { Link, Outlet, Route, Routes, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { TitleMain } from '../TitleMain/TitleMain';
 import s from './NewsList.module.scss';
-import { PageSimpleNews1 } from '../PageSimpleNews/PageSimpleNews';
-import data from '../../data/data.json';
 
 export const NewsList = ({ currentItems }) => {
   return (
     <div className={s.news}>
-      {/* <h3>Вы выбрали продукт: {newsId}</h3> */}
       <h3 className={s.news__decor}>Новини</h3>
 
       <div className={s.news__wrap}>

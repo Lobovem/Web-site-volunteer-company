@@ -12,7 +12,7 @@ import { PageSimpleNews, PageSimpleNews1 } from '../PageSimpleNews/PageSimpleNew
 import { PageGetHelp } from '../PageGetHelp/PageGetHelp';
 import { NewsList, Product } from '../NewsList/NewsList';
 
-export const App = () => {
+export const App = ({ news }) => {
   const burgerMenu = useSelector(burgerMenuSelector);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export const App = () => {
         <Route path="/" element={<PageHome />} />
         <Route path="/aboutUs" element={<PageAboutUs />} />
         <Route path="/news" element={<PageNews />}></Route>
-        <Route path="/news/:newsId" element={<PageSimpleNews />} />
+        <Route path="/news/:newsId" element={<PageSimpleNews news={news} />} />
         <Route path="/get-help" element={<PageGetHelp />} />
         <Route path="*" element={<PageError />} />
       </Routes>
@@ -38,37 +38,3 @@ export const App = () => {
     </div>
   );
 };
-
-// function Products() {
-//   return (
-//     <div>
-//       <h2>Продукты</h2>
-//       <Routes>
-//         <Route path="/" element={<ProductList />} />
-//         <Route path="/:productId" element={<Product />} />
-//       </Routes>
-//     </div>
-//   );
-// }
-
-// function ProductList() {
-//   return (
-//     <div>
-//       <h3>Выберите продукт</h3>
-//       <ul>
-//         <li>
-//           <Link to="product1">Продукт 1</Link>
-//         </li>
-//         <li>
-//           <Link to="product2">Продукт 2</Link>
-//         </li>
-//       </ul>
-//     </div>
-//   );
-// }
-
-// function Product({ match }) {
-//   const { productId } = match.params;
-
-//   return <h3>Вы выбрали продукт: {productId}</h3>;
-// }
