@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { burgerMenuSelector, isOpenBurgerMenu, menuListSelector } from '../../store/reducer';
 import s from './Menu.module.scss';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export const Menu = () => {
   const burgerMenu = useSelector(burgerMenuSelector);

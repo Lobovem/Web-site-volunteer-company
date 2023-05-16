@@ -1,6 +1,6 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { burgerMenuSelector } from '../../store/reducer';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { PageHome } from '../PageHome/PageHome';
 import { Header } from '../Header/Header';
 import { Footer } from '../Footer/Footer';
@@ -10,9 +10,17 @@ import { PageNews } from '../PageNews/PageNews';
 import { PageError } from '../PageError/PageError';
 import { PageSimpleNews } from '../PageSimpleNews/PageSimpleNews';
 import { PageGetHelp } from '../PageGetHelp/PageGetHelp';
+import data from '../../data/data.json';
 
 export const App = () => {
+  const [baseData, setbaseData] = useState(data);
+  console.log('baseData', baseData);
+
   const burgerMenu = useSelector(burgerMenuSelector);
+
+  useEffect(() => {
+    localStorage.setItem('baseData', JSON.stringify(baseData));
+  }, [baseData]);
 
   useEffect(() => {
     if (burgerMenu) {
