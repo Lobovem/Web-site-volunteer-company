@@ -1,9 +1,11 @@
-//reset default styles
-@import-normalize;
-//import fonts
+@import 'reset-css';
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
 //import variables
-@import './src/styles/variables.module.scss';
+@import './src/styles/MixinsMedia.module.scss';
+@import './src/styles/Variables.module.scss';
+@import './src/styles/MixinsLayout.module.scss';
+@import './src/styles/MixinsKit.module.scss';
+
 
 
 
@@ -18,5 +20,9 @@ body {
 
   &.active {
     overflow: hidden;
+
+    @include md-min {
+      overflow: visible;
+    }
   }
 }

@@ -73,6 +73,16 @@
   }
 }
 
+.titleSectionAlt {
+  font-weight: $font-weight-500;
+  font-size: $font-size-24;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-black;
+  margin-bottom: 50px;
+}
+
 .visuallyHidden {
   position: absolute;
   width: 1px;

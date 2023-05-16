@@ -6,7 +6,7 @@ import s from './Pagination.module.scss';
 import { NewsList } from '../NewsList/NewsList';
 
 export const Pagination = ({ itemsPerPage }) => {
-  console.log('currentItems ====>');
+  // console.log('currentItems ====>');
   // Here we use item offsets; we could also use page offsets
   // following the API or data you're working with.
   const [item, setItem] = useState(0);

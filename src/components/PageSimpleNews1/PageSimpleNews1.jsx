@@ -1,7 +1,7 @@
 import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs';
 import { DonateWithLayout, SimpleNewsnWithLayout } from '../SectionHOC/SectionHOC';
 
-export const PageSimpleNews = () => {
+export const PageSimpleNews1 = () => {
   return (
     <>
       <Breadcrumbs></Breadcrumbs>
