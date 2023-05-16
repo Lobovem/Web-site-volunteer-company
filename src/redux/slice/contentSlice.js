@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
-  contents: [],
+  menuList: [],
   isLoading: false,
   error: null,
 };
@@ -23,7 +23,7 @@ export const contentSlice = createSlice({
     });
     builder.addCase(fetchContent.fulfilled, (state, action) => {
       state.isLoading = false;
-      state.contents = action.payload;
+      state.menuList = action.payload;
     });
     builder.addCase(fetchContent.rejected, (state, action) => {
       state.isLoading = false;
@@ -32,6 +32,6 @@ export const contentSlice = createSlice({
   },
 });
 
-export const contentSelector = (state) => state.content.contents;
+export const menuListSelector = (state) => state.content.menuList;
 
 export default contentSlice.reducer;
