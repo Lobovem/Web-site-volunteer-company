@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 const initialState = {
   menuList: [],
@@ -8,9 +7,16 @@ const initialState = {
 };
 
 export const fetchContent = createAsyncThunk('content/fetchContent', async () => {
-  const res = await axios('http://localhost:3000/listMenu');
-  const data = await res.data;
-  return data;
+  try {
+    const response = await fetch('http://localhost:3000/listMenu');
+    if (!response.ok) {
+      throw new Error('Error fetching menu list');
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    throw new Error(error.message);
+  }
 });
 
 export const contentSlice = createSlice({
