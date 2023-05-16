@@ -1,5 +1,3 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { burgerMenuSelector, dataSelector } from '../../store/reducer';
 import { useEffect, useState } from 'react';
 import { PageHome } from '../PageHome/PageHome';
 import { Header } from '../Header/Header';
@@ -10,20 +8,16 @@ import { PageNews } from '../PageNews/PageNews';
 import { PageError } from '../PageError/PageError';
 import { PageSimpleNews } from '../PageSimpleNews/PageSimpleNews';
 import { PageGetHelp } from '../PageGetHelp/PageGetHelp';
-import { fetchUsers } from '../../api/api';
-// import data from '../../data/data.json';
+import { fetchListMenu } from '../../api/api';
 
 export const App = () => {
-  // const [baseData, setbaseData] = useState(data);
-  // console.log('baseData', baseData);
-
   // const data = useSelector(dataSelector);
 
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchUsers()
+    fetchListMenu()
       .then(setData)
       .then(() => setLoading(false));
   }, []); //[] скобки нужны, чтобы тело useEffect было запущено только один раз
@@ -31,6 +25,9 @@ export const App = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
+
+  console.log(data);
+  console.log('data ===>', data);
 
   // useEffect(() => {
   //   localStorage.setItem('baseData', JSON.stringify(baseData));

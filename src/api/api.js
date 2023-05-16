@@ -9,7 +9,7 @@ const jsonRequest = (url, options = {}) => {
   }).then((response) => response.json());
 };
 
-export const fetchUsers = () => {
+export const fetchListMenu = () => {
   const options = { method: 'GET' };
   const req = jsonRequest('/listMenu', options);
 
