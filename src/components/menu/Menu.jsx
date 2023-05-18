@@ -15,7 +15,7 @@ export const Menu = () => {
           if (item.title !== 'Звіти')
             return (
               <li key={item.id} className={s.menu__item}>
-                <Link to={item.link} className={s.menu__link}>
+                <Link to={item.path} className={s.menu__link}>
                   {item.title}
                 </Link>
               </li>

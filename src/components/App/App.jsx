@@ -8,7 +8,6 @@ import { PageNews } from '../PageNews/PageNews';
 import { PageError } from '../PageError/PageError';
 import { PageSimpleNews } from '../PageSimpleNews/PageSimpleNews';
 import { PageGetHelp } from '../PageGetHelp/PageGetHelp';
-// import { fetchListMenu } from '../../api/api';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMenu, fetchNews } from '../../redux/slice/contentSlice';
 
@@ -30,24 +29,6 @@ export const App = ({ newsId }) => {
   if (error) {
     return error;
   }
-  // const data = useSelector(dataSelector);
-
-  // const [data, setData] = useState([]);
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   fetchListMenu()
-  //     .then(setData)
-  //     .then(() => setLoading(false));
-  // }, []); //[] скобки нужны, чтобы тело useEffect было запущено только один раз
-
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
-
-  // useEffect(() => {
-  //   localStorage.setItem('baseData', JSON.stringify(baseData));
-  // }, [baseData]);
 
   return (
     <div>
@@ -55,8 +36,8 @@ export const App = ({ newsId }) => {
       <Routes>
         <Route path="/" element={<PageHome />} />
         <Route path="/about-us" element={<PageAboutUs />} />
-        <Route path="/news" element={<PageNews />}></Route>
-        <Route path="/news/:newsId" element={<PageSimpleNews newsId={newsId} />} />
+        <Route path="/news" element={<PageNews />} />
+        <Route path="/news/:newsId" element={<PageSimpleNews />} />
         <Route path="/get-help" element={<PageGetHelp />} />
         <Route path="*" element={<PageError />} />
       </Routes>
