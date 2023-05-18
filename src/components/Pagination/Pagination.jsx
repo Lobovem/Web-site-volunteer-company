@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 // Example items, to simulate fetching from another resources.
 // import data from '../../data/data.json';
 import s from './Pagination.module.scss';
 import { NewsList } from '../NewsList/NewsList';
-import { useSelector } from 'react-redux';
-import { listNewsSelector } from '../../redux/slice/contentSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchNews, listNewsSelector } from '../../redux/slice/contentSlice';
 
 export const Pagination = ({ itemsPerPage }) => {
   const listNews = useSelector(listNewsSelector);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchNews());
+  }, [dispatch]);
 
   // console.log('currentItems ====>');
   // Here we use item offsets; we could also use page offsets
@@ -20,6 +26,8 @@ export const Pagination = ({ itemsPerPage }) => {
   // from an API endpoint with useEffect and useState)
   const endOffset = item + itemsPerPage;
   const currentItems = listNews.slice(item, endOffset);
+
+  console.log('currentItems ====>', currentItems);
 
   const pageCount = Math.ceil(listNews.length / itemsPerPage);
 

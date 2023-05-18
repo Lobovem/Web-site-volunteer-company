@@ -1,19 +1,28 @@
 const SERVER_URL = 'http://localhost:3000';
 
-const jsonRequest = (url, options = {}) => {
-  return fetch(SERVER_URL + url, {
-    headers: {
-      'content-type': 'application/json',
-    },
-    ...options,
-  }).then((response) => response.json());
-};
+// const jsonRequest = (url, options = {}) => {
+//   return fetch(SERVER_URL + url, {
+//     headers: {
+//       'content-type': 'application/json',
+//     },
+//     ...options,
+//   }).then((response) => response.json());
+// };
 
-export const fetchListMenu = () => {
-  const options = { method: 'GET' };
-  const req = jsonRequest('/listMenu', options);
+// export const fetchListMenu = () => {
+//   const options = { method: 'GET' };
+//   const req = jsonRequest('/listMenu', options);
 
-  return req;
+//   return req;
+// };
+
+export const newsFetch = async (url) => {
+  try {
+    const news = await fetch(SERVER_URL + url);
+    return await news.json();
+  } catch (error) {
+    console.log('Fetch error: ', error);
+  }
 };
 
 // const SERVER_URL_USERS = 'https://jsonplaceholder.typicode.com/users';

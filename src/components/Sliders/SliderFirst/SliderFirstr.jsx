@@ -10,10 +10,14 @@ import 'swiper/scss/navigation';
 import s from './SliderFirst.module.scss';
 import { useRef, useState } from 'react';
 import { BtnSliders } from '../../kit/BtnSliders/BtnSliders';
+import { Link, useParams } from 'react-router-dom';
 
 export const SliderFirst = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const { newsId } = useParams();
+
+  console.log('newsId=====>', newsId);
 
   const [init, setInit] = useState();
 
@@ -58,43 +62,73 @@ export const SliderFirst = () => {
       >
         <SwiperSlide className={s.slider__item}>
           <div className={s.slider__itemWrap}>
-            <img className={s.slider__img} src={slide} alt="slider-news-1.jpg" />
-            <h2 className={s.slider__title}>Якась дуже важлива новина перша</h2>
+            <Link to="/news/:newsId">
+              <img className={s.slider__img} src={slide} alt="slider-news-1.jpg" />
+            </Link>
+
+            <Link to="/:newsId">
+              <h2 className={s.slider__title}>Якась дуже важлива новина перша</h2>
+            </Link>
           </div>
         </SwiperSlide>
 
         <SwiperSlide className={s.sslider_item}>
           <div className={s.slider__itemWrap}>
-            <img className={s.slider__img} src={slide2} alt="slider-news-2.jpg" />
-            <h2 className={s.slider__title}>Якась новина друга</h2>
+            <Link to="/:newsId">
+              <img className={s.slider__img} src={slide2} alt="slider-news-2.jpg" />
+            </Link>
+
+            <Link to="/:newsId">
+              <h2 className={s.slider__title}>Якась новина друга</h2>
+            </Link>
           </div>
         </SwiperSlide>
 
         <SwiperSlide className={s.slider__item}>
           <div className={s.slider__itemWrap}>
-            <img className={s.slider__img} src={slide} alt="slider-news-1.jpg" />
-            <h2 className={s.slider__title}>Якась дуже важлива новина перша</h2>
+            <Link to="/:newsId">
+              <img className={s.slider__img} src={slide} alt="slider-news-1.jpg" />
+            </Link>
+
+            <Link to="/:newsId">
+              <h2 className={s.slider__title}>Якась дуже важлива новина перша</h2>
+            </Link>
           </div>
         </SwiperSlide>
 
         <SwiperSlide className={s.slider__item}>
           <div className={s.slider__itemWrap}>
-            <img className={s.slider__img} src={slide2} alt="slider-news-2.jpg" />
-            <h2 className={s.slider__title}>Якась новина друга</h2>
+            <Link to="/:newsId">
+              <img className={s.slider__img} src={slide2} alt="slider-news-2.jpg" />
+            </Link>
+
+            <Link to="/:newsId">
+              <h2 className={s.slider__title}>Якась новина друга</h2>
+            </Link>
           </div>
         </SwiperSlide>
 
         <SwiperSlide className={s.slider__item}>
           <div className={s.slider__itemWrap}>
-            <img className={s.slider__img} src={slide} alt="slider-news-1.jpg" />
-            <h2 className={s.slider__title}>Якась дуже важлива новина перша</h2>
+            <Link to="/:newsId">
+              <img className={s.slider__img} src={slide} alt="slider-news-1.jpg" />
+            </Link>
+
+            <Link to="/:newsId">
+              <h2 className={s.slider__title}>Якась дуже важлива новина перша</h2>
+            </Link>
           </div>
         </SwiperSlide>
 
         <SwiperSlide className={s.slider__item}>
           <div className={s.slider__itemWrap}>
-            <img className={s.slider__img} src={slide2} alt="slider-news-2.jpg" />
-            <h2 className={s.slider__title}>Якась новина друга</h2>
+            <Link to="/:newsId">
+              <img className={s.slider__img} src={slide2} alt="slider-news-2.jpg" />
+            </Link>
+
+            <Link to="/:newsId">
+              <h2 className={s.slider__title}>Якась новина друга</h2>
+            </Link>
           </div>
         </SwiperSlide>
 
