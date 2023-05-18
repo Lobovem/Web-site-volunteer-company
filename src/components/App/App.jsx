@@ -10,6 +10,7 @@ import { PageSimpleNews } from '../PageSimpleNews/PageSimpleNews';
 import { PageGetHelp } from '../PageGetHelp/PageGetHelp';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMenu, fetchNews } from '../../redux/slice/contentSlice';
+import { ScrollToTop } from '../ScrollTop/ScrollTop';
 
 export const App = ({ newsId }) => {
   const dispatch = useDispatch();
@@ -32,6 +33,7 @@ export const App = ({ newsId }) => {
 
   return (
     <div>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<PageHome />} />

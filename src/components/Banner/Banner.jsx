@@ -2,6 +2,7 @@ import { Btn } from '../kit/Btn/Btn';
 import flag from '../../img/ukraine-flag.png';
 import { SocialLine } from '../SocialLine/SocialLine';
 import s from './Banner.module.scss';
+import { Link } from 'react-router-dom';
 
 export const Banner = () => {
   return (
@@ -15,7 +16,9 @@ export const Banner = () => {
             Свободи та Демократії. Приєднуйтесь до нас, щоб жити, допомагаючи іншим і творити зміни на краще разом!
           </p>
 
-          <Btn title="Про проєкт" className="btn" type="button" />
+          <Link to="about-us">
+            <Btn title="Про проєкт" className="btn" type="button" />
+          </Link>
         </div>
       </div>
       <SocialLine />

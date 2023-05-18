@@ -43,7 +43,7 @@ export const Pagination = ({ itemsPerPage }) => {
         pageLinkClassName={s.pagination__link}
         activeClassName={s.active}
         disabledLinkClassName={s.disabled}
-        onClick={() => window.scrollTo({ top: 150, behavior: 'smooth' })}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         // hrefBuilder={(pageNumber, pageCount) => (pageNumber <= 3 && pageNumber <= pageCount ? `/page/${pageNumber}` : '#')}
         // hrefAllControls
       />

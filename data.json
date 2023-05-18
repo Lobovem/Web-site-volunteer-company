@@ -1,49 +1,49 @@
 {
   "listMenu": [
     {
-      "id": 0,
+      "id": "0",
       "title": "Главная",
       "path": "/",
       "breadcrumb":"Главная",
       "show": false
     },
     {
-      "id": 1,
+      "id": "1",
       "title": "Про нас",
       "path": "/about-us",
       "breadcrumb":"Про нас",
       "show": true
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Новини",
       "path": "/news",
       "breadcrumb":"Новини",
        "show": true
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Отримати допомогу",
       "path": "/get-help",
       "breadcrumb":"Отримати допомогу",
        "show": true
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Допомогти",
       "path": "/help",
       "breadcrumb":"Допомогти",
        "show": true
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Контакти",
       "path": "/contacts",
       "breadcrumb":"Контакти",
        "show": true
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Звіти",
       "path": "/result",
       "breadcrumb":"Звіти",
@@ -56,7 +56,9 @@
       "title": "Якась важлива новина 1",
       "desc": "За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його структуру, з можливістю вставляти зовнішні посилання, але не тільки. Фактично, вставляючи будь -який фантастичний текст або відомий текст, це вірш, промова, літературний уривок, текст пісні тощо, наш текстовий генератор забезпечить випадкове виділення термінів і кроків для створення власного ексклюзивного Lorem Ipsum. Фактично.",
       "photoMain": "../../img/slider-news-1.jpg",
-      "photoList": ["../../img/slider-news-1.jpg", "../../img/slider-news-2.jpg", "../../img/slider-news-1.jpg" ,"../../img/slider-news-2.jpg"]
+      "photoList": ["../../img/slider-news-1.jpg", "../../img/slider-news-2.jpg", "../../img/slider-news-1.jpg" ,"../../img/slider-news-2.jpg"],
+      "path": "/news/1",
+      "breadcrumb":"первая"
     },
     {
       "id": "2",

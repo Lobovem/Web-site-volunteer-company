@@ -14,7 +14,7 @@ export const FooterMenu = () => {
           {listMenu.map((item) => {
             return (
               <li key={item.id} className={s.menu__item}>
-                <Link className={s.menu__link} to={item.link}>
+                <Link className={s.menu__link} to={item.path}>
                   {item.title}
                 </Link>
               </li>
