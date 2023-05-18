@@ -15,7 +15,7 @@
 
       position: absolute;
       display: block;
-      top: 150px;
+      top: 260px;
       left: -430px;
       z-index: 0;
       font-weight: $font-weight-500;
@@ -37,6 +37,24 @@
       display: flex;
       flex-direction: row;
       gap: 60px;
+    }
+  }
+
+  &__title {
+    font-weight: $font-weight-500;
+    font-size: $font-size-32;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-black;
+    mix-blend-mode: normal;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    @include lg-min {
+      font-size: $font-size-38;
+      line-height: 38px;
+      margin-bottom: 80px;
     }
   }
 

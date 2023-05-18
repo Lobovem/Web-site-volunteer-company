@@ -24,6 +24,18 @@
     mix-blend-mode: normal;
     cursor: pointer;
 
+    &::after {
+      position: absolute;
+      content: '';
+      top: 4px;
+      right: -16px;
+
+      width: 6px;
+      height: 6px;
+      border-radius: 3px;
+      background: $color-grey-dark;
+    }
+
     &:hover {
       color: $color-hover;
     }
@@ -33,16 +45,9 @@
       pointer-events: none;
 
       &::after {
-        position: absolute;
-        content: '';
-        top: 4px;
-        left: -16px;
-
-        width: 6px;
-        height: 6px;
-        border-radius: 3px;
-        background: $color-grey-dark;
+        display: none;
       }
+
     }
 
 

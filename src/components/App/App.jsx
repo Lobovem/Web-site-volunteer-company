@@ -12,7 +12,7 @@ import { PageGetHelp } from '../PageGetHelp/PageGetHelp';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMenu, fetchNews } from '../../redux/slice/contentSlice';
 
-export const App = () => {
+export const App = ({ newsId }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export const App = () => {
         <Route path="/" element={<PageHome />} />
         <Route path="/about-us" element={<PageAboutUs />} />
         <Route path="/news" element={<PageNews />}></Route>
-        <Route path="/news/:newsId" element={<PageSimpleNews />} />
+        <Route path="/news/:newsId" element={<PageSimpleNews newsId={newsId} />} />
         <Route path="/get-help" element={<PageGetHelp />} />
         <Route path="*" element={<PageError />} />
       </Routes>
