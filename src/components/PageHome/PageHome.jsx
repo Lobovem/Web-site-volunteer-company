@@ -37,7 +37,7 @@ export const PageHome = () => {
 
       <WayWithLayout
         titleSection="напрямки підтримки"
-        classNameSectionWrap="sectionWrap"
+        classNameSectionWrap="sectionWrapAlt"
         classNameTitleSection="titleSection"
         classNameSection="sectionAlt"
       ></WayWithLayout>

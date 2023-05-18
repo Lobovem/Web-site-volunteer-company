@@ -35,7 +35,12 @@ export const SliderThird = () => {
           //option than disable autoplay slides (when click btn or manual changes sliders)
           disableOnInteraction: false,
         }}
-        slidesPerView={1}
+        slidesPerView={1.3}
+        centeredSlides={true}
+        spaceBetween={20}
+        pagination={{
+          clickable: true,
+        }}
         grid={{
           rows: 1,
           fill: 'row',
@@ -75,10 +80,6 @@ export const SliderThird = () => {
               rows: 2,
             },
           },
-        }}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
         }}
         modules={[Grid, Navigation, Autoplay]}
       >

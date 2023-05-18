@@ -66,6 +66,12 @@
   margin-top: 0;
   margin-bottom: 30px;
 
+  padding: 0 10px;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+
   @include lg-min {
     font-size: $font-size-38;
     line-height: 38px;
