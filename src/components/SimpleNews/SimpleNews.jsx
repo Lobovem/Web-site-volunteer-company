@@ -21,7 +21,7 @@ export const SimpleNews = () => {
               <div>
                 <p className={s.simpleNews__text}>{item.desc}</p>
               </div>
-              <SliderFifth></SliderFifth>
+              <SliderFifth news={news}></SliderFifth>
             </div>
           </div>
         ))}

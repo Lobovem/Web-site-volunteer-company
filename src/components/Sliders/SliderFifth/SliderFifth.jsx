@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper';
 
-import slide from '../../../img/slider-news-1.jpg';
-import slide2 from '../../../img/slider-news-2.jpg';
+// import slide from '../../../img/slider-news-1.jpg';
+// import slide2 from '../../../img/slider-news-2.jpg';
 
 import 'swiper/scss';
 import 'swiper/scss/navigation';
@@ -11,9 +11,11 @@ import s from './SliderFifth.module.scss';
 import { useRef, useState } from 'react';
 import { BtnSliders } from '../../kit/BtnSliders/BtnSliders';
 
-export const SliderFifth = () => {
+export const SliderFifth = ({ news }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const listPhoto = news.find((item) => item.photoList);
 
   const [init, setInit] = useState();
 
@@ -56,41 +58,15 @@ export const SliderFifth = () => {
         }}
         modules={[Navigation, Autoplay]}
       >
-        <SwiperSlide className={s.slider__item}>
-          <div className={s.slider__itemWrap}>
-            <img className={s.slider__img} src={slide} alt="slider-news-1.jpg" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className={s.sslider_item}>
-          <div className={s.slider__itemWrap}>
-            <img className={s.slider__img} src={slide2} alt="slider-news-2.jpg" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className={s.slider__item}>
-          <div className={s.slider__itemWrap}>
-            <img className={s.slider__img} src={slide} alt="slider-news-1.jpg" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className={s.slider__item}>
-          <div className={s.slider__itemWrap}>
-            <img className={s.slider__img} src={slide2} alt="slider-news-2.jpg" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className={s.slider__item}>
-          <div className={s.slider__itemWrap}>
-            <img className={s.slider__img} src={slide} alt="slider-news-1.jpg" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className={s.slider__item}>
-          <div className={s.slider__itemWrap}>
-            <img className={s.slider__img} src={slide2} alt="slider-news-2.jpg" />
-          </div>
-        </SwiperSlide>
+        <>
+          {listPhoto.photoList.map((item, index) => (
+            <SwiperSlide className={s.slider__item} key={index}>
+              <div className={s.slider__itemWrap}>
+                <img className={s.slider__img} src={item} alt={item} />
+              </div>
+            </SwiperSlide>
+          ))}
+        </>
 
         <BtnSliders nextRef={nextRef} prevRef={prevRef} className={'btnSlider'}></BtnSliders>
       </Swiper>
