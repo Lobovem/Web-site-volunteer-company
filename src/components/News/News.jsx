@@ -9,15 +9,15 @@ export const News = () => {
       <h3 className={s.sectionNews__decor}>Новини</h3>
       <div className={s.sectionNews__inner}>
         <div className={s.sectionNews__textWrap}>
-          <TitleMain title="Нашою метою є вирішення нагальних проблем ЗСУ"></TitleMain>
+          <TitleMain title="Наша мета - вирішення нагальних потреб Сил оборони України"></TitleMain>
 
           <p className={s.sectionNews__desc}>
-            За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його
-            структуру, з можливістю вставляти зовнішні посилання, але не тільки...
+            UkrHumBat надає пріоритет в допомозі військовослужбовцям та членам їх сімей, а також, за можливості, допомагає цивільним особам, які опинились у
+            зв'язку із війною в скрутному становищі.
           </p>
 
           <Link to="/news" className={s.sectionNews__link}>
-            Читати повністю
+            Читати всі статті
           </Link>
         </div>
 
