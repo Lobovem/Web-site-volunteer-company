@@ -31,14 +31,18 @@ export const SliderSecond = () => {
           //option than disable autoplay slides (when click btn or manual changes sliders)
           disableOnInteraction: false,
         }}
-        slidesPerView={1}
+        slidesPerView={1.3}
+        centeredSlides={true}
+        spaceBetween={20}
+        pagination={{
+          clickable: true,
+        }}
         grid={{
           rows: 1,
           fill: 'row',
         }}
         breakpoints={{
           440: {
-            slidesPerView: 2,
             spaceBetween: 20,
             loop: true,
             grid: {
@@ -48,6 +52,7 @@ export const SliderSecond = () => {
           768: {
             slidesPerView: 3,
             spaceBetween: 20,
+            centeredSlides: false,
             loop: true,
             grid: {
               rows: 1,
@@ -57,6 +62,7 @@ export const SliderSecond = () => {
           994: {
             slidesPerView: 4,
             spaceBetween: 20,
+            centeredSlides: false,
             loop: false,
             grid: {
               rows: 1,
@@ -64,17 +70,14 @@ export const SliderSecond = () => {
           },
 
           1400: {
-            loop: true,
             slidesPerView: 4,
             spaceBetween: 30,
+            centeredSlides: false,
+            loop: true,
             grid: {
               rows: 2,
             },
           },
-        }}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
         }}
         modules={[Grid, Navigation, Autoplay]}
       >

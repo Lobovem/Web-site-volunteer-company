@@ -16,6 +16,20 @@
 
 }
 
+@mixin layoutSlider {
+  width: min(100%, 1195px);
+  margin-inline: auto;
+
+  @media (min-width: 768px) {
+    width: min(100% - 40px, 1195px);
+  }
+
+  @include lg-min {
+    width: min(100% - 80px, 1195px);
+  }
+
+}
+
 @mixin layoutLarge {
   width: min(100% - 30px, 1440px);
   margin-inline: auto;

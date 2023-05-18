@@ -30,7 +30,7 @@ export const PageHome = () => {
 
       <OurRulesWithLayout
         titleSection="наші результати"
-        classNameSectionWrap="sectionWrap"
+        classNameSectionWrap="sectionWrapAlt"
         classNameTitleSection="titleSection"
         classNameSection="section"
       ></OurRulesWithLayout>

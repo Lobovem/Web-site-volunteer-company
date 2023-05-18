@@ -20,7 +20,7 @@
 }
 
 .sectionWrapAlt {
-  @include layoutMain;
+  @include layoutSlider;
   padding: 50px 0;
 
   @include lg-min {
