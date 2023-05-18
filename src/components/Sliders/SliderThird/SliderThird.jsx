@@ -47,7 +47,6 @@ export const SliderThird = () => {
         }}
         breakpoints={{
           440: {
-            slidesPerView: 1,
             spaceBetween: 20,
             loop: true,
             grid: {
@@ -57,6 +56,8 @@ export const SliderThird = () => {
           768: {
             slidesPerView: 2,
             spaceBetween: 20,
+            centeredSlides: false,
+
             loop: true,
             grid: {
               rows: 1,
@@ -66,6 +67,8 @@ export const SliderThird = () => {
           994: {
             slidesPerView: 3,
             spaceBetween: 20,
+            centeredSlides: false,
+
             loop: false,
             grid: {
               rows: 1,
@@ -76,6 +79,8 @@ export const SliderThird = () => {
             loop: true,
             slidesPerView: 2,
             spaceBetween: 30,
+            centeredSlides: false,
+
             grid: {
               rows: 2,
             },

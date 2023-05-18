@@ -1,40 +1,53 @@
 {
   "listMenu": [
     {
+      "id": 0,
+      "title": "Главная",
+      "path": "/",
+      "breadcrumb":"Главная",
+      "show": false
+    },
+    {
       "id": 1,
       "title": "Про нас",
       "path": "/about-us",
-      "breadcrumb":"Про нас"
+      "breadcrumb":"Про нас",
+      "show": true
     },
     {
       "id": 2,
       "title": "Новини",
       "path": "/news",
-      "breadcrumb":"Новини"
+      "breadcrumb":"Новини",
+       "show": true
     },
     {
       "id": 3,
       "title": "Отримати допомогу",
       "path": "/get-help",
-      "breadcrumb":"Отримати допомогу"
+      "breadcrumb":"Отримати допомогу",
+       "show": true
     },
     {
       "id": 4,
       "title": "Допомогти",
       "path": "/help",
-      "breadcrumb":"Допомогти"
+      "breadcrumb":"Допомогти",
+       "show": true
     },
     {
       "id": 5,
       "title": "Контакти",
       "path": "/contacts",
-      "breadcrumb":"Контакти"
+      "breadcrumb":"Контакти",
+       "show": true
     },
     {
       "id": 6,
       "title": "Звіти",
       "path": "/result",
-      "breadcrumb":"Звіти"
+      "breadcrumb":"Звіти",
+      "show": false
     }
   ],
   "news": [
