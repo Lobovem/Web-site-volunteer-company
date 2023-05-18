@@ -13,7 +13,7 @@ export const NewsList = ({ currentItems }) => {
             <div className={s.news__inner} key={item.id}>
               <div className={s.news__imgWrap}>
                 <Link key={item.id} to={`/news/${item.id}`}>
-                  <img className={s.news__img} src={item.photo} alt="news.jpg" />
+                  <img className={s.news__img} src={item.photoMain} alt="news.jpg" />
                 </Link>
               </div>
 
