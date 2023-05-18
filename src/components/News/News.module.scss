@@ -47,6 +47,8 @@
     line-height: 21px;
     color: $color-black;
     mix-blend-mode: normal;
+    margin-bottom: 30px;
+
 
     @include xl-min {
       margin-bottom: 50px;

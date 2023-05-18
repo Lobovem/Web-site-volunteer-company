@@ -11,6 +11,8 @@ import s from './SliderFirst.module.scss';
 import { useRef, useState } from 'react';
 import { BtnSliders } from '../../kit/BtnSliders/BtnSliders';
 import { Link, useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { listNewsSelector } from '../../../redux/slice/contentSlice';
 
 export const SliderFirst = () => {
   const prevRef = useRef(null);
@@ -20,6 +22,9 @@ export const SliderFirst = () => {
   console.log('newsId=====>', newsId);
 
   const [init, setInit] = useState();
+  const listNews = useSelector(listNewsSelector);
+
+  console.log('listNews=====>', listNews);
 
   return (
     <>
@@ -31,7 +36,7 @@ export const SliderFirst = () => {
           disabledClass: 'swiper-button-disabled',
         }}
         autoplay={{
-          delay: 2000,
+          delay: 22000,
           //option than disable autoplay slides (when click btn or manual changes sliders)
           disableOnInteraction: false,
         }}
@@ -60,77 +65,19 @@ export const SliderFirst = () => {
         }}
         modules={[Navigation, Autoplay]}
       >
-        <SwiperSlide className={s.slider__item}>
-          <div className={s.slider__itemWrap}>
-            <Link to="/news/:newsId">
-              <img className={s.slider__img} src={slide} alt="slider-news-1.jpg" />
-            </Link>
+        {listNews.map((news) => (
+          <SwiperSlide className={s.slider__item}>
+            <div className={s.slider__itemWrap}>
+              <Link to="/news">
+                <img className={s.slider__img} src={news.photoMain} alt={news.photoMain} />
+              </Link>
 
-            <Link to="/:newsId">
-              <h2 className={s.slider__title}>Якась дуже важлива новина перша</h2>
-            </Link>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className={s.sslider_item}>
-          <div className={s.slider__itemWrap}>
-            <Link to="/:newsId">
-              <img className={s.slider__img} src={slide2} alt="slider-news-2.jpg" />
-            </Link>
-
-            <Link to="/:newsId">
-              <h2 className={s.slider__title}>Якась новина друга</h2>
-            </Link>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className={s.slider__item}>
-          <div className={s.slider__itemWrap}>
-            <Link to="/:newsId">
-              <img className={s.slider__img} src={slide} alt="slider-news-1.jpg" />
-            </Link>
-
-            <Link to="/:newsId">
-              <h2 className={s.slider__title}>Якась дуже важлива новина перша</h2>
-            </Link>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className={s.slider__item}>
-          <div className={s.slider__itemWrap}>
-            <Link to="/:newsId">
-              <img className={s.slider__img} src={slide2} alt="slider-news-2.jpg" />
-            </Link>
-
-            <Link to="/:newsId">
-              <h2 className={s.slider__title}>Якась новина друга</h2>
-            </Link>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className={s.slider__item}>
-          <div className={s.slider__itemWrap}>
-            <Link to="/:newsId">
-              <img className={s.slider__img} src={slide} alt="slider-news-1.jpg" />
-            </Link>
-
-            <Link to="/:newsId">
-              <h2 className={s.slider__title}>Якась дуже важлива новина перша</h2>
-            </Link>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className={s.slider__item}>
-          <div className={s.slider__itemWrap}>
-            <Link to="/:newsId">
-              <img className={s.slider__img} src={slide2} alt="slider-news-2.jpg" />
-            </Link>
-
-            <Link to="/:newsId">
-              <h2 className={s.slider__title}>Якась новина друга</h2>
-            </Link>
-          </div>
-        </SwiperSlide>
+              <Link to="/news" className={s.slider__link}>
+                <h2 className={s.slider__title}>{news.title}</h2>
+              </Link>
+            </div>
+          </SwiperSlide>
+        ))}
 
         <BtnSliders nextRef={nextRef} prevRef={prevRef} className={'btnSlider'}></BtnSliders>
       </Swiper>

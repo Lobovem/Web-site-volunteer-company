@@ -1,9 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper';
 
-// import slide from '../../../img/slider-news-1.jpg';
-// import slide2 from '../../../img/slider-news-2.jpg';
-
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 // import './styles.scss';
@@ -33,7 +30,7 @@ export const SliderFifth = ({ news }) => {
           //option than disable autoplay slides (when click btn or manual changes sliders)
           disableOnInteraction: false,
         }}
-        loop={true}
+        loop={false}
         onInit={() => setInit(true)}
         slidesPerView={1}
         centeredSlides={false}
@@ -42,18 +39,18 @@ export const SliderFifth = ({ news }) => {
           440: {
             slidesPerView: 2,
             spaceBetween: 20,
-            loop: true,
+            // loop: false,
           },
           768: {
             slidesPerView: 3,
             spaceBetween: 20,
-            loop: true,
+            // loop: false,
           },
           1400: {
-            slidesPerView: 2.4,
+            slidesPerView: 2.3,
             centeredSlides: false,
             spaceBetween: 30,
-            loop: true,
+            // loop: false,
           },
         }}
         modules={[Navigation, Autoplay]}

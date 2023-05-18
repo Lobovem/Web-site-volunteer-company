@@ -39,24 +39,23 @@
     text-transform: uppercase;
     color: $color-black;
     mix-blend-mode: normal;
-    padding: 10px 0;
+    // padding: 10px 0;
+    padding: 30px 0;
 
-    @media(min-width: 768px) {
-      padding: 20px 0;
-    }
+    @media(min-width: 768px) {}
 
     @include xl-min {
-      padding: 30px 0 70px 0;
+      padding: 30px 0 50px 0;
     }
   }
 
 
   &__desc {
-    font-size: $font-size-14;
+    font-size: $font-size-16;
     line-height: 21px;
     color: $color-black;
     mix-blend-mode: normal;
-    text-align: left;
+    text-align: center;
     margin-bottom: 20px;
     margin-top: auto;
 
