@@ -8,12 +8,9 @@ const initialState = {
   burgerState: false,
 };
 
-const SERVER_URL_LISTMENU = 'listMenu';
-const SERVER_URL_NEWS = 'news';
-
 export const fetchMenu = createAsyncThunk('content/fetchMenu', async () => {
   try {
-    const response = await fetch(`http://localhost:3000/${SERVER_URL_LISTMENU}`);
+    const response = await fetch('http://localhost:3000/listMenu');
     if (!response.ok) {
       throw new Error('Error fetching menu list');
     }
@@ -26,7 +23,7 @@ export const fetchMenu = createAsyncThunk('content/fetchMenu', async () => {
 
 export const fetchNews = createAsyncThunk('content/fetchNews', async () => {
   try {
-    const response = await fetch(`http://localhost:3000/${SERVER_URL_NEWS}`);
+    const response = await fetch('http://localhost:3000/news');
     if (!response.ok) {
       throw new Error('Error fetching menu list');
     }

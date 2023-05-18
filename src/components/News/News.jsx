@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { SliderFirst } from '../Sliders/SliderFirst/SliderFirstr';
 import { TitleMain } from '../TitleMain/TitleMain';
 import s from './News.module.scss';
@@ -15,9 +16,9 @@ export const News = () => {
             структуру, з можливістю вставляти зовнішні посилання, але не тільки...
           </p>
 
-          <a className={s.sectionNews__link} href="/">
+          <Link to="/news" className={s.sectionNews__link}>
             Читати повністю
-          </a>
+          </Link>
         </div>
 
         <SliderFirst />

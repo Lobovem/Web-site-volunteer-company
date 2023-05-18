@@ -17,7 +17,7 @@ export const App = ({ newsId }) => {
   useEffect(() => {
     dispatch(fetchMenu());
     dispatch(fetchNews());
-  }, [dispatch]);
+  }, []);
 
   const isLoading = useSelector((state) => state.content.isLoading);
   const error = useSelector((state) => state.content.error);
