@@ -7,6 +7,12 @@
 
   position: relative;
 
+  @media (min-width: 1500px) {
+    padding-bottom: 150px;
+  }
+
+
+
   &__decor {
     margin: 0;
     padding: 0;
@@ -16,8 +22,8 @@
 
       position: absolute;
       display: block;
-      top: 150px;
-      left: -430px;
+      top: 50px;
+      left: -370px;
       z-index: 0;
       font-weight: $font-weight-500;
       font-size: $font-size-165;
@@ -28,5 +34,29 @@
       mix-blend-mode: normal;
       transform: rotate(-90deg);
     }
+  }
+
+  &__title {
+    font-weight: $font-weight-500;
+    font-size: $font-size-18;
+    line-height: 18px;
+    color: $color-black;
+    mix-blend-mode: normal;
+    margin: 25px 0;
+
+    @include lg-min {
+      font-weight: $font-weight-500;
+      font-size: $font-size-24;
+      line-height: 24px;
+    }
+  }
+
+  &__desc {
+    font-weight: $font-weight-400;
+    font-size: $font-size-14;
+    line-height: 21px;
+    color: $color-black;
+    mix-blend-mode: normal;
+    margin-bottom: 10px;
   }
 }
