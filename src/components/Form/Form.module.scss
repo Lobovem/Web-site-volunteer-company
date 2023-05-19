@@ -3,6 +3,7 @@
 @import './src/styles/MixinsLayout.module.scss';
 @import './src/styles/MixinsKit.module.scss';
 
+
 .form {
   &__wrap {
     @media(min-width: 750px) {
@@ -41,6 +42,7 @@
     box-shadow: 0px 4px 15px rgba(2, 95, 167, 0.08);
     border-radius: 15px;
     min-height: 550px;
+
 
 
     @media(min-width: 750px) {
@@ -104,6 +106,13 @@
     padding: 0 10px;
     margin-bottom: 30px;
 
+    @include hoverAnimation;
+
+    &:hover {
+      border: 2px solid $color-hover;
+    }
+
+
     @media (min-width: 1200px) {
       margin-bottom: 40px;
     }
@@ -116,6 +125,7 @@
     padding: 10px;
     min-height: 100px;
     margin-bottom: 50px;
+    resize: none;
 
     @include lg-min {
       margin-bottom: 40px;
@@ -124,6 +134,12 @@
 
     @media (min-width: 1200px) {
       margin-bottom: 80px;
+    }
+
+    @include hoverAnimation;
+
+    &:hover {
+      border: 2px solid $color-hover;
     }
   }
 

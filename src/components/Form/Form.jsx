@@ -48,7 +48,15 @@ export const Form = () => {
             <label className={s.form__inputTitle} htmlFor="name">
               Імʼя
             </label>
-            <input className={s.form__input} type="text" name="name" id="name" required value={inputDataForm.name} onChange={handleChange} />
+            <input
+              className={s.form__input}
+              type="text"
+              name="name"
+              id="name"
+              required
+              value={inputDataForm.name}
+              onChange={handleChange}
+            />
 
             <label className={s.form__inputTitle} htmlFor="email">
               Email
@@ -67,7 +75,14 @@ export const Form = () => {
             <label className={s.form__inputTitle} htmlFor="area">
               Коментар
             </label>
-            <textarea className={s.form__textArea} name="textarea" id="area" required value={inputDataForm.textarea} onChange={handleChange}></textarea>
+            <textarea
+              className={s.form__textArea}
+              name="textarea"
+              id="area"
+              required
+              value={inputDataForm.textarea}
+              onChange={handleChange}
+            ></textarea>
 
             <div className={s.form__btnWrap}>
               <p className={s.form__text}>
