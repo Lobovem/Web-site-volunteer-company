@@ -23,7 +23,7 @@
     margin-bottom: 30px;
   }
 
-  &__desc {
+  &__link {
     font-weight: $font-weight-500;
     font-size: $font-size-14;
     line-height: 17px;
@@ -33,6 +33,7 @@
     display: block;
     margin-bottom: 5px;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 
     &:hover {
       color: $color-hover;
