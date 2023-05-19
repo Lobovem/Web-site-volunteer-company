@@ -105,11 +105,18 @@
     height: 35px;
     padding: 0 10px;
     margin-bottom: 30px;
+    outline: none;
+
 
     @include hoverAnimation;
 
     &:hover {
-      border: 2px solid $color-hover;
+      border-color: $color-hover;
+    }
+
+    &:focus,
+    &:active {
+      border-color: $color-type;
     }
 
 
@@ -126,6 +133,7 @@
     min-height: 100px;
     margin-bottom: 50px;
     resize: none;
+    outline: none;
 
     @include lg-min {
       margin-bottom: 40px;
@@ -139,7 +147,12 @@
     @include hoverAnimation;
 
     &:hover {
-      border: 2px solid $color-hover;
+      border-color: $color-hover;
+    }
+
+    &:focus,
+    &:active {
+      border-color: $color-type;
     }
   }
 
