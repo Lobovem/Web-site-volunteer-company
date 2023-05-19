@@ -66,7 +66,7 @@ export const SliderFirst = () => {
         modules={[Navigation, Autoplay]}
       >
         {listNews.map((news) => (
-          <SwiperSlide className={s.slider__item}>
+          <SwiperSlide className={s.slider__item} key={news.id}>
             <div className={s.slider__itemWrap}>
               <Link to="/news">
                 <img className={s.slider__img} src={news.photoMain} alt={news.photoMain} />

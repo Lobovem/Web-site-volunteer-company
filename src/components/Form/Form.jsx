@@ -3,6 +3,7 @@ import sending from '../../img/form-sending.svg';
 import { Btn } from '../kit/Btn/Btn';
 import { useState } from 'react';
 import s from './Form.module.scss';
+import { Link } from 'react-router-dom';
 
 export const Form = () => {
   const [sendState, setSendState] = useState(false);
@@ -71,9 +72,9 @@ export const Form = () => {
             <div className={s.form__btnWrap}>
               <p className={s.form__text}>
                 Відправляючи форму, я приймаю{' '}
-                <a className={s.form__link} href="/">
+                <Link to="/user-condition" className={s.form__link}>
                   умови угоди користувача
-                </a>
+                </Link>
               </p>
               <Btn title="надіслати" className="btn" type="submit" />
             </div>

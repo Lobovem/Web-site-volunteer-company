@@ -48,7 +48,16 @@
       "path": "/result",
       "breadcrumb":"Звіти",
       "show": false
+    },
+    {
+      "id": "7",
+      "title": "Умови використання сайту",
+      "path": "/user-condition",
+      "breadcrumb":"Умови використання сайту",
+      "show": false
     }
+
+   
   ],
   "news": [
     {
