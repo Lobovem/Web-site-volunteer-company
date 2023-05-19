@@ -5,6 +5,7 @@ import logo from '../../img/logo-second.png';
 import { FooterContacts } from '../FooterContacts/FooterContacts';
 import { FooterSocial } from '../FooterSocial/FooterSocial';
 import { Btn } from '../kit/Btn/Btn';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
@@ -18,11 +19,14 @@ export const Footer = () => {
 
           <div className={s.footer__descBox}>
             <p className={s.footer__desc}>
-              За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його
-              структуру, з можливістю вставляти зовнішні посилання, але не тільки.
+              Україна – це вічність, не тільки сьогоднішня, але передусім майбутня й минула. Самостійну державу може здобути собі
+              український народ тільки власною боротьбою і трудом. Не дивіться на Україну, як на землю своїх батьків. Дивіться на неї, як на
+              землю своїх дітей
             </p>
             <div className={s.footer__btnBox}>
-              <Btn title="задонатити" type="button" className="btn-secondary" />
+              <Link to="/donate">
+                <Btn title="задонатити" type="button" className="btn-secondary" />
+              </Link>
             </div>
           </div>
         </div>

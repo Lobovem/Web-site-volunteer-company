@@ -12,6 +12,7 @@ import { SimpleNews } from '../SimpleNews/SimpleNews';
 import s from './SectionHOC.module.scss';
 import { GetHelp } from '../GetHelp/GetHelp';
 import { UserConditions } from '../UserConditions/UserConditions';
+import { DonateAll } from '../DonateAll/DonateAll';
 
 export const SectionHOC = (Component) => (props) =>
   (
@@ -35,3 +36,4 @@ export const PaginationWithLayout = SectionHOC(Pagination);
 export const SimpleNewsnWithLayout = SectionHOC(SimpleNews);
 export const GetHelpWithLayout = SectionHOC(GetHelp);
 export const UserConditionWithLayout = SectionHOC(UserConditions);
+export const DonateAllnWithLayout = SectionHOC(DonateAll);

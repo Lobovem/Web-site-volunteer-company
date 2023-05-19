@@ -13,6 +13,7 @@ import { fetchMenu, fetchNews } from '../../redux/slice/contentSlice';
 import { ScrollToTop } from '../ScrollTop/ScrollTop';
 import { PageUserCondition } from '../PageUserConditions/PageUserCondition';
 import { PageContacts } from '../PageContacts/PageContacts';
+import { PageDonate } from '../PageDonate/PageDonate';
 
 export const App = ({ newsId }) => {
   const dispatch = useDispatch();
@@ -43,6 +44,7 @@ export const App = ({ newsId }) => {
         <Route path="/news" element={<PageNews />} />
         <Route path="/news/:newsId" element={<PageSimpleNews />} />
         <Route path="/get-help" element={<PageGetHelp />} />
+        <Route path="/donate" element={<PageDonate />} />
         <Route path="/contacts" element={<PageContacts />} />
         <Route path="/user-condition" element={<PageUserCondition />} />
         <Route path="*" element={<PageError />} />
