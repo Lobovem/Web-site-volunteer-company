@@ -49,6 +49,9 @@
     mix-blend-mode: normal;
     margin-bottom: 30px;
 
+    @include lg-min {
+      font-size: $font-size-16;
+    }
 
     @include xl-min {
       margin-bottom: 50px;

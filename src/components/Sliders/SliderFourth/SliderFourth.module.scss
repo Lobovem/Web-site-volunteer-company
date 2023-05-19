@@ -78,6 +78,7 @@
     background: $gradient-main;
     text-transform: uppercase;
     margin: 0;
+    margin-bottom: 10px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -109,9 +110,10 @@
     mix-blend-mode: normal;
     text-align: center;
     margin-bottom: 50px;
-    // margin-top: auto;
+
 
     @include lg-min {
+      font-size: $font-size-16;
       margin-bottom: 60px;
     }
 

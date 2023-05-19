@@ -51,13 +51,17 @@
 
 
   &__desc {
-    font-size: $font-size-16;
+    font-size: $font-size-14;
     line-height: 21px;
     color: $color-black;
     mix-blend-mode: normal;
     text-align: center;
     margin-bottom: 20px;
     margin-top: auto;
+
+    @include lg-min {
+      font-size: $font-size-16;
+    }
 
     @include xl-min {
       margin-bottom: 40px;

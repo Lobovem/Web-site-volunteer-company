@@ -59,6 +59,11 @@
   }
 
   &__text {
+
+    @include lg-min {
+      font-size: $font-size-16;
+    }
+
     @include xl-min {
       max-width: 250px;
     }
@@ -67,6 +72,7 @@
     line-height: 21px;
     color: $color-black;
     mix-blend-mode: normal;
+    margin-bottom: 20px;
 
   }
 }

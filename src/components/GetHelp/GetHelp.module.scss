@@ -51,7 +51,7 @@
     line-height: 18px;
     color: $color-black;
     mix-blend-mode: normal;
-    margin: 25px 0;
+    margin: 0 0 10px 0;
 
     @include lg-min {
       font-weight: $font-weight-500;
@@ -73,5 +73,13 @@
     color: $color-black;
     mix-blend-mode: normal;
     margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+
+    @include lg-min {
+      font-size: $font-size-16;
+    }
   }
 }

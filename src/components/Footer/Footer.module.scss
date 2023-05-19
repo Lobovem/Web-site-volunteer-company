@@ -35,10 +35,9 @@
     gap: 40px;
     justify-content: space-between;
 
-    @include sm-min {
-      flex-direction: row;
+    @media(min-width: 700px) {
       flex-wrap: wrap;
-
+      flex-direction: row;
     }
 
     @include lg-min {

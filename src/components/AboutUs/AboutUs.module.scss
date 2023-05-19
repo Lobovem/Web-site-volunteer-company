@@ -56,6 +56,8 @@
     color: $color-black;
     mix-blend-mode: normal;
 
-
+    @include lg-min {
+      font-size: $font-size-16;
+    }
   }
 }

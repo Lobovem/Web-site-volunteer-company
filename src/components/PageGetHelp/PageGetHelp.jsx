@@ -9,7 +9,7 @@ export const PageGetHelp = () => {
 
       <GetHelpWithLayout
         titleSection="отримати допомогу"
-        classNameSectionWrap="sectionWrapShort"
+        classNameSectionWrap="sectionWrapShortAlt"
         classNameTitleSection="titleSection"
         classNameSection="sectionAlt"
       />
