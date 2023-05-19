@@ -32,6 +32,11 @@
     text-decoration: none;
     display: block;
     margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $color-hover;
+    }
   }
 
   &__phoneBox {

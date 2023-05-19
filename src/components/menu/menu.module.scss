@@ -56,9 +56,6 @@
       gap: 40px;
     }
 
-    @include xl-min {
-      // margin-right: 166px;
-    }
   }
 
   &__link {
@@ -90,12 +87,9 @@
       padding: 10px 5px;
     }
 
+
     &:hover {
       color: $color-hover;
     }
   }
 }
-
-
-
-.menu {}

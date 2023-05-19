@@ -69,6 +69,12 @@ export const Form = () => {
             <textarea className={s.form__textArea} name="textarea" id="area" required value={inputDataForm.textarea} onChange={handleChange}></textarea>
 
             <div className={s.form__btnWrap}>
+              <p className={s.form__text}>
+                Відправляючи форму, я приймаю{' '}
+                <a className={s.form__link} href="/">
+                  умови угоди користувача
+                </a>
+              </p>
               <Btn title="надіслати" className="btn" type="submit" />
             </div>
           </form>

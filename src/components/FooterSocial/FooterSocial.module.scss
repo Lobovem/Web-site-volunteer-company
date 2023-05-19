@@ -27,17 +27,26 @@
     font-weight: $font-weight-500;
     font-size: $font-size-14;
     line-height: 17px;
-    color: $color-white;
     mix-blend-mode: normal;
     text-decoration: none;
     display: block;
-    margin-bottom: 5px;
+
   }
 
-  &__instagramBox {
+  &__wrapLink {
     position: relative;
     margin-bottom: 20px;
     padding-left: 40px;
+    display: flex;
+    color: $color-white;
+
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $color-hover;
+    }
   }
 
   &__facebookBox {

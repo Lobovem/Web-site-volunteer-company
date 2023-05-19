@@ -8,19 +8,15 @@ export const FooterSocial = () => {
     <div className={s.social}>
       <div className={s.social__wrap}>
         <h2 className={s.social__title}>соціальні мережі</h2>
-        <div className={s.social__instagramBox}>
+        <a className={s.social__wrapLink} href="/">
           <img className={s.social__img} src={instagram} alt="icon-instagram.svg" />
-          <a className={s.social__desc} href="/">
-            instagram
-          </a>
-        </div>
+          <p className={s.social__desc}>instagram</p>
+        </a>
 
-        <div className={s.social__facebookBox}>
+        <a className={s.social__wrapLink} href="/">
           <img className={s.social__img} src={facebook} alt="icon-facebook.svg" />
-          <a className={s.social__desc} href="/">
-            facebook
-          </a>
-        </div>
+          <p className={s.social__desc}>facebook</p>
+        </a>
       </div>
     </div>
   );
