@@ -3,11 +3,6 @@ import { Autoplay, Grid, Navigation } from 'swiper';
 import { useRef, useState } from 'react';
 import { BtnSliders } from '../../kit/BtnSliders/BtnSliders';
 
-import team1 from '../../../img/team-1.jpeg';
-import team2 from '../../../img/team-2.png';
-import team3 from '../../../img/team-3.jpeg';
-import team4 from '../../../img/team-4.png';
-
 import 'swiper/css';
 import 'swiper/css/grid';
 import 'swiper/css/pagination';
@@ -93,7 +88,7 @@ export const SliderFourth = () => {
             <h2 className={s.slider__title}>Максим Журавлев</h2>
             <p className={s.slider__position}>Голова фонду</p>
             <p className={s.slider__desc}>Засновник благодійного фонду, Волонтер та висококваліфікований спеціаліст в галузі права</p>
-            <img className={s.slider__img} src={team1} alt="team-1.jpeg" />
+            <img className={s.slider__img} src="./img/team-1.jpeg" alt="team-1.jpeg" />
           </div>
         </SwiperSlide>
 
@@ -102,7 +97,7 @@ export const SliderFourth = () => {
             <h2 className={s.slider__title}>Алексей Волонтеров</h2>
             <p className={s.slider__position}>Руководитель штаба волонтер</p>
             <p className={s.slider__desc}>Найкращий логист эвер и еще какой-то важный текст, но не очень длинный</p>
-            <img className={s.slider__img} src={team2} alt="team-2.png" />
+            <img className={s.slider__img} src="./img/team-2.png" alt="team-2.png" />
           </div>
         </SwiperSlide>
 
@@ -111,7 +106,7 @@ export const SliderFourth = () => {
             <h2 className={s.slider__title}>Іванов Тимур Іванович</h2>
             <p className={s.slider__position}>Доброволець</p>
             <p className={s.slider__desc}>Співробітник благодійного фонду, Волонтер та висококваліфікований спеціаліст в галузі права</p>
-            <img className={s.slider__img} src={team3} alt="team-3.jpeg" />
+            <img className={s.slider__img} src="./img/team-3.jpeg" alt="team-3.jpeg" />
           </div>
         </SwiperSlide>
 
@@ -120,7 +115,7 @@ export const SliderFourth = () => {
             <h2 className={s.slider__title}>Микола Франко</h2>
             <p className={s.slider__position}>Заместитель руководителя</p>
             <p className={s.slider__desc}>Засновник благодійного фонду, Волонтер та висококваліфікований спеціаліст в галузі права</p>
-            <img className={s.slider__img} src={team4} alt="team-4.png" />
+            <img className={s.slider__img} src="./img/team-4.png" alt="team-4.png" />
           </div>
         </SwiperSlide>
 

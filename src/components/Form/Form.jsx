@@ -1,5 +1,3 @@
-import photo from '../../img/form-photo.jpg';
-import sending from '../../img/form-sending.svg';
 import { Btn } from '../kit/Btn/Btn';
 import { useState } from 'react';
 import s from './Form.module.scss';
@@ -30,12 +28,12 @@ export const Form = () => {
     <div className={s.form}>
       <div className={s.form__wrap}>
         <div className={s.form__imgWrap}>
-          <img className={s.form__img} src={photo} alt="" />
+          <img className={s.form__img} src="./img/form-photo.jpg" alt="" />
         </div>
 
         {sendState ? (
           <div className={s.form__sending}>
-            <img className={s.form__sendingImg} src={sending} alt="form-sending.svg" />
+            <img className={s.form__sendingImg} src="./img/form-sending.svg" alt="form-sending.svg" />
             <p className={s.form__sendingTitle}>
               <span>вітаємо!</span> дані успішно відправлені!
             </p>
@@ -86,7 +84,7 @@ export const Form = () => {
 
             <div className={s.form__btnWrap}>
               <p className={s.form__text}>
-                Відправляючи форму, я приймаю{' '}
+                Відправляючи форму, я приймаю
                 <Link to="/user-condition" className={s.form__link}>
                   умови угоди користувача
                 </Link>

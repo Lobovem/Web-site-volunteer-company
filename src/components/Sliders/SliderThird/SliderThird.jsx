@@ -3,9 +3,6 @@ import { Autoplay, Grid, Navigation } from 'swiper';
 import { useRef, useState } from 'react';
 import { BtnSliders } from '../../kit/BtnSliders/BtnSliders';
 
-import icon1 from '../../../img/icon-slider-waySupport-1.svg';
-import icon2 from '../../../img/icon-slider-waySupport-2.svg';
-
 import 'swiper/css';
 import 'swiper/css/grid';
 import 'swiper/css/pagination';
@@ -90,9 +87,11 @@ export const SliderThird = () => {
       >
         <SwiperSlide>
           <div className={s.slider__itemWrap}>
-            <img className={s.slider__img} src={icon2} alt="icon-slider-waySupport-2.svg" />
+            <img className={s.slider__img} src="./img/icon-slider-waySupport-2.svg" alt="icon-slider-waySupport-2.svg" />
             <h2 className={s.slider__title}>купівля обладнання</h2>
-            <p className={s.slider__desc}>Медицини та здоров'я - медикаменти та все, що пов'язано зі здоров'ям та рятуванням наших захисників</p>
+            <p className={s.slider__desc}>
+              Медицини та здоров'я - медикаменти та все, що пов'язано зі здоров'ям та рятуванням наших захисників
+            </p>
             {/* <a className={s.slider__link} href="/">
               Читати повністю
             </a> */}
@@ -101,7 +100,7 @@ export const SliderThird = () => {
 
         <SwiperSlide>
           <div className={s.slider__itemWrap}>
-            <img className={s.slider__img} src={icon1} alt="icon-slider-waySupport-1.svg" />
+            <img className={s.slider__img} src="./img/icon-slider-waySupport-1.svg" alt="icon-slider-waySupport-1.svg" />
             <h2 className={s.slider__title}>збір коштів</h2>
             <p className={s.slider__desc}>Транспорт і засоби переміщення - авто для Сил оборони, включаючи ремонт та обслуговування</p>
             {/* <a className={s.slider__link} href="/">
@@ -112,7 +111,7 @@ export const SliderThird = () => {
 
         <SwiperSlide>
           <div className={s.slider__itemWrap}>
-            <img className={s.slider__img} src={icon2} alt="icon-slider-waySupport-2.svg" />
+            <img className={s.slider__img} src="./img/icon-slider-waySupport-2.svg" alt="icon-slider-waySupport-2.svg" />
             <h2 className={s.slider__title}>купівля обладнання</h2>
             <p className={s.slider__desc}>Засоби розвідки - тепловізори, дрони, приціли і інші необхідні речі</p>
             {/* <a className={s.slider__link} href="/">
@@ -123,7 +122,7 @@ export const SliderThird = () => {
 
         <SwiperSlide>
           <div className={s.slider__itemWrap}>
-            <img className={s.slider__img} src={icon1} alt="icon-slider-waySupport-1.svg" />
+            <img className={s.slider__img} src="./img/icon-slider-waySupport-1.svg" alt="icon-slider-waySupport-1.svg" />
             <h2 className={s.slider__title}>збір коштів</h2>
             <p className={s.slider__desc}>Загальна підтримка необхідним - продовольча підтримка, предмети одягу, засоби гігієни</p>
             {/* <a className={s.slider__link} href="/">

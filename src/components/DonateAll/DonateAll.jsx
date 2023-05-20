@@ -1,11 +1,4 @@
 import { TitleMain } from '../TitleMain/TitleMain';
-import privat from '../../img/icon-privat-bank.svg';
-import swift from '../../img/icon-swift.svg';
-import paypal from '../../img/icon-pay-pal.svg';
-import mono from '../../img/icon-mono.png';
-import BTC from '../../img/icon-bitcoin.svg';
-import ETH from '../../img/icon-ethereum.svg';
-import USDT from '../../img/icon-tether.svg';
 import s from './DonateAll.module.scss';
 
 export const DonateAll = () => {
@@ -20,7 +13,7 @@ export const DonateAll = () => {
 
         <div className={s.donateAll__wrapPay}>
           <div className={s.donateAll__wrapIcon}>
-            <img className={s.donateAll__img} src={privat} alt="icon-privat-bank.svg" />
+            <img className={s.donateAll__img} src="./img/icon-privat-bank.svg" alt="icon-privat-bank.svg" />
             <p className={s.donateAll__text}>Рахунок (Гривня)</p>
             <p className={s.donateAll__desc}>БО МБФ УКРАЇНСЬКИЙ ГУМАНІТАРНИЙ БАТАЛЬЙОН</p>
 
@@ -32,37 +25,37 @@ export const DonateAll = () => {
           </div>
 
           <div className={s.donateAll__wrapIcon}>
-            <img className={s.donateAll__img} src={mono} alt="icon-mono.png" />
+            <img className={s.donateAll__img} src="./img/icon-mono.png" alt="icon-mono.png" />
             <p className={s.donateAll__text}>Карта (Гривна)</p>
             <p className={s.donateAll__desc}>3758640000000000</p>
           </div>
 
           <div className={s.donateAll__wrapIcon}>
-            <img className={s.donateAll__img} src={swift} alt="icon-swift.svg" />
+            <img className={s.donateAll__img} src="./img/icon-swift.svg" alt="icon-swift.svg" />
             <p className={s.donateAll__text}>SWIFT (Прекази у гривнях)</p>
             <p className={s.donateAll__desc}>IBAN UA00 000000 00000 00000000000000</p>
           </div>
 
           <div className={s.donateAll__wrapIcon}>
-            <img className={s.donateAll__img} src={paypal} alt="icon-pay-pal.svg" />
+            <img className={s.donateAll__img} src="./img/icon-pay-pal.svg" alt="icon-pay-pal.svg" />
             <p className={s.donateAll__text}>Перейти до PayPal</p>
             <p className={s.donateAll__desc}>namecompany@gmail.com</p>
           </div>
 
           <div className={s.donateAll__wrapIconAlt}>
-            <img className={s.donateAll__img} src={BTC} alt="icon-bitcoin.svg" />
+            <img className={s.donateAll__img} src="./img/icon-bitcoin.svg" alt="icon-bitcoin.svg" />
             <div className={s.donateAll__wrapText}>
               <p className={s.donateAll__text}>BTC</p>
               <p className={s.donateAll__desc}>0x0000000000000000000000000000000000000000</p>
             </div>
 
-            <img className={s.donateAll__img} src={ETH} alt="icon-ethereum.svg" />
+            <img className={s.donateAll__img} src="./img/icon-ethereum.svg" alt="icon-ethereum.svg" />
             <div className={s.donateAll__wrapText}>
               <p className={s.donateAll__text}>ETH</p>
               <p className={s.donateAll__desc}>0x00000000000000000000000000000000</p>
             </div>
 
-            <img className={s.donateAll__img} src={USDT} alt="icon-tether.svg" />
+            <img className={s.donateAll__img} src="./img/icon-tether.svg" alt="icon-tether.svg" />
             <div className={s.donateAll__wrapText}>
               <p className={s.donateAll__text}>USDT</p>
               <p className={s.donateAll__desc}>TG00000000000000000000000000000000</p>

@@ -1,5 +1,4 @@
 import { Btn } from '../kit/Btn/Btn';
-import flag from '../../img/ukraine-flag.png';
 import { SocialLine } from '../SocialLine/SocialLine';
 import s from './Banner.module.scss';
 import { Link } from 'react-router-dom';
@@ -8,7 +7,7 @@ export const Banner = () => {
   return (
     <>
       <div className={s.banner}>
-        <img className={s.banner__img} src={flag} alt="" />
+        <img className={s.banner__img} src="./img/ukraine-flag.png" alt="" />
         <div className={s.banner__textWrap}>
           <h1 className={s.banner__title}>Єдність країни забезпечує її Перемогу!</h1>
           <p className={s.banner__desc}>

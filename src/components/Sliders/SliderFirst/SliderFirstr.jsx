@@ -1,9 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper';
 
-import slide from '../../../img/slider-news-1.jpg';
-import slide2 from '../../../img/slider-news-2.jpg';
-
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 // import './styles.scss';

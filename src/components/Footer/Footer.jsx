@@ -1,7 +1,6 @@
 import { FooterMenu } from '../FooterMenu/FooterMenu';
 import s from './Footer.module.scss';
 
-import logo from '../../img/logo-second.png';
 import { FooterContacts } from '../FooterContacts/FooterContacts';
 import { FooterSocial } from '../FooterSocial/FooterSocial';
 import { Btn } from '../kit/Btn/Btn';
@@ -10,7 +9,7 @@ import { Link } from 'react-router-dom';
 export const Footer = () => {
   return (
     <div className={s.footer}>
-      <img className={s.footer__img} src={logo} alt="logo-second.png" />
+      <img className={s.footer__img} src="./img/logo-second.png" alt="logo-second.png" />
       <div className={s.footer__wrap}>
         <div className={s.footer__inner}>
           <FooterMenu />
