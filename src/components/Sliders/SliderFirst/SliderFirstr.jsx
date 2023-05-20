@@ -65,19 +65,20 @@ export const SliderFirst = () => {
         }}
         modules={[Navigation, Autoplay]}
       >
-        {listNews.map((news) => (
-          <SwiperSlide className={s.slider__item} key={news.id}>
-            <div className={s.slider__itemWrap}>
-              <Link to="/news">
-                <img className={s.slider__img} src={news.photoMain} alt={news.photoMain} />
-              </Link>
+        {listNews &&
+          listNews.map((news) => (
+            <SwiperSlide className={s.slider__item} key={news.id}>
+              <div className={s.slider__itemWrap}>
+                <Link to="/news">
+                  <img className={s.slider__img} src={news.photoMain} alt={news.photoMain} />
+                </Link>
 
-              <Link to="/news" className={s.slider__link}>
-                <h2 className={s.slider__title}>{news.title}</h2>
-              </Link>
-            </div>
-          </SwiperSlide>
-        ))}
+                <Link to="/news" className={s.slider__link}>
+                  <h2 className={s.slider__title}>{news.title}</h2>
+                </Link>
+              </div>
+            </SwiperSlide>
+          ))}
 
         <BtnSliders nextRef={nextRef} prevRef={prevRef} className={'btnSlider'}></BtnSliders>
       </Swiper>

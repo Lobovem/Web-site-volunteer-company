@@ -11,15 +11,16 @@ export const Breadcrumbs = () => {
 
   return (
     <div className={s.breadcrumbs}>
-      {breadcrumbs.map(({ location, match, breadcrumb }) => (
-        <Link
-          className={location.pathname === match.pathname ? `${s.breadcrumbs__link} ${s.breadcrumbs__link_active}` : s.breadcrumbs__link}
-          key={match.pathname}
-          to={match.pathname}
-        >
-          {breadcrumb}
-        </Link>
-      ))}
+      {breadcrumbs &&
+        breadcrumbs.map(({ location, match, breadcrumb }) => (
+          <Link
+            className={location.pathname === match.pathname ? `${s.breadcrumbs__link} ${s.breadcrumbs__link_active}` : s.breadcrumbs__link}
+            key={match.pathname}
+            to={match.pathname}
+          >
+            {breadcrumb}
+          </Link>
+        ))}
     </div>
   );
 };

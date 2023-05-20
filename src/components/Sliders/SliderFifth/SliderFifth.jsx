@@ -56,13 +56,14 @@ export const SliderFifth = ({ news }) => {
         modules={[Navigation, Autoplay]}
       >
         <>
-          {listPhoto.photoList.map((item, index) => (
-            <SwiperSlide className={s.slider__item} key={index}>
-              <div className={s.slider__itemWrap}>
-                <img className={s.slider__img} src={item} alt={item} />
-              </div>
-            </SwiperSlide>
-          ))}
+          {listPhoto.photoList &&
+            listPhoto.photoList.map((item, index) => (
+              <SwiperSlide className={s.slider__item} key={index}>
+                <div className={s.slider__itemWrap}>
+                  <img className={s.slider__img} src={item} alt={item} />
+                </div>
+              </SwiperSlide>
+            ))}
         </>
 
         <BtnSliders nextRef={nextRef} prevRef={prevRef} className={'btnSlider'}></BtnSliders>

@@ -11,15 +11,16 @@ export const FooterMenu = () => {
       <div className={s.menu__wrap}>
         <h2 className={s.menu__title}>про фонд</h2>
         <ul className={s.menu__list}>
-          {listMenu.map((item) => {
-            return (
-              <li key={item.id} className={s.menu__item}>
-                <Link className={s.menu__link} to={item.path}>
-                  {item.title}
-                </Link>
-              </li>
-            );
-          })}
+          {listMenu &&
+            listMenu.map((item) => {
+              return (
+                <li key={item.id} className={s.menu__item}>
+                  <Link className={s.menu__link} to={item.path}>
+                    {item.title}
+                  </Link>
+                </li>
+              );
+            })}
         </ul>
       </div>
     </nav>
