@@ -1,38 +1,35 @@
 import { useParams } from 'react-router-dom';
 import { SliderFifth } from '../Sliders/SliderFifth/SliderFifth';
 import { YoutubeVideo } from '../YoutubeVideo/YoutubeVideo';
-import { fetchNews, listNewsSelector } from '../../redux/slice/contentSlice';
-import { useSelector } from 'react-redux';
+import { fetchNewsSimple, newsSimpleSelector } from '../../redux/slice/contentSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import s from './SimpleNews.module.scss';
-import { useEffect, useState } from 'react';
 // import { newsFetch } from '../../api/api';
 
 export const SimpleNews = () => {
-  const [news, setNews] = useState([]);
   const { id } = useParams();
-
-  const newsFetch = () => {
-    fetch(`http://localhost:3000/news/${id}`)
-      .then((res) => res.json())
-      .then((data) => setNews(data));
-  };
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    newsFetch();
-  }, []);
-  // const listNews = useSelector(listNewsSelector);
+    dispatch(fetchNewsSimple(id)); // Dispatch the action to fetch news data by ID
+  }, [id]);
+
+  const newsSimple = useSelector(newsSimpleSelector);
+
+  console.log('newsSimple', newsSimple);
 
   return (
     <>
       <div className={s.simpleNews}>
-        <div key={news.id}>
-          <h1 className={s.simpleNews__title}>{news.title}</h1>
+        <div key={newsSimple.id}>
+          <h1 className={s.simpleNews__title}>{newsSimple.title}</h1>
           <div className={s.simpleNews__wrap}>
             <h3 className={s.simpleNews__decor}>Новини</h3>
             <div>
-              <p className={s.simpleNews__text}>{news.desc}</p>
+              <p className={s.simpleNews__text}>{newsSimple.desc}</p>
             </div>
-            <SliderFifth news={news}></SliderFifth>
+            <SliderFifth news={newsSimple}></SliderFifth>
           </div>
         </div>
       </div>

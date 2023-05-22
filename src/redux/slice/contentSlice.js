@@ -1,9 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 const initialState = {
   listMenu: [],
   listNews: [],
-  news: [],
+  news: {},
   isLoading: false,
   error: null,
   burgerState: false,
@@ -33,6 +34,22 @@ export const fetchNews = createAsyncThunk('content/fetchNews', async () => {
   } catch (error) {
     throw new Error(error.message);
   }
+});
+
+const fetchNewsById = async (id) => {
+  try {
+    const response = await axios.get(`http://localhost:3000/news/${id}`);
+    console.log('response', response.data);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching news:', error);
+    throw error;
+  }
+};
+
+export const fetchNewsSimple = createAsyncThunk('content/fetchNewsSimple', async (id) => {
+  const response = await fetchNewsById(id); // Call the API function
+  return response;
 });
 
 export const contentSlice = createSlice({
@@ -68,11 +85,16 @@ export const contentSlice = createSlice({
       state.isLoading = false;
       state.error = action.error.message;
     });
+
+    builder.addCase(fetchNewsSimple.fulfilled, (state, action) => {
+      state.news = action.payload;
+    });
   },
 });
 
 export const listMenuSelector = (state) => state.content.listMenu;
 export const listNewsSelector = (state) => state.content.listNews;
+export const newsSimpleSelector = (state) => state.content.news;
 export const burgerMenuSelector = (state) => state.content.burgerState;
 
 export const { changeBurgerState } = contentSlice.actions;
