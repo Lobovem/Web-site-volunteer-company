@@ -7,7 +7,7 @@ import 'swiper/scss/navigation';
 import s from './SliderFirst.module.scss';
 import { useRef, useState } from 'react';
 import { BtnSliders } from '../../kit/BtnSliders/BtnSliders';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { listNewsSelector } from '../../../redux/slice/contentSlice';
 

@@ -8,7 +8,7 @@ import { Teams } from '../Teams/Teams';
 import { Contacts } from '../Contacts/Contacts';
 import { Form } from '../Form/Form';
 import { Pagination } from '../Pagination/Pagination';
-import { OneNews } from '../SimpleNews/OneNews';
+import { OneNews } from '../OneNews/OneNews';
 import s from './SectionHOC.module.scss';
 import { GetHelp } from '../GetHelp/GetHelp';
 import { UserConditions } from '../UserConditions/UserConditions';

@@ -100,9 +100,9 @@ export const contentSlice = createSlice({
       state.error = action.error.message;
     });
 
-    builder.addCase(fetchOneNews.pending, (state) => {
-      state.isLoading = true;
-    });
+    // builder.addCase(fetchOneNews.pending, (state) => {
+    //   state.isLoading = true;
+    // });
     builder.addCase(fetchOneNews.fulfilled, (state, action) => {
       state.isLoading = false;
       state.oneNews = action.payload;

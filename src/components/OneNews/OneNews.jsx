@@ -5,6 +5,7 @@ import { fetchOneNews, oneNewsSelector } from '../../redux/slice/contentSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import s from './OneNews.module.scss';
+import { Loader } from '../Loader/Loader';
 
 export const OneNews = () => {
   const { id } = useParams();

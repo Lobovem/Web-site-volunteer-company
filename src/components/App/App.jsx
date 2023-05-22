@@ -8,19 +8,37 @@ import { PageNews } from '../PageNews/PageNews';
 import { PageError } from '../PageError/PageError';
 import { PageOneNews } from '../PageSimpleNews/PageOneNews';
 import { PageGetHelp } from '../PageGetHelp/PageGetHelp';
-import { useDispatch } from 'react-redux';
-import { fetchMenu } from '../../redux/slice/contentSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchMenu, fetchNews } from '../../redux/slice/contentSlice';
 import { ScrollToTop } from '../ScrollTop/ScrollTop';
 import { PageUserCondition } from '../PageUserConditions/PageUserCondition';
 import { PageContacts } from '../PageContacts/PageContacts';
 import { PageDonate } from '../PageDonate/PageDonate';
+import { Loader } from '../Loader/Loader';
+import s from './App.module.scss';
 
 export const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchMenu());
+    dispatch(fetchNews());
   }, [dispatch]);
+
+  const isLoading = useSelector((state) => state.content.isLoading);
+  const error = useSelector((state) => state.content.error);
+
+  if (isLoading) {
+    return (
+      <div className={s.loader}>
+        <Loader />
+      </div>
+    );
+  }
+
+  if (error) {
+    return error;
+  }
 
   return (
     <div>

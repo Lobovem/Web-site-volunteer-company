@@ -3,22 +3,22 @@ import { TitleMain } from '../TitleMain/TitleMain';
 import { useDispatch } from 'react-redux';
 import { useEffect, useMemo } from 'react';
 import { fetchNews } from '../../redux/slice/contentSlice';
-import { Loader } from '../Loader/Loader';
 import s from './NewsList.module.scss';
+// import { Loader } from '../Loader/Loader';
 
 export const NewsList = ({ currentItems }) => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   //I done useMemo that don't render often the component
-  const fetchData = useMemo(() => {
-    return () => {
-      dispatch(fetchNews());
-    };
-  }, [dispatch]);
+  // const fetchData = useMemo(() => {
+  //   return () => {
+  //     dispatch(fetchNews());
+  //   };
+  // }, [dispatch]);
 
-  useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+  // useEffect(() => {
+  //   fetchData();
+  // }, [fetchData]);
 
   return (
     <div className={s.news}>
