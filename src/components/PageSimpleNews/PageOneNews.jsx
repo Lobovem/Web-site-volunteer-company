@@ -1,15 +1,15 @@
 import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs';
-import { DonateWithLayout, SimpleNewsnWithLayout } from '../SectionHOC/SectionHOC';
+import { DonateWithLayout, OneNewsWithLayout } from '../SectionHOC/SectionHOC';
 
-export const PageSimpleNews = () => {
+export const PageOneNews = () => {
   return (
     <>
       <Breadcrumbs></Breadcrumbs>
-      <SimpleNewsnWithLayout
+      <OneNewsWithLayout
         classNameSectionWrap="sectionWrapShortAlt"
         classNameTitleSection="visuallyHidden"
         classNameSection="sectionAlt"
-      ></SimpleNewsnWithLayout>
+      ></OneNewsWithLayout>
 
       <DonateWithLayout
         titleSection="Допомогти"

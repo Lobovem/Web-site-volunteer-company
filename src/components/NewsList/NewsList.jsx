@@ -4,6 +4,8 @@ import s from './NewsList.module.scss';
 import { useDispatch } from 'react-redux';
 import { useEffect, useMemo } from 'react';
 import { fetchNews } from '../../redux/slice/contentSlice';
+import { MutatingDots } from 'react-loader-spinner';
+import { Loader } from '../Loader/Loader';
 
 export const NewsList = ({ currentItems }) => {
   const dispatch = useDispatch();
@@ -21,8 +23,8 @@ export const NewsList = ({ currentItems }) => {
   return (
     <div className={s.news}>
       <h3 className={s.news__decor}>Новини</h3>
-
       <div className={s.news__wrap}>
+        <Loader />
         {currentItems &&
           currentItems.map((item) => (
             <div className={s.news__inner} key={item.id}>

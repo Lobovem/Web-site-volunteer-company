@@ -6,10 +6,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; //imp
 import { PageAboutUs } from '../PageAboutUs/PageAboutUs';
 import { PageNews } from '../PageNews/PageNews';
 import { PageError } from '../PageError/PageError';
-import { PageSimpleNews } from '../PageSimpleNews/PageSimpleNews';
+import { PageOneNews } from '../PageSimpleNews/PageOneNews';
 import { PageGetHelp } from '../PageGetHelp/PageGetHelp';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchMenu, fetchNews } from '../../redux/slice/contentSlice';
+import { useDispatch } from 'react-redux';
+import { fetchMenu } from '../../redux/slice/contentSlice';
 import { ScrollToTop } from '../ScrollTop/ScrollTop';
 import { PageUserCondition } from '../PageUserConditions/PageUserCondition';
 import { PageContacts } from '../PageContacts/PageContacts';
@@ -20,19 +20,18 @@ export const App = () => {
 
   useEffect(() => {
     dispatch(fetchMenu());
-    // dispatch(fetchNews());
   }, []);
 
-  const isLoading = useSelector((state) => state.content.isLoading);
-  const error = useSelector((state) => state.content.error);
+  // const isLoading = useSelector((state) => state.content.isLoading);
+  // const error = useSelector((state) => state.content.error);
 
-  if (isLoading) {
-    return 'loading...';
-  }
+  // if (isLoading) {
+  //   return 'loading...';
+  // }
 
-  if (error) {
-    return error;
-  }
+  // if (error) {
+  //   return error;
+  // }
 
   return (
     <div>
@@ -42,7 +41,7 @@ export const App = () => {
         <Route path="/" element={<PageHome />} />
         <Route path="/about-us" element={<PageAboutUs />} />
         <Route path="/news" element={<PageNews />}></Route>
-        <Route path="/news/:id" element={<PageSimpleNews />} />
+        <Route path="/news/:id" element={<PageOneNews />} />
         <Route path="/get-help" element={<PageGetHelp />} />
         <Route path="/donate" element={<PageDonate />} />
         <Route path="/contacts" element={<PageContacts />} />

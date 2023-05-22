@@ -4,9 +4,10 @@ import { YoutubeVideo } from '../YoutubeVideo/YoutubeVideo';
 import { fetchOneNews, oneNewsSelector } from '../../redux/slice/contentSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import s from './SimpleNews.module.scss';
+import s from './OneNews.module.scss';
+import { Loader } from '../Loader/Loader';
 
-export const SimpleNews = () => {
+export const OneNews = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
 
@@ -14,22 +15,12 @@ export const SimpleNews = () => {
     dispatch(fetchOneNews(id)); // Dispatch the action to fetch news data by ID
   }, [id]);
 
-  const isLoading = useSelector((state) => state.content.isLoading);
-  const error = useSelector((state) => state.content.error);
-  const oneNews = useSelector(oneNewsSelector);
-
-  if (isLoading) {
-    return 'loading...';
-  }
-
-  if (error) {
-    return error;
-  }
-
   //selector for simple news data
+  const oneNews = useSelector(oneNewsSelector);
 
   return (
     <>
+      <Loader></Loader>
       <div className={s.simpleNews}>
         <div key={oneNews.id}>
           <h1 className={s.simpleNews__title}>{oneNews.title}</h1>
