@@ -17,11 +17,11 @@ export const Pagination = ({ itemsPerPage }) => {
   // from an API endpoint with useEffect and useState)
   const endOffset = item + itemsPerPage;
   const currentItems = listNews.slice(item, endOffset);
-  const pageCount = Math.ceil(listNews / itemsPerPage);
+  const pageCount = Math.ceil(listNews.length / itemsPerPage);
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % listNews;
+    const newOffset = (event.selected * itemsPerPage) % listNews.length;
     setItem(newOffset);
   };
 

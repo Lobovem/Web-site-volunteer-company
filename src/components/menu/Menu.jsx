@@ -17,7 +17,7 @@ export const Menu = () => {
             if (item.show)
               return (
                 <li key={item.id} className={s.menu__item}>
-                  <NavLink to={item.path} className={s.menu__link} activeClassName="active">
+                  <NavLink to={item.path} className={s.menu__link} activeclassname="active">
                     {item.title}
                   </NavLink>
                 </li>

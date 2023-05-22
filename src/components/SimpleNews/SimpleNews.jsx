@@ -13,19 +13,18 @@ export const SimpleNews = () => {
   return (
     <>
       <div className={s.simpleNews}>
-        {news &&
-          news.map((item) => (
-            <div key={item.id}>
-              <h1 className={s.simpleNews__title}>{item.title}</h1>
-              <div className={s.simpleNews__wrap}>
-                <h3 className={s.simpleNews__decor}>Новини</h3>
-                <div>
-                  <p className={s.simpleNews__text}>{item.desc}</p>
-                </div>
-                <SliderFifth news={news}></SliderFifth>
+        {news.map((item) => (
+          <div key={item.id}>
+            <h1 className={s.simpleNews__title}>{item.title}</h1>
+            <div className={s.simpleNews__wrap}>
+              <h3 className={s.simpleNews__decor}>Новини</h3>
+              <div>
+                <p className={s.simpleNews__text}>{item.desc}</p>
               </div>
+              <SliderFifth news={news}></SliderFifth>
             </div>
-          ))}
+          </div>
+        ))}
       </div>
       <YoutubeVideo></YoutubeVideo>
     </>
