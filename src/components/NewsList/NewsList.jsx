@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
 import { TitleMain } from '../TitleMain/TitleMain';
-import s from './NewsList.module.scss';
 import { useDispatch } from 'react-redux';
 import { useEffect, useMemo } from 'react';
 import { fetchNews } from '../../redux/slice/contentSlice';
-import { MutatingDots } from 'react-loader-spinner';
 import { Loader } from '../Loader/Loader';
+import s from './NewsList.module.scss';
 
 export const NewsList = ({ currentItems }) => {
   const dispatch = useDispatch();
 
+  //I done useMemo that don't render often the component
   const fetchData = useMemo(() => {
     return () => {
       dispatch(fetchNews());
@@ -24,7 +24,7 @@ export const NewsList = ({ currentItems }) => {
     <div className={s.news}>
       <h3 className={s.news__decor}>Новини</h3>
       <div className={s.news__wrap}>
-        <Loader />
+        {/* <Loader /> */}
         {currentItems &&
           currentItems.map((item) => (
             <div className={s.news__inner} key={item.id}>
