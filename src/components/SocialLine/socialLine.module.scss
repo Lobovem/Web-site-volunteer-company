@@ -65,5 +65,13 @@
     }
   }
 
+  &__icon {
 
+    display: block;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      fill: $color-hover;
+    }
+  }
 }
