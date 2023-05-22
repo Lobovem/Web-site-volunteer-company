@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Btn } from '../kit/Btn/Btn';
 import s from './Donate.module.scss';
 
@@ -14,7 +15,9 @@ export const Donate = () => {
         <h2 className={s.donate__mainTitle}>Маленькі кроки ведуть нас до великої ПЕРЕМОГИ!</h2>
         <p className={s.donate__mainDesc}>Кожна гривня для нас дуже важлива, тому зробити свій внесок ви можете саме зараз</p>
 
-        <Btn title="задонатити" className="btn" type="button" />
+        <Link to="/donate">
+          <Btn title="задонатити" className="btn" type="button" />
+        </Link>
       </div>
     </div>
   );
