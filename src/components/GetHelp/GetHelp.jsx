@@ -2,7 +2,7 @@ import s from './GetHelp.module.scss';
 
 export const GetHelp = () => {
   return (
-    <div className={s.getHelp}>
+    <section className={s.getHelp}>
       <div className={s.getHelp__contentWrap}>
         <div className={s.getHelp__imgWrap}>
           <img className={s.getHelp__img} src="./img/get-help.jpg" alt="get-help.jpg" />
@@ -37,6 +37,6 @@ export const GetHelp = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
-    <section className={s.footer}>
+    <footer className={s.footer}>
       <img className={s.footer__img} src="./img/logo-second.png" alt="logo-second.png" />
       <div className={s.footer__wrap}>
         <div className={s.footer__inner}>
@@ -32,6 +32,6 @@ export const Footer = () => {
 
         <div className={s.footer__copyright}>©‌ Міжнародний благодійний фонд “Український гуманітарний батальйон”, 2022-2023</div>
       </div>
-    </section>
+    </footer>
   );
 };

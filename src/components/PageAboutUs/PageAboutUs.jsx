@@ -16,10 +16,14 @@ export const PageAboutUs = () => {
         titleSection="команда"
         classNameSectionWrap="sectionWrapAlt"
         classNameTitleSection="titleSection"
-        classNameSection="sectionShort"
+        classNameSection="sectionAlt"
       ></TeamsWithLayout>
 
-      <DonateWithLayout classNameSectionWrap="sectionWrap" classNameTitleSection="visuallyHidden" classNameSection="section"></DonateWithLayout>
+      <DonateWithLayout
+        classNameSectionWrap="sectionWrap"
+        classNameTitleSection="visuallyHidden"
+        classNameSection="section"
+      ></DonateWithLayout>
     </>
   );
 };

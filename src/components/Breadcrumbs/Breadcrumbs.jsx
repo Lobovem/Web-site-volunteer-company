@@ -10,7 +10,7 @@ export const Breadcrumbs = () => {
   const breadcrumbs = useBreadcrumbs(listMenu);
 
   return (
-    <div className={s.breadcrumbs}>
+    <nav className={s.breadcrumbs}>
       {breadcrumbs &&
         breadcrumbs.map(({ location, match, breadcrumb }) => (
           <Link
@@ -21,6 +21,6 @@ export const Breadcrumbs = () => {
             {breadcrumb}
           </Link>
         ))}
-    </div>
+    </nav>
   );
 };
