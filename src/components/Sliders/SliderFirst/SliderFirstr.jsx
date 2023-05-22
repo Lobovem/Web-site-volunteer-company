@@ -14,14 +14,9 @@ import { listNewsSelector } from '../../../redux/slice/contentSlice';
 export const SliderFirst = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  const { newsId } = useParams();
-
-  console.log('newsId=====>', newsId);
 
   const [init, setInit] = useState();
   const listNews = useSelector(listNewsSelector);
-
-  console.log('listNews=====>', listNews);
 
   return (
     <>
