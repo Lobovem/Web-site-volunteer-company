@@ -3,6 +3,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 const initialState = {
   listMenu: [],
   listNews: [],
+  news: [],
   isLoading: false,
   error: null,
   burgerState: false,
