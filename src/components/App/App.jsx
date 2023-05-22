@@ -20,18 +20,7 @@ export const App = () => {
 
   useEffect(() => {
     dispatch(fetchMenu());
-  }, []);
-
-  // const isLoading = useSelector((state) => state.content.isLoading);
-  // const error = useSelector((state) => state.content.error);
-
-  // if (isLoading) {
-  //   return 'loading...';
-  // }
-
-  // if (error) {
-  //   return error;
-  // }
+  }, [dispatch]);
 
   return (
     <div>
