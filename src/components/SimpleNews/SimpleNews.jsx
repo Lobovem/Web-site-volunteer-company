@@ -21,10 +21,6 @@ export const SimpleNews = () => {
     newsFetch();
   }, []);
   // const listNews = useSelector(listNewsSelector);
-  // const news = listNews.filter((item) => item.id === newsId);
-
-  console.log('id', id);
-  console.log('news', news);
 
   return (
     <>
