@@ -4,17 +4,18 @@ import axios from 'axios';
 const initialState = {
   listMenu: [],
   listNews: [],
-  news: {},
+  oneNews: {},
   isLoading: false,
   error: null,
   burgerState: false,
 };
 
+//example fetch response
 export const fetchMenu = createAsyncThunk('content/fetchMenu', async () => {
   try {
     const response = await fetch('http://localhost:3000/listMenu');
-    if (!response.ok) {
-      throw new Error('Error fetching menu list');
+    if (!response.status === 200) {
+      throw new Error('Error fetching news list');
     }
     const data = await response.json();
     return data;
@@ -23,33 +24,46 @@ export const fetchMenu = createAsyncThunk('content/fetchMenu', async () => {
   }
 });
 
+//example with .then
 export const fetchNews = createAsyncThunk('content/fetchNews', async () => {
   try {
-    const response = await fetch('http://localhost:3000/news');
-    if (!response.ok) {
-      throw new Error('Error fetching menu list');
-    }
-    const data = await response.json();
-    return data;
+    const response = await fetch('http://localhost:3000/news').then((data) => data.json());
+    return response;
   } catch (error) {
     throw new Error(error.message);
   }
 });
 
-const fetchNewsById = async (id) => {
+//large example with .then
+// export const fetchNews = createAsyncThunk('content/fetchNews', async () => {
+//   return new Promise((resolve, reject) => {
+//     fetch('http://localhost:3000/news')
+//       .then((response) => {
+//         if (!response.ok) {
+//           throw new Error('Error fetching news list');
+//         }
+//         return response.json();
+//       })
+//       .then((data) => {
+//         resolve(data);
+//       })
+//       .catch((error) => {
+//         reject(new Error(error.message));
+//       });
+//   });
+// });
+
+//example axios response
+export const fetchOneNews = createAsyncThunk('content/fetchOneNews', async (id) => {
   try {
     const response = await axios.get(`http://localhost:3000/news/${id}`);
-    console.log('response', response.data);
+    if (!response.status === 200) {
+      throw new Error('Error fetching news list');
+    }
     return response.data;
   } catch (error) {
-    console.error('Error fetching news:', error);
-    throw error;
+    throw new Error(error.message);
   }
-};
-
-export const fetchNewsSimple = createAsyncThunk('content/fetchNewsSimple', async (id) => {
-  const response = await fetchNewsById(id); // Call the API function
-  return response;
 });
 
 export const contentSlice = createSlice({
@@ -74,9 +88,9 @@ export const contentSlice = createSlice({
       state.error = action.error.message;
     });
 
-    builder.addCase(fetchNews.pending, (state) => {
-      state.isLoading = true;
-    });
+    // builder.addCase(fetchNews.pending, (state) => {
+    //   state.isLoading = true;
+    // });
     builder.addCase(fetchNews.fulfilled, (state, action) => {
       state.isLoading = false;
       state.listNews = action.payload;
@@ -86,16 +100,24 @@ export const contentSlice = createSlice({
       state.error = action.error.message;
     });
 
-    builder.addCase(fetchNewsSimple.fulfilled, (state, action) => {
-      state.news = action.payload;
+    // builder.addCase(fetchOneNews.pending, (state) => {
+    //   state.isLoading = true;
+    // });
+    builder.addCase(fetchOneNews.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.oneNews = action.payload;
+    });
+    builder.addCase(fetchOneNews.rejected, (state, action) => {
+      state.isLoading = false;
+      state.error = action.error.message;
     });
   },
 });
 
+export const burgerMenuSelector = (state) => state.content.burgerState;
 export const listMenuSelector = (state) => state.content.listMenu;
 export const listNewsSelector = (state) => state.content.listNews;
-export const newsSimpleSelector = (state) => state.content.news;
-export const burgerMenuSelector = (state) => state.content.burgerState;
+export const oneNewsSelector = (state) => state.content.oneNews;
 
 export const { changeBurgerState } = contentSlice.actions;
 

@@ -1,8 +1,23 @@
 import { Link } from 'react-router-dom';
 import { TitleMain } from '../TitleMain/TitleMain';
 import s from './NewsList.module.scss';
+import { useDispatch } from 'react-redux';
+import { useEffect, useMemo } from 'react';
+import { fetchNews } from '../../redux/slice/contentSlice';
 
 export const NewsList = ({ currentItems }) => {
+  const dispatch = useDispatch();
+
+  const fetchData = useMemo(() => {
+    return () => {
+      dispatch(fetchNews());
+    };
+  }, [dispatch]);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
   return (
     <div className={s.news}>
       <h3 className={s.news__decor}>Новини</h3>

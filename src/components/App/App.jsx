@@ -15,12 +15,12 @@ import { PageUserCondition } from '../PageUserConditions/PageUserCondition';
 import { PageContacts } from '../PageContacts/PageContacts';
 import { PageDonate } from '../PageDonate/PageDonate';
 
-export const App = ({ newsId }) => {
+export const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchMenu());
-    dispatch(fetchNews());
+    // dispatch(fetchNews());
   }, []);
 
   const isLoading = useSelector((state) => state.content.isLoading);
