@@ -2,7 +2,7 @@ import s from './SocialLine.module.scss';
 
 export const SocialLine = () => {
   return (
-    <div className={s.socialLine}>
+    <section className={s.socialLine}>
       <div className={s.socialLine__wrap}>
         <p className={s.socialLine__title}>Ми в соціальних мережах</p>
         <div className={s.socialLine__socialWrap}>
@@ -53,6 +53,6 @@ export const SocialLine = () => {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

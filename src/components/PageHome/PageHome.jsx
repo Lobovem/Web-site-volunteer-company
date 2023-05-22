@@ -42,13 +42,17 @@ export const PageHome = () => {
         classNameSection="sectionAlt"
       ></WayWithLayout>
 
-      <DonateWithLayout classNameSectionWrap="sectionWrap" classNameTitleSection="visuallyHidden" classNameSection="section"></DonateWithLayout>
+      <DonateWithLayout
+        classNameSectionWrap="sectionWrap"
+        classNameTitleSection="visuallyHidden"
+        classNameSection="section"
+      ></DonateWithLayout>
 
       <TeamsWithLayout
         titleSection="команда"
         classNameSectionWrap="sectionWrapAlt"
         classNameTitleSection="titleSection"
-        classNameSection="sectionShort"
+        classNameSection="sectionAlt"
       ></TeamsWithLayout>
 
       <ContactsWithLayout

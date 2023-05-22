@@ -3,7 +3,7 @@ import s from './AboutUs.module.scss';
 
 export const AboutUs = () => {
   return (
-    <div className={s.aboutUs}>
+    <section className={s.aboutUs}>
       <div className={s.aboutUs__contentWrap}>
         <div className={s.aboutUs__imgWrap}>
           <img className={s.aboutUs__img} src="./img/aboutUs.jpg" alt="aboutUs.jpg" />
@@ -22,6 +22,6 @@ export const AboutUs = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

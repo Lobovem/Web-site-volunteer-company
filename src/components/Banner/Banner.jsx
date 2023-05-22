@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export const Banner = () => {
   return (
     <>
-      <div className={s.banner}>
+      <section className={s.banner}>
         <img className={s.banner__img} src="./img/ukraine-flag.png" alt="" />
         <div className={s.banner__textWrap}>
           <h1 className={s.banner__title}>Єдність країни забезпечує її Перемогу!</h1>
@@ -20,7 +20,7 @@ export const Banner = () => {
             <Btn title="Про проєкт" className="btn" type="button" />
           </Link>
         </div>
-      </div>
+      </section>
       <SocialLine />
     </>
   );
