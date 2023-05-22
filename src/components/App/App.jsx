@@ -42,7 +42,7 @@ export const App = ({ newsId }) => {
         <Route path="/" element={<PageHome />} />
         <Route path="/about-us" element={<PageAboutUs />} />
         <Route path="/news" element={<PageNews />} />
-        <Route path="/news/:newsId" element={<PageSimpleNews />} />
+        <Route path="/news/:id" element={<PageSimpleNews />} />
         <Route path="/get-help" element={<PageGetHelp />} />
         <Route path="/donate" element={<PageDonate />} />
         <Route path="/contacts" element={<PageContacts />} />

@@ -12,7 +12,7 @@ export const SliderFifth = ({ news }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
-  const listPhoto = news.find((item) => item.photoList);
+  // const listPhoto = news.find((item) => item.photoList);
 
   const [init, setInit] = useState();
 
@@ -56,8 +56,8 @@ export const SliderFifth = ({ news }) => {
         modules={[Navigation, Autoplay]}
       >
         <>
-          {listPhoto.photoList &&
-            listPhoto.photoList.map((item, index) => (
+          {news.photoList &&
+            news.photoList.map((item, index) => (
               <SwiperSlide className={s.slider__item} key={index}>
                 <div className={s.slider__itemWrap}>
                   <img className={s.slider__img} src={item} alt={item} />
