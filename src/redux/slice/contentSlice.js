@@ -15,7 +15,7 @@ const initialState = {
 //example fetch response
 export const fetchMenu = createAsyncThunk('content/fetchMenu', async () => {
   try {
-    const response = await fetch('http://localhost:3000/listMenu');
+    const response = await fetch('http://localshost:3000/listMenu');
     if (!response.status === 200) {
       throw new Error('Error fetching news list');
     }

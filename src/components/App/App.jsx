@@ -37,7 +37,7 @@ export const App = () => {
   }
 
   if (error) {
-    return error;
+    return <h1 className={s.error}>{error}</h1>;
   }
 
   return (
