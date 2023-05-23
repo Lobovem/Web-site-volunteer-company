@@ -1,11 +1,12 @@
 import { useParams } from 'react-router-dom';
 import { SliderFifth } from '../Sliders/SliderFifth/SliderFifth';
 import { YoutubeVideo } from '../YoutubeVideo/YoutubeVideo';
-import { fetchOneNews, oneNewsSelector } from '../../redux/slice/contentSlice';
+import { oneNewsSelector } from '../../redux/slice/contentSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import s from './OneNews.module.scss';
 import { Loader } from '../Loader/Loader';
+import { fetchOneNews } from '../../api/api';
 
 export const OneNews = () => {
   const { id } = useParams();

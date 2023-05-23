@@ -1,57 +1,110 @@
-const SERVER_URL = 'http://localhost:3000';
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { addFormData } from '../redux/slice/contentSlice';
+import axios from 'axios';
 
-// const jsonRequest = (url, options = {}) => {
-//   return fetch(SERVER_URL + url, {
-//     headers: {
-//       'content-type': 'application/json',
-//     },
-//     ...options,
-//   }).then((response) => response.json());
-// };
-
-// export const fetchListMenu = () => {
-//   const options = { method: 'GET' };
-//   const req = jsonRequest('/listMenu', options);
-
-//   return req;
-// };
-
-export const newsFetch = async (url) => {
+//example fetch response
+export const fetchMenu = createAsyncThunk('content/fetchMenu', async () => {
   try {
-    const news = await fetch(SERVER_URL + url);
-    return await news.json();
+    const response = await fetch('http://localhost:3000/listMenu');
+    if (!response.status === 200) {
+      throw new Error('Error fetching news list');
+    }
+    const data = await response.json();
+    return data;
   } catch (error) {
-    console.log('Fetch error: ', error);
+    throw new Error(error.message);
   }
-};
+});
 
-// const SERVER_URL_USERS = 'https://jsonplaceholder.typicode.com/users';
-// const SERVER_URL_ALBUMS = 'https://jsonplaceholder.typicode.com/albums?userId=';
-// const SERVER_URL_PHOTOS = 'https://jsonplaceholder.typicode.com/photos?albumId=';
+//example response with .then
+export const fetchNews = createAsyncThunk('content/fetchNews', async () => {
+  try {
+    const response = await fetch('http://localhost:3000/news').then((data) => data.json());
+    return response;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+});
 
-// export const usersFetch = async () => {
+//large example response with .then
+// export const fetchNews = createAsyncThunk('content/fetchNews', async () => {
+//   return new Promise((resolve, reject) => {
+//     fetch('http://localhost:3000/news')
+//       .then((response) => {
+//         if (!response.ok) {
+//           throw new Error('Error fetching news list');
+//         }
+//         return response.json();
+//       })
+//       .then((data) => {
+//         resolve(data);
+//       })
+//       .catch((error) => {
+//         reject(new Error(error.message));
+//       });
+//   });
+// });
+
+//example axios response
+export const fetchOneNews = createAsyncThunk('content/fetchOneNews', async (id) => {
+  try {
+    const response = await axios.get(`http://localhost:3000/news/${id}`);
+    if (!response.status === 200) {
+      throw new Error('Error fetching news list');
+    }
+    return response.data;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+});
+
+export const postFormData = createAsyncThunk('content/postFormData', async (imputDataForm, { dispatch }) => {
+  try {
+    const response = await fetch('http://localhost:3000/formData', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(imputDataForm),
+    });
+
+    if (!response.status === 200) {
+      throw new Error('Can not post data');
+    }
+
+    dispatch(addFormData(imputDataForm));
+
+    return;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+});
+
+//example with axios post
+// export const postFormData = createAsyncThunk('content/postFormData', async (imputDataForm, { dispatch }) => {
 //   try {
-//     const users = await fetch(SERVER_URL_USERS);
-//     return await users.json();
-//   } catch (error) {
-//     console.log('Fetch error: ', error);
-//   }
-// };
+//     const response = await axios.post(
+//       'http://localhost:3000/formData',
+//       {
+//         name: imputDataForm.name,
+//         email: imputDataForm.email,
+//         textarea: imputDataForm.textarea,
+//       },
+//       {
+//         headers: {
+//           'Content-Type': 'application/json',
+//         },
+//       }
+//     );
 
-// export const albumsFetch = async (url) => {
-//   try {
-//     const albums = await fetch(SERVER_URL_ALBUMS + url);
-//     return await albums.json();
-//   } catch (error) {
-//     console.log('Fetch error: ', error);
-//   }
-// };
+//     if (!response.status === 200) {
+//       throw new Error('Can not post data');
+//     }
 
-// export const photosFetch = async (url) => {
-//   try {
-//     const photos = await fetch(SERVER_URL_PHOTOS + url);
-//     return await photos.json();
+//     dispatch(addFormData(imputDataForm));
+
+//     return;
 //   } catch (error) {
-//     console.log('Fetch error: ', error);
+//     throw new Error(error.message);
 //   }
-// };
+// });

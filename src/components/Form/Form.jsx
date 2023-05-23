@@ -3,7 +3,8 @@ import { useState } from 'react';
 import s from './Form.module.scss';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addFormData, addInputDataForm, inputDataFormSelector, postFormData } from '../../redux/slice/contentSlice';
+import { addInputDataForm, inputDataFormSelector } from '../../redux/slice/contentSlice';
+import { postFormData } from '../../api/api';
 
 export const Form = () => {
   const [sendState, setSendState] = useState(false);
