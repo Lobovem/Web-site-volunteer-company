@@ -14,8 +14,8 @@ import { PageUserCondition } from '../PageUserConditions/PageUserCondition';
 import { PageContacts } from '../PageContacts/PageContacts';
 import { PageDonate } from '../PageDonate/PageDonate';
 import { Loader } from '../Loader/Loader';
-import s from './App.module.scss';
 import { fetchMenu, fetchNews } from '../../api/api';
+import s from './App.module.scss';
 
 export const App = () => {
   const dispatch = useDispatch();

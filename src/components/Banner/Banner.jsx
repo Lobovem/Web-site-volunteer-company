@@ -1,7 +1,7 @@
 import { Btn } from '../kit/Btn/Btn';
 import { SocialLine } from '../SocialLine/SocialLine';
-import s from './Banner.module.scss';
 import { Link } from 'react-router-dom';
+import s from './Banner.module.scss';
 
 export const Banner = () => {
   return (

@@ -7,14 +7,12 @@ Object {
     <div>
       <button
         class="undefined"
-        type="button"
       />
     </div>
   </body>,
   "container": <div>
     <button
       class="undefined"
-      type="button"
     />
   </div>,
   "debug": [Function],
