@@ -1,44 +1,35 @@
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Banner } from './Banner';
+import { Donate } from './Donate';
 
-describe('Banner component', () => {
-  test('renders Banner component', () => {
+describe('Donate component', () => {
+  test('renders Donate component', () => {
     // eslint-disable-next-line testing-library/render-result-naming-convention
     const component = render(
       <Router>
-        <Banner />
+        <Donate />
       </Router>
     );
     expect(component).toMatchSnapshot();
   });
-  test('search title tag h1', () => {
+
+  test('search title tag h2', () => {
     render(
       <Router>
-        <Banner />
+        <Donate />
       </Router>
     );
-    const h1Element = screen.getByRole('heading', { level: 1 });
+    const h1Element = screen.getByRole('heading', { level: 2 });
     expect(h1Element).toBeInTheDocument();
   });
 
-  test('renders and search component button', () => {
+  test('renders and search component btn', () => {
     render(
       <Router>
-        <Banner />
+        <Donate />
       </Router>
     );
     const buttonElement = screen.getByRole('button', { type: 'button' });
     expect(buttonElement).toBeInTheDocument();
-  });
-
-  test('search image', () => {
-    render(
-      <Router>
-        <Banner />
-      </Router>
-    );
-    const imgElement = screen.getByRole('img');
-    expect(imgElement).toBeInTheDocument();
   });
 });
