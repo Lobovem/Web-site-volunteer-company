@@ -32,7 +32,7 @@
     height: 100%;
     transition: opacity 0.3s ease-in-out;
     z-index: -1000;
-    background: $gradient-hover;
+    background: $color-main;
     border-radius: 60px;
   }
 
@@ -64,7 +64,6 @@
 
   &:hover {
     background: $color-type;
-    // border: 3px solid $color-hover;
     color: $color-white;
   }
 }
