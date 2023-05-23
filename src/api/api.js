@@ -1,6 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { addFormData } from '../redux/slice/contentSlice';
-import axios from 'axios';
 
 //example fetch response
 export const fetchMenu = createAsyncThunk('content/fetchMenu', async () => {
@@ -48,11 +47,12 @@ export const fetchNews = createAsyncThunk('content/fetchNews', async () => {
 //example axios response
 export const fetchOneNews = createAsyncThunk('content/fetchOneNews', async (id) => {
   try {
-    const response = await axios.get(`http://localhost:3000/news/${id}`);
+    const response = await fetch(`http://localhost:3000/news/${id}`);
     if (!response.status === 200) {
       throw new Error('Error fetching news list');
     }
-    return response.data;
+    const data = await response.json();
+    return data;
   } catch (error) {
     throw new Error(error.message);
   }

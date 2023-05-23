@@ -1,24 +1,36 @@
 import { render } from '@testing-library/react';
-import App from './App';
-import { useDispatch } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider, useDispatch, useSelector } from 'react-redux';
+import { store } from '../../redux/config/store';
+import { App } from './App';
 
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
-  useDispatch: jest.fn(),
-  useSelector: jest.fn(),
+jest.mock('../../api/api', () => ({
+  fetchMenu: jest.fn(),
+  fetchNews: jest.fn(),
 }));
 
+jest.mock('react-redux', () => {
+  const originalModule = jest.requireActual('react-redux');
+  return {
+    ...originalModule,
+    useDispatch: jest.fn(),
+    useSelector: jest.fn(),
+  };
+});
+
 describe('App', () => {
-  const dispatch = jest.fn();
-
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
-
-  test('renders app component', () => {
+  test('renders App component', () => {
+    const dispatch = jest.fn();
     useDispatch.mockReturnValue(dispatch);
-    // eslint-disable-next-line testing-library/render-result-naming-convention
-    const component = render(<App />);
-    expect(component).toMatchSnapshot();
+    useSelector.mockReturnValue({ isLoading: false, error: null });
+
+    const { container } = render(
+      <Provider store={store}>
+        <Router>
+          <App />
+        </Router>
+      </Provider>
+    );
+    expect(container).toMatchSnapshot();
   });
 });

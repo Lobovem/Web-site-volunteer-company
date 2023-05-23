@@ -57,15 +57,15 @@ export const contentSlice = createSlice({
     },
 
     //TODO don't work, need fix
-    // [fetchOneNews.pending]: (state) => {
-    //   state.isLoading = true;
-    // },
+    [fetchOneNews.pending]: (state) => {
+      // state.isLoading = true;
+    },
     [fetchOneNews.fulfilled]: (state, action) => {
-      state.isLoading = false;
+      // state.isLoading = false;
       state.oneNews = action.payload;
     },
     [fetchOneNews.rejected]: (state, action) => {
-      state.isLoading = false;
+      // state.isLoading = false;
       state.error = action.error.message;
     },
   },

@@ -3,6 +3,15 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Banner } from './Banner';
 
 describe('Banner component', () => {
+  test('renders Banner component', () => {
+    // eslint-disable-next-line testing-library/render-result-naming-convention
+    const component = render(
+      <Router>
+        <Banner />
+      </Router>
+    );
+    expect(component).toMatchSnapshot();
+  });
   test('search tag h1', () => {
     render(
       <Router>

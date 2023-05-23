@@ -3,7 +3,6 @@ import { Autoplay, Navigation } from 'swiper';
 
 import 'swiper/scss';
 import 'swiper/scss/navigation';
-// import './styles.scss';
 import s from './SliderFirst.module.scss';
 import { useRef, useState } from 'react';
 import { BtnSliders } from '../../kit/BtnSliders/BtnSliders';
