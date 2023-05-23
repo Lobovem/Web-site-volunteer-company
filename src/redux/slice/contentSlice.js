@@ -26,7 +26,7 @@ export const fetchMenu = createAsyncThunk('content/fetchMenu', async () => {
   }
 });
 
-//example with .then
+//example response with .then
 export const fetchNews = createAsyncThunk('content/fetchNews', async () => {
   try {
     const response = await fetch('http://localhost:3000/news').then((data) => data.json());
@@ -36,7 +36,7 @@ export const fetchNews = createAsyncThunk('content/fetchNews', async () => {
   }
 });
 
-//large example with .then
+//large example response with .then
 // export const fetchNews = createAsyncThunk('content/fetchNews', async () => {
 //   return new Promise((resolve, reject) => {
 //     fetch('http://localhost:3000/news')
@@ -75,7 +75,7 @@ export const contentSlice = createSlice({
     changeBurgerState: (state, action) => {
       state.burgerState = action.payload;
     },
-    addFormData: (state, action) => {
+    addFormData: (state) => {
       state.formData = [...state.formData, state.inputDataForm];
     },
     addInputDataForm: (state, action) => {
