@@ -87,42 +87,43 @@ export const contentSlice = createSlice({
     },
   },
 
-  extraReducers: (builder) => {
-    builder.addCase(fetchMenu.pending, (state) => {
+  extraReducers: {
+    [fetchMenu.pending]: (state) => {
       state.isLoading = true;
-    });
-    builder.addCase(fetchMenu.fulfilled, (state, action) => {
+    },
+    [fetchMenu.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.listMenu = action.payload;
-    });
-    builder.addCase(fetchMenu.rejected, (state, action) => {
+    },
+    [fetchMenu.rejected]: (state, action) => {
       state.isLoading = false;
       state.error = action.error.message;
-    });
+    },
 
-    builder.addCase(fetchNews.pending, (state) => {
+    [fetchNews.pending]: (state) => {
       state.isLoading = true;
-    });
-    builder.addCase(fetchNews.fulfilled, (state, action) => {
+    },
+    [fetchNews.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.listNews = action.payload;
-    });
-    builder.addCase(fetchNews.rejected, (state, action) => {
+    },
+    [fetchNews.rejected]: (state, action) => {
       state.isLoading = false;
       state.error = action.error.message;
-    });
+    },
 
-    // builder.addCase(fetchOneNews.pending, (state) => {
+    //TODO don't work, need fix
+    // [fetchOneNews.pending]: (state) => {
     //   state.isLoading = true;
-    // });
-    builder.addCase(fetchOneNews.fulfilled, (state, action) => {
+    // },
+    [fetchOneNews.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.oneNews = action.payload;
-    });
-    builder.addCase(fetchOneNews.rejected, (state, action) => {
+    },
+    [fetchOneNews.rejected]: (state, action) => {
       state.isLoading = false;
       state.error = action.error.message;
-    });
+    },
   },
 });
 
