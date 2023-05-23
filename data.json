@@ -122,5 +122,13 @@
   
   "burger": {
     "burgerMenuState": false
-  }
+  },
+  "formData":[
+    { 
+    "id": "",
+    "name": "",
+    "email": "", 
+    "textarea": ""
+   }
+  ]
 }

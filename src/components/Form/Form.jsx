@@ -2,11 +2,13 @@ import { Btn } from '../kit/Btn/Btn';
 import { useState } from 'react';
 import s from './Form.module.scss';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { addFormData, addInputDataForm, inputDataFormSelector } from '../../redux/slice/contentSlice';
 
 export const Form = () => {
   const [sendState, setSendState] = useState(false);
-  const [inputDataForm, setInputDataForm] = useState({ name: '', email: '', textarea: '' });
-  const [dataForm, setDataForm] = useState([]);
+  const dispatch = useDispatch();
+  const imputDataForm = useSelector(inputDataFormSelector);
 
   const handleChangeState = () => {
     setSendState(!sendState);
@@ -16,12 +18,14 @@ export const Form = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     handleChangeState();
-    setDataForm([...dataForm, inputDataForm]);
-    setInputDataForm({ name: '', email: '', textarea: '' });
+    dispatch(addFormData(imputDataForm));
+    //set empty input
+    dispatch(addInputDataForm({ id: '', name: '', email: '', textarea: '' }));
   };
 
   const handleChange = (e) => {
-    setInputDataForm({ ...inputDataForm, [e.target.name]: e.target.value });
+    //need do ...inputDataForm that copy all data from inputDataForm(example - name, email and etc)
+    dispatch(addInputDataForm({ ...imputDataForm, [e.target.id]: e.target.value }));
   };
 
   return (
@@ -39,7 +43,7 @@ export const Form = () => {
             </p>
           </div>
         ) : (
-          <form className={s.form__inner} onSubmit={onSubmit} method="post" action="/">
+          <form className={s.form__inner} onSubmit={onSubmit}>
             <h2 className={s.form__title}>зв'яжіться з нами</h2>
             <p className={s.form__desc}>Форма зворотнього зв'язку</p>
 
@@ -52,7 +56,7 @@ export const Form = () => {
               name="name"
               id="name"
               required
-              value={inputDataForm.name}
+              value={imputDataForm.name}
               onChange={handleChange}
             />
 
@@ -66,7 +70,7 @@ export const Form = () => {
               id="email"
               required
               pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-              value={inputDataForm.email}
+              value={imputDataForm.email}
               onChange={handleChange}
             />
 
@@ -76,9 +80,9 @@ export const Form = () => {
             <textarea
               className={s.form__textArea}
               name="textarea"
-              id="area"
+              id="textarea"
               required
-              value={inputDataForm.textarea}
+              value={imputDataForm.textarea}
               onChange={handleChange}
             ></textarea>
 

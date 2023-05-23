@@ -5,6 +5,8 @@ const initialState = {
   listMenu: [],
   listNews: [],
   oneNews: {},
+  formData: [],
+  inputDataForm: { id: '', name: '', email: '', textarea: '' },
   isLoading: false,
   error: null,
   burgerState: false,
@@ -73,6 +75,16 @@ export const contentSlice = createSlice({
     changeBurgerState: (state, action) => {
       state.burgerState = action.payload;
     },
+    addFormData: (state, action) => {
+      state.formData = [...state.formData, state.inputDataForm];
+    },
+    addInputDataForm: (state, action) => {
+      state.inputDataForm = { ...action.payload, id: state.formData.length + 1 };
+    },
+
+    inputChange: (state, action) => {
+      state.inputDataForm = action.payload;
+    },
   },
 
   extraReducers: (builder) => {
@@ -118,7 +130,9 @@ export const burgerMenuSelector = (state) => state.content.burgerState;
 export const listMenuSelector = (state) => state.content.listMenu;
 export const listNewsSelector = (state) => state.content.listNews;
 export const oneNewsSelector = (state) => state.content.oneNews;
+export const inputDataFormSelector = (state) => state.content.inputDataForm;
+export const formDataSelector = (state) => state.content.formData;
 
-export const { changeBurgerState } = contentSlice.actions;
+export const { changeBurgerState, addFormData, addInputDataForm } = contentSlice.actions;
 
 export default contentSlice.reducer;
