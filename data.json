@@ -4,53 +4,51 @@
       "id": "0",
       "title": "Главная",
       "path": "/",
-      "breadcrumb":"Главная",
+      "breadcrumb": "Главная",
       "show": false
     },
     {
       "id": "1",
       "title": "Про нас",
       "path": "/about-us",
-      "breadcrumb":"Про нас",
+      "breadcrumb": "Про нас",
       "show": true
     },
     {
       "id": "2",
       "title": "Новини",
       "path": "/news",
-      "breadcrumb":"Новини",
-       "show": true
+      "breadcrumb": "Новини",
+      "show": true
     },
     {
       "id": "3",
       "title": "Отримати допомогу",
       "path": "/get-help",
-      "breadcrumb":"Отримати допомогу",
-       "show": true
+      "breadcrumb": "Отримати допомогу",
+      "show": true
     },
     {
       "id": "4",
       "title": "Допомогти",
       "path": "/donate",
-      "breadcrumb":"Допомогти",
-       "show": true
+      "breadcrumb": "Допомогти",
+      "show": true
     },
     {
       "id": "5",
       "title": "Контакти",
       "path": "/contacts",
-      "breadcrumb":"Контакти",
-       "show": true
+      "breadcrumb": "Контакти",
+      "show": true
     },
     {
       "id": "6",
       "title": "Умови використання сайту",
       "path": "/user-condition",
-      "breadcrumb":"Умови використання сайту",
+      "breadcrumb": "Умови використання сайту",
       "show": false
     }
-
-   
   ],
   "news": [
     {
@@ -58,77 +56,207 @@
       "title": "Якась важлива новина 1",
       "desc": "За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його структуру, з можливістю вставляти зовнішні посилання, але не тільки. Фактично, вставляючи будь -який фантастичний текст або відомий текст, це вірш, промова, літературний уривок, текст пісні тощо, наш текстовий генератор забезпечить випадкове виділення термінів і кроків для створення власного ексклюзивного Lorem Ipsum. Фактично.",
       "photoMain": "http://localhost:3000/img/slider-news-1.jpg",
-      "photoList": [" http://localhost:3000/img/slider-news-1.jpg", "http://localhost:3000/img/slider-news-2.jpg", "http://localhost:3000/img/slider-news-1.jpg" ,"http://localhost:3000/img/slider-news-2.jpg"],
+      "photoList": [
+        " http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg",
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg"
+      ],
       "path": "/news/1",
-      "breadcrumb":"первая"
+      "breadcrumb": "первая"
     },
     {
       "id": 2,
       "title": "Якась важлива новина 2",
       "desc": "За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його структуру, з можливістю вставляти зовнішні посилання, але не тільки. Фактично, вставляючи будь -який фантастичний текст або відомий текст, це вірш, промова, літературний уривок, текст пісні тощо, наш текстовий генератор забезпечить випадкове виділення термінів і кроків для створення власного ексклюзивного Lorem Ipsum. Фактично.",
-     "photoMain": "http://localhost:3000/img/slider-news-2.jpg",
-     "photoList": ["http://localhost:3000/img/slider-news-1.jpg", "http://localhost:3000/img/slider-news-2.jpg", "http://localhost:3000/img/slider-news-1.jpg" ,"http://localhost:3000/img/slider-news-2.jpg"]
+      "photoMain": "http://localhost:3000/img/slider-news-2.jpg",
+      "photoList": [
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg",
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg"
+      ]
     },
     {
       "id": 3,
       "title": "Якась важлива новина 3",
       "desc": "За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його структуру, з можливістю вставляти зовнішні посилання, але не тільки. Фактично, вставляючи будь -який фантастичний текст або відомий текст, це вірш, промова, літературний уривок, текст пісні тощо, наш текстовий генератор забезпечить випадкове виділення термінів і кроків для створення власного ексклюзивного Lorem Ipsum. Фактично.",
-     "photoMain": "http://localhost:3000/img/slider-news-1.jpg",
-      "photoList": ["http://localhost:3000/img/slider-news-1.jpg", "http://localhost:3000/img/slider-news-2.jpg", "http://localhost:3000/img/slider-news-1.jpg" ,"http://localhost:3000/img/slider-news-2.jpg"]
+      "photoMain": "http://localhost:3000/img/slider-news-1.jpg",
+      "photoList": [
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg",
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg"
+      ]
     },
     {
       "id": 4,
       "title": "Якась важлива новина 4",
       "desc": "За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його структуру, з можливістю вставляти зовнішні посилання, але не тільки. Фактично, вставляючи будь -який фантастичний текст або відомий текст, це вірш, промова, літературний уривок, текст пісні тощо, наш текстовий генератор забезпечить випадкове виділення термінів і кроків для створення власного ексклюзивного Lorem Ipsum. Фактично.",
-     "photoMain": "http://localhost:3000/img/slider-news-2.jpg",
-     "photoList": ["http://localhost:3000/img/slider-news-1.jpg", "http://localhost:3000/img/slider-news-2.jpg", "http://localhost:3000/img/slider-news-1.jpg" ,"http://localhost:3000/img/slider-news-2.jpg"]
+      "photoMain": "http://localhost:3000/img/slider-news-2.jpg",
+      "photoList": [
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg",
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg"
+      ]
     },
     {
       "id": 5,
       "title": "Якась важлива новина 5",
       "desc": "За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його структуру, з можливістю вставляти зовнішні посилання, але не тільки. Фактично, вставляючи будь -який фантастичний текст або відомий текст, це вірш, промова, літературний уривок, текст пісні тощо, наш текстовий генератор забезпечить випадкове виділення термінів і кроків для створення власного ексклюзивного Lorem Ipsum. Фактично.",
-     "photoMain": "http://localhost:3000/img/slider-news-1.jpg",
-     "photoList": ["http://localhost:3000/img/slider-news-1.jpg", "http://localhost:3000/img/slider-news-2.jpg", "http://localhost:3000/img/slider-news-1.jpg" ,"http://localhost:3000/img/slider-news-2.jpg"]
+      "photoMain": "http://localhost:3000/img/slider-news-1.jpg",
+      "photoList": [
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg",
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg"
+      ]
     },
     {
       "id": 6,
       "title": "Якась важлива новина 6",
       "desc": "За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його структуру, з можливістю вставляти зовнішні посилання, але не тільки. Фактично, вставляючи будь -який фантастичний текст або відомий текст, це вірш, промова, літературний уривок, текст пісні тощо, наш текстовий генератор забезпечить випадкове виділення термінів і кроків для створення власного ексклюзивного Lorem Ipsum. Фактично.",
-     "photoMain": "http://localhost:3000/img/slider-news-2.jpg",
-     "photoList": ["http://localhost:3000/img/slider-news-1.jpg", "http://localhost:3000/img/slider-news-2.jpg", "http://localhost:3000/img/slider-news-1.jpg" ,"http://localhost:3000/img/slider-news-2.jpg"]
+      "photoMain": "http://localhost:3000/img/slider-news-2.jpg",
+      "photoList": [
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg",
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg"
+      ]
     },
     {
       "id": 7,
       "title": "Якась важлива новина 7",
       "desc": "За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його структуру, з можливістю вставляти зовнішні посилання, але не тільки. Фактично, вставляючи будь -який фантастичний текст або відомий текст, це вірш, промова, літературний уривок, текст пісні тощо, наш текстовий генератор забезпечить випадкове виділення термінів і кроків для створення власного ексклюзивного Lorem Ipsum. Фактично.",
-     "photoMain": "http://localhost:3000/img/slider-news-1.jpg",
-     "photoList": ["http://localhost:3000/img/slider-news-1.jpg", "http://localhost:3000/img/slider-news-2.jpg", "http://localhost:3000/img/slider-news-1.jpg" ,"http://localhost:3000/img/slider-news-2.jpg"]
+      "photoMain": "http://localhost:3000/img/slider-news-1.jpg",
+      "photoList": [
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg",
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg"
+      ]
     },
     {
       "id": 8,
       "title": "Якась важлива новина 8",
       "desc": "За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його структуру, з можливістю вставляти зовнішні посилання, але не тільки. Фактично, вставляючи будь -який фантастичний текст або відомий текст, це вірш, промова, літературний уривок, текст пісні тощо, наш текстовий генератор забезпечить випадкове виділення термінів і кроків для створення власного ексклюзивного Lorem Ipsum. Фактично.",
-     "photoMain": "http://localhost:3000/img/slider-news-2.jpg",
-     "photoList": ["http://localhost:3000/img/slider-news-1.jpg", "http://localhost:3000/img/slider-news-2.jpg", "http://localhost:3000/img/slider-news-1.jpg" ,"http://localhost:3000/img/slider-news-2.jpg"]
+      "photoMain": "http://localhost:3000/img/slider-news-2.jpg",
+      "photoList": [
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg",
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg"
+      ]
     },
     {
       "id": 9,
       "title": "Якась важлива новина 9",
       "desc": "За допомогою онлайн -генератора тексту ви можете обробляти свій особистий Lorem Ipsum , збагачуючи його html -елементами, які визначають його структуру, з можливістю вставляти зовнішні посилання, але не тільки. Фактично, вставляючи будь -який фантастичний текст або відомий текст, це вірш, промова, літературний уривок, текст пісні тощо, наш текстовий генератор забезпечить випадкове виділення термінів і кроків для створення власного ексклюзивного Lorem Ipsum. Фактично.",
-     "photoMain": "http://localhost:3000/img/slider-news-1.jpg",
-     "photoList": ["http://localhost:3000/img/slider-news-1.jpg", "http://localhost:3000/img/slider-news-2.jpg", "http://localhost:3000/img/slider-news-1.jpg" ,"http://localhost:3000/img/slider-news-2.jpg"]
+      "photoMain": "http://localhost:3000/img/slider-news-1.jpg",
+      "photoList": [
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg",
+        "http://localhost:3000/img/slider-news-1.jpg",
+        "http://localhost:3000/img/slider-news-2.jpg"
+      ]
     }
   ],
-  
   "burger": {
     "burgerMenuState": false
   },
-  "formData":[
-    { 
-    "id": "",
-    "name": "",
-    "email": "", 
-    "textarea": ""
-   }
+  "formData": [
+    {
+      "id": "",
+      "name": "",
+      "email": "",
+      "textarea": ""
+    },
+    {
+      "id": 1,
+      "name": "111",
+      "email": "11@11.ru",
+      "textarea": "11"
+    },
+    {
+      "id": 2,
+      "name": "22",
+      "email": "22@22.ru",
+      "textarea": "22"
+    },
+    {
+      "name": "444",
+      "email": "44@44.ru",
+      "textarea": "444",
+      "id": 3
+    },
+    {
+      "name": "555",
+      "email": "55@55.ru",
+      "textarea": "55",
+      "id": 4
+    },
+    {
+      "name": "66",
+      "email": "66@66.ru",
+      "textarea": "66",
+      "id": 5
+    },
+    {
+      "name": "77",
+      "email": "77@77.ru",
+      "textarea": "77",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "name": "88",
+      "email": "88@88.ru",
+      "textarea": "88"
+    },
+    {
+      "id": 8,
+      "name": "99",
+      "email": "99@99.ru",
+      "textarea": "99"
+    },
+    {
+      "id": 9,
+      "name": "10",
+      "email": "10@10.ru",
+      "textarea": "10"
+    },
+    {
+      "id": 10,
+      "name": "12",
+      "email": "12@12.ru",
+      "textarea": "12"
+    },
+    {
+      "imputDataForm": {
+        "id": "",
+        "name": "11",
+        "email": "11@11.ru",
+        "textarea": "11"
+      },
+      "id": 11
+    },
+    {
+      "name": "aaa",
+      "textarea": "aaa",
+      "id": 12
+    },
+    {
+      "name": "vvvv",
+      "email": "vvv@vv.ru",
+      "textarea": "vvvv",
+      "id": 13
+    },
+    {
+      "id": 14,
+      "name": "zzzz",
+      "email": "zzz@zzz.ru",
+      "textarea": "zzz"
+    }
   ]
 }

@@ -15,7 +15,7 @@ const initialState = {
 //example fetch response
 export const fetchMenu = createAsyncThunk('content/fetchMenu', async () => {
   try {
-    const response = await fetch('http://localshost:3000/listMenu');
+    const response = await fetch('http://localhost:3000/listMenu');
     if (!response.status === 200) {
       throw new Error('Error fetching news list');
     }
@@ -68,6 +68,43 @@ export const fetchOneNews = createAsyncThunk('content/fetchOneNews', async (id) 
   }
 });
 
+export const postFormData = createAsyncThunk('content/postFormData', async (imputDataForm, { dispatch }) => {
+  try {
+    const response = await fetch('http://localhost:3000/formData', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(imputDataForm),
+    });
+
+    //example with axios
+    // const response = await axios.post(
+    //   'http://localhost:3000/formData',
+    //   {
+    //     name: imputDataForm.name,
+    //     email: imputDataForm.email,
+    //     textarea: imputDataForm.textarea,
+    //   },
+    //   {
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //   }
+    // );
+
+    if (!response.status === 200) {
+      throw new Error('Can not post data');
+    }
+
+    dispatch(addFormData(imputDataForm));
+
+    return;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+});
+
 export const contentSlice = createSlice({
   name: 'content',
   initialState,
@@ -79,7 +116,7 @@ export const contentSlice = createSlice({
       state.formData = [...state.formData, state.inputDataForm];
     },
     addInputDataForm: (state, action) => {
-      state.inputDataForm = { ...action.payload, id: state.formData.length + 1 };
+      state.inputDataForm = action.payload;
     },
 
     inputChange: (state, action) => {

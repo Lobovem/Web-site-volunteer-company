@@ -3,7 +3,7 @@ import { useState } from 'react';
 import s from './Form.module.scss';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addFormData, addInputDataForm, inputDataFormSelector } from '../../redux/slice/contentSlice';
+import { addFormData, addInputDataForm, inputDataFormSelector, postFormData } from '../../redux/slice/contentSlice';
 
 export const Form = () => {
   const [sendState, setSendState] = useState(false);
@@ -18,7 +18,7 @@ export const Form = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     handleChangeState();
-    dispatch(addFormData(imputDataForm));
+    dispatch(postFormData(imputDataForm));
     dispatch(addInputDataForm({ id: '', name: '', email: '', textarea: '' }));
   };
 
