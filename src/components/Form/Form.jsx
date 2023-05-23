@@ -19,7 +19,6 @@ export const Form = () => {
     e.preventDefault();
     handleChangeState();
     dispatch(addFormData(imputDataForm));
-    //set empty input
     dispatch(addInputDataForm({ id: '', name: '', email: '', textarea: '' }));
   };
 
