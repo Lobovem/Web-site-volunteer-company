@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Btn renders app component 1`] = `
+exports[`Btn renders btn component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>

@@ -25,15 +25,19 @@ Object {
           >
             <div
               class="burger"
+              data-testid="burger"
             >
               <span
                 class="burger__line"
+                data-testid="burger-line"
               />
               <span
                 class="burger__line"
+                data-testid="burger-line"
               />
               <span
                 class="burger__line"
+                data-testid="burger-line"
               />
             </div>
             <nav
@@ -85,15 +89,19 @@ Object {
         >
           <div
             class="burger"
+            data-testid="burger"
           >
             <span
               class="burger__line"
+              data-testid="burger-line"
             />
             <span
               class="burger__line"
+              data-testid="burger-line"
             />
             <span
               class="burger__line"
+              data-testid="burger-line"
             />
           </div>
           <nav

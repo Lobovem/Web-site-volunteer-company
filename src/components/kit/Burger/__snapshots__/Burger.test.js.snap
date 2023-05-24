@@ -1,31 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BtnSliders renders btn component 1`] = `
+exports[`Burger renders app component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="undefined"
+        class="burger"
+        data-testid="burger"
       >
-        <button
-          class="btnSlider__prev"
+        <span
+          class="burger__line"
+          data-testid="burger-line"
         />
-        <button
-          class="btnSlider__next"
+        <span
+          class="burger__line"
+          data-testid="burger-line"
+        />
+        <span
+          class="burger__line"
+          data-testid="burger-line"
         />
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="undefined"
+      class="burger"
+      data-testid="burger"
     >
-      <button
-        class="btnSlider__prev"
+      <span
+        class="burger__line"
+        data-testid="burger-line"
       />
-      <button
-        class="btnSlider__next"
+      <span
+        class="burger__line"
+        data-testid="burger-line"
+      />
+      <span
+        class="burger__line"
+        data-testid="burger-line"
       />
     </div>
   </div>,

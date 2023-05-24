@@ -34,7 +34,11 @@ describe('DonateAll component', () => {
   });
 
   test('renders DonateAll component with 7 images (pay elements)', () => {
-    render(<DonateAll />);
+    render(
+      <Router>
+        <DonateAll />
+      </Router>
+    );
     const images = screen.getAllByRole('img');
     expect(images).toHaveLength(7);
   });

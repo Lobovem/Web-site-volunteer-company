@@ -7,10 +7,14 @@ export const Burger = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className={!burgerMenu ? s.burger : `${s.burger} ${s.active}`} onClick={() => dispatch(changeBurgerState(!burgerMenu))}>
-      <span className={s.burger__line}></span>
-      <span className={s.burger__line}></span>
-      <span className={s.burger__line}></span>
+    <div
+      className={!burgerMenu ? s.burger : `${s.burger} ${s.active}`}
+      data-testid="burger"
+      onClick={() => dispatch(changeBurgerState(!burgerMenu))}
+    >
+      <span className={s.burger__line} data-testid="burger-line"></span>
+      <span className={s.burger__line} data-testid="burger-line"></span>
+      <span className={s.burger__line} data-testid="burger-line"></span>
     </div>
   );
 };
