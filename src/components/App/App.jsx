@@ -15,7 +15,7 @@ import { PageContacts } from '../PageContacts/PageContacts';
 import { PageDonate } from '../PageDonate/PageDonate';
 import { Loader } from '../Loader/Loader';
 import { fetchMenu, fetchNews } from '../../api/api';
-import s from './App.module.scss';
+import s from './app.module.scss';
 
 export const App = () => {
   const dispatch = useDispatch();
