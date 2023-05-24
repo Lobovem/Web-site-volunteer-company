@@ -17,7 +17,7 @@ describe('FooterMenu` component', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('should render the title (H2) component contacts', () => {
+  test('should render the title (H2) component FooterMenu', () => {
     render(
       <Provider store={store}>
         <Router>
@@ -29,7 +29,7 @@ describe('FooterMenu` component', () => {
     expect(titleSection).toBeInTheDocument();
   });
 
-  test('should render the title component contacts', () => {
+  test('should render the title component FooterMenu', () => {
     render(
       <Provider store={store}>
         <Router>

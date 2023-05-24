@@ -1,27 +1,27 @@
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { FooterSocial } from './FooterSocial';
+import { Form } from './Form';
 import { Provider } from 'react-redux';
 import { store } from '../../redux/config/store';
 
-describe('FooterSocial` component', () => {
-  test('renders FooterSocial component', () => {
+describe('Form` component', () => {
+  test('renders Form component', () => {
     // eslint-disable-next-line testing-library/render-result-naming-convention
     const component = render(
       <Provider store={store}>
         <Router>
-          <FooterSocial />
+          <Form />
         </Router>
       </Provider>
     );
     expect(component).toMatchSnapshot();
   });
 
-  test('should render the title (H2) component social', () => {
+  test('should render the title (H2) component contacts', () => {
     render(
       <Provider store={store}>
         <Router>
-          <FooterSocial />
+          <Form />
         </Router>
       </Provider>
     );
@@ -29,45 +29,51 @@ describe('FooterSocial` component', () => {
     expect(titleSection).toBeInTheDocument();
   });
 
-  test('should render the title component social', () => {
+  test('should render the title component contacts', () => {
     render(
       <Provider store={store}>
         <Router>
-          <FooterSocial />
+          <Form />
         </Router>
       </Provider>
     );
-    const titleSection = screen.getByRole('heading', { name: /СОЦІАЛЬНІ МЕРЕЖІ/i });
+    const titleSection = screen.getByRole('heading', { name: /ЗВ'ЯЖІТЬСЯ З НАМИ/i });
     expect(titleSection).toBeInTheDocument();
   });
 
-  test('renders FooterSocial component with 2 images (link elements)', () => {
+  test('renders and search Form component with 1 images', () => {
     render(
       <Provider store={store}>
         <Router>
-          <FooterSocial />
+          <Form />
         </Router>
       </Provider>
     );
     const images = screen.getAllByRole('img');
-    expect(images).toHaveLength(2);
+    expect(images).toHaveLength(1);
   });
 
-  test('renders and search elements links', () => {
+  test('renders and search component button', () => {
     render(
       <Provider store={store}>
         <Router>
-          <FooterSocial />
+          <Form />
         </Router>
       </Provider>
     );
-    const phoneLinks = screen.getAllByRole('link'); // Search all links
-    expect(phoneLinks).toHaveLength(2);
+    const buttonElement = screen.getByRole('button', { type: 'button' });
+    expect(buttonElement).toBeInTheDocument();
+  });
 
-    const phoneLink1 = screen.getByText('instagram'); // Search link about text
-    expect(phoneLink1).toBeInTheDocument(); // Check out link in DOM
-
-    const phoneLink2 = screen.getByText('facebook');
-    expect(phoneLink2).toBeInTheDocument();
+  test('renders and search input and textArea of form', () => {
+    render(
+      <Provider store={store}>
+        <Router>
+          <Form />
+        </Router>
+      </Provider>
+    );
+    const buttonElement = screen.getAllByRole('textbox');
+    expect(buttonElement).toHaveLength(3);
   });
 });
