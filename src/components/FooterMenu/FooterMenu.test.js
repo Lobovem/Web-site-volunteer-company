@@ -49,7 +49,7 @@ describe('FooterMenu` component', () => {
         </Router>
       </Provider>
     );
-    const phoneLinks = screen.getAllByRole('navigation'); // Search all links
-    expect(phoneLinks).toHaveLength(1);
+    const links = screen.getAllByRole('navigation'); // Search all links
+    expect(links).toHaveLength(1);
   });
 });

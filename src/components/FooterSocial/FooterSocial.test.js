@@ -61,13 +61,13 @@ describe('FooterSocial` component', () => {
         </Router>
       </Provider>
     );
-    const phoneLinks = screen.getAllByRole('link'); // Search all links
-    expect(phoneLinks).toHaveLength(2);
+    const links = screen.getAllByRole('link'); // Search all links
+    expect(links).toHaveLength(2);
 
-    const phoneLink1 = screen.getByText('instagram'); // Search link about text
-    expect(phoneLink1).toBeInTheDocument(); // Check out link in DOM
+    const linkSocial1 = screen.getByText('instagram'); // Search link about text
+    expect(linkSocial1).toBeInTheDocument(); // Check out link in DOM
 
-    const phoneLink2 = screen.getByText('facebook');
-    expect(phoneLink2).toBeInTheDocument();
+    const linkSocial2 = screen.getByText('facebook');
+    expect(linkSocial2).toBeInTheDocument();
   });
 });
