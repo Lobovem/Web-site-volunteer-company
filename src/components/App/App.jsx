@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { PageHome } from '../PageHome/PageHome';
 import { Header } from '../Header/Header';
 import { Footer } from '../Footer/Footer';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; //importing routing elements
 import { PageAboutUs } from '../PageAboutUs/PageAboutUs';
 import { PageNews } from '../PageNews/PageNews';
 import { PageError } from '../PageError/PageError';
@@ -16,6 +15,7 @@ import { PageDonate } from '../PageDonate/PageDonate';
 import { Loader } from '../Loader/Loader';
 import { fetchMenu, fetchNews } from '../../api/api';
 import s from './app.module.scss';
+import { Route, Routes } from 'react-router-dom';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -47,8 +47,9 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<PageHome />} />
         <Route path="/about-us" element={<PageAboutUs />} />
-        <Route path="/news" element={<PageNews />}></Route>
-        <Route path="/news/:id" element={<PageOneNews />} />
+        <Route path="/news/*" element={<PageNews />}>
+          <Route path=":id" element={<PageOneNews />} />
+        </Route>
         <Route path="/get-help" element={<PageGetHelp />} />
         <Route path="/donate" element={<PageDonate />} />
         <Route path="/contacts" element={<PageContacts />} />
