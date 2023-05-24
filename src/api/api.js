@@ -4,7 +4,7 @@ import { addFormData } from '../redux/slice/contentSlice';
 //example fetch response
 export const fetchMenu = createAsyncThunk('content/fetchMenu', async () => {
   try {
-    const response = await fetch('http://localhost:3000/listMenu');
+    const response = await fetch('https://base-twmn.onrender.com/listMenu');
     if (!response.status === 200) {
       throw new Error('Error fetching news list');
     }
@@ -18,7 +18,7 @@ export const fetchMenu = createAsyncThunk('content/fetchMenu', async () => {
 //example response with .then
 export const fetchNews = createAsyncThunk('content/fetchNews', async () => {
   try {
-    const response = await fetch('http://localhost:3000/news').then((data) => data.json());
+    const response = await fetch('https://base-twmn.onrender.com/news').then((data) => data.json());
     return response;
   } catch (error) {
     throw new Error(error.message);
@@ -47,7 +47,7 @@ export const fetchNews = createAsyncThunk('content/fetchNews', async () => {
 //example axios response
 export const fetchOneNews = createAsyncThunk('content/fetchOneNews', async (id) => {
   try {
-    const response = await fetch(`http://localhost:3000/news/${id}`);
+    const response = await fetch(`https://base-twmn.onrender.com/news/${id}`);
     if (!response.status === 200) {
       throw new Error('Error fetching news list');
     }
@@ -60,7 +60,7 @@ export const fetchOneNews = createAsyncThunk('content/fetchOneNews', async (id) 
 
 export const postFormData = createAsyncThunk('content/postFormData', async (imputDataForm, { dispatch }) => {
   try {
-    const response = await fetch('http://localhost:3000/formData', {
+    const response = await fetch('https://base-twmn.onrender.com/formData', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
