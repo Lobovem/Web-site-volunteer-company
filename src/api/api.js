@@ -24,8 +24,14 @@ export const fetchMenu = createAsyncThunk('content/fetchMenu', async () => {
 //example response with .then
 export const fetchNews = createAsyncThunk('content/fetchNews', async () => {
   try {
-    const response = await fetch('http://localhost:3000/news').then((data) => data.json());
-    return response;
+    const response = await fetch('https://api.jsonbin.io/v3/b/646e1a978e4aa6225ea34ca4', {
+      method: 'GET',
+      headers: {
+        'X-MASTER-KEY': '$2b$10$9uMoHzB71cSKJqUbxrBwrOoApODGRNQzWIREbwnCDNunIqu6GGOI6',
+        'Content-Type': 'application/json',
+      },
+    }).then((data) => data.json());
+    return response.record.news;
   } catch (error) {
     throw new Error(error.message);
   }

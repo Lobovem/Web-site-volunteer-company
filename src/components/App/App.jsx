@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { PageHome } from '../PageHome/PageHome';
-import { Header } from './components/Header/Header';
+import { Header } from '../Header/Header';
 import { Footer } from '../Footer/Footer';
 import { PageAboutUs } from '../PageAboutUs/PageAboutUs';
 import { PageNews } from '../PageNews/PageNews';
