@@ -4,12 +4,18 @@ import { addFormData } from '../redux/slice/contentSlice';
 //example fetch response
 export const fetchMenu = createAsyncThunk('content/fetchMenu', async () => {
   try {
-    const response = await fetch('http://localhost:3000/listMenu');
+    const response = await fetch('https://api.jsonbin.io/v3/b/646e1a978e4aa6225ea34ca4', {
+      method: 'GET',
+      headers: {
+        'X-MASTER-KEY': '$2b$10$9uMoHzB71cSKJqUbxrBwrOoApODGRNQzWIREbwnCDNunIqu6GGOI6',
+        'Content-Type': 'application/json',
+      },
+    });
     if (!response.status === 200) {
       throw new Error('Error fetching news list');
     }
     const data = await response.json();
-    return data;
+    return data.record.listMenu;
   } catch (error) {
     throw new Error(error.message);
   }

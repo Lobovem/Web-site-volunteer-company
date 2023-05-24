@@ -9,6 +9,8 @@ export const Menu = () => {
   const burgerMenu = useSelector(burgerMenuSelector);
   const listMenu = useSelector(listMenuSelector);
 
+  console.log('listMenu', listMenu);
+
   return (
     <nav className={!burgerMenu ? s.menu : `${s.menu} ${s.active}`}>
       <ul className={s.menu__list} onClick={() => dispatch(changeBurgerState(!burgerMenu))}>
