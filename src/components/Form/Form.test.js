@@ -17,7 +17,7 @@ describe('Form` component', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('should render the title (H2) component contacts', () => {
+  test('should render the title (H2) component form', () => {
     render(
       <Provider store={store}>
         <Router>
@@ -29,7 +29,7 @@ describe('Form` component', () => {
     expect(titleSection).toBeInTheDocument();
   });
 
-  test('should render the title component contacts', () => {
+  test('should render the title component form', () => {
     render(
       <Provider store={store}>
         <Router>
