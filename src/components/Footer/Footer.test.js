@@ -65,7 +65,7 @@ describe('Footer component', () => {
     expect(buttonElement).toBeInTheDocument();
   });
 
-  test('renders Footer component with 7 images (pay elements)', () => {
+  test('renders Footer component with 5 images of component', () => {
     render(
       <Provider store={store}>
         <Router>
