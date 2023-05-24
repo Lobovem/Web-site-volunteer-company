@@ -69,7 +69,7 @@ export const Form = () => {
               name="email"
               id="email"
               required
-              pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               value={imputDataForm.email}
               onChange={handleChange}
             />
