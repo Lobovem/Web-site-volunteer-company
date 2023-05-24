@@ -47,9 +47,8 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<PageHome />} />
         <Route path="/about-us" element={<PageAboutUs />} />
-        <Route path="/news/*" element={<PageNews />}>
-          <Route path=":id" element={<PageOneNews />} />
-        </Route>
+        <Route path="/news" element={<PageNews />}></Route>
+        <Route path="/news/:id" element={<PageOneNews />} />
         <Route path="/get-help" element={<PageGetHelp />} />
         <Route path="/donate" element={<PageDonate />} />
         <Route path="/contacts" element={<PageContacts />} />

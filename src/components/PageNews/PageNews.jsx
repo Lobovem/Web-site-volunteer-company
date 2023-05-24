@@ -1,4 +1,3 @@
-import { Outlet } from 'react-router-dom';
 import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs';
 import { PaginationWithLayout } from '../SectionHOC/SectionHOC';
 
@@ -6,7 +5,6 @@ export const PageNews = () => {
   return (
     <>
       <Breadcrumbs></Breadcrumbs>
-
       <PaginationWithLayout
         titleSection="новини"
         classNameSectionWrap="sectionWrapShort"
@@ -14,8 +12,6 @@ export const PageNews = () => {
         classNameSection="sectionAlt"
         itemsPerPage={5}
       ></PaginationWithLayout>
-
-      <Outlet />
     </>
   );
 };
