@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom';
 import { TitleMain } from '../TitleMain/TitleMain';
-import { useDispatch } from 'react-redux';
-import { useEffect, useMemo } from 'react';
-import { fetchNews } from '../../redux/slice/contentSlice';
 import s from './NewsList.module.scss';
 // import { Loader } from '../Loader/Loader';
 
