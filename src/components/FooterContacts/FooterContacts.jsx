@@ -5,11 +5,13 @@ export const FooterContacts = () => {
     <div className={s.contacts}>
       <div className={s.contacts__wrap}>
         <h2 className={s.contacts__title}>контакти</h2>
+
         <div className={s.contacts__phoneBox}>
           <img className={s.contacts__img} src="/img/icon-phone.svg" alt="icon-phone.svg" />
           <a className={s.contacts__link} href="tel:+380630494002">
             +380 (63)-049-40-02
           </a>
+          
           <a className={s.contacts__link} href="tel:+380671597373">
             +380 (67)-159-73-73
           </a>

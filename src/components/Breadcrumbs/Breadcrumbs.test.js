@@ -14,6 +14,10 @@ jest.mock('react-redux', () => {
 });
 
 describe('Breadcrumbs component', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+  
   test('renders Breadcrumbs component', () => {
     // eslint-disable-next-line testing-library/render-result-naming-convention
     const component = render(

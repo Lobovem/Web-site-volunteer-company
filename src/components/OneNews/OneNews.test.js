@@ -2,11 +2,6 @@ import { render, screen } from '@testing-library/react';
 import { OneNews } from './OneNews';
 import { useDispatch, useSelector } from 'react-redux';
 
-// jest.mock('../../api/api', () => ({
-//   fetchMenu: jest.fn(),
-//   fetchNews: jest.fn(),
-// }));
-
 jest.mock('react-redux', () => {
   const originalModule = jest.requireActual('react-redux');
   return {
@@ -17,6 +12,10 @@ jest.mock('react-redux', () => {
 });
 
 describe('OneNews', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   const dispatch = jest.fn();
   const oneNews = { id: 1, title: 'Новина', desc: 'News' };
 

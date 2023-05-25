@@ -1,10 +1,10 @@
 import { Btn } from '../kit/Btn/Btn';
 import { useState } from 'react';
-import s from './Form.module.scss';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addInputDataForm, inputDataFormSelector } from '../../redux/slice/contentSlice';
 import { postFormData } from '../../api/api';
+import s from './Form.module.scss';
 
 export const Form = () => {
   const [sendState, setSendState] = useState(false);
@@ -93,6 +93,7 @@ export const Form = () => {
                   умови угоди користувача
                 </Link>
               </p>
+              
               <Btn title="надіслати" className="btn" type="submit" />
             </div>
           </form>

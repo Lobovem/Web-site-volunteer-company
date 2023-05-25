@@ -1,5 +1,4 @@
 import { Banner } from '../Banner/Banner';
-import { Loader } from '../Loader/Loader';
 import {
   AboutUsWithLayout,
   ContactsWithLayout,

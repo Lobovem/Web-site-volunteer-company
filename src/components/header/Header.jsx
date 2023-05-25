@@ -4,7 +4,7 @@ import { LogoMain } from '../LogoMain/LogoMain';
 import { Burger } from '../kit/Burger/Burger';
 import s from './Header.module.scss';
 
-export const Header = ({ children }) => {
+export const Header = () => {
   return (
     <>
       <header className={s.header}>
@@ -17,7 +17,6 @@ export const Header = ({ children }) => {
           </div>
         </div>
       </header>
-      {children}
     </>
   );
 };

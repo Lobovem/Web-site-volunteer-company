@@ -1,10 +1,9 @@
 import { FooterMenu } from '../FooterMenu/FooterMenu';
-import s from './Footer.module.scss';
-
 import { FooterContacts } from '../FooterContacts/FooterContacts';
 import { FooterSocial } from '../FooterSocial/FooterSocial';
 import { Btn } from '../kit/Btn/Btn';
 import { Link } from 'react-router-dom';
+import s from './Footer.module.scss';
 
 export const Footer = () => {
   return (
@@ -22,6 +21,7 @@ export const Footer = () => {
               український народ тільки власною боротьбою і трудом. Не дивіться на Україну, як на землю своїх батьків. Дивіться на неї, як на
               землю своїх дітей
             </p>
+
             <div className={s.footer__btnBox}>
               <Link to="/donate">
                 <Btn title="задонатити" type="button" className="btn-secondary" />

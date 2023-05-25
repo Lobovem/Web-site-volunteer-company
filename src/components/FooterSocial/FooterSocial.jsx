@@ -5,6 +5,7 @@ export const FooterSocial = () => {
     <div className={s.social}>
       <div className={s.social__wrap}>
         <h2 className={s.social__title}>соціальні мережі</h2>
+
         <a className={s.social__wrapLink} target="blank" href="https://www.instagram.com/ukrhumbat/?igshid=YmMyMTA2M2Y=">
           <img className={s.social__img} src="/img/icon-instagram.svg" alt="icon-instagram.svg" />
           <p className={s.social__desc}>instagram</p>

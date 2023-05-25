@@ -19,6 +19,10 @@ jest.mock('react-redux', () => {
 });
 
 describe('App', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   test('renders App component', () => {
     const dispatch = jest.fn();
     useDispatch.mockReturnValue(dispatch);

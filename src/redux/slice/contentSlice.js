@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchMenu, fetchNews, fetchOneNews } from '../../api/api';
 
 const initialState = {
   listMenu: [],

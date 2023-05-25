@@ -12,6 +12,10 @@ jest.mock('react-redux', () => {
 });
 
 describe('Pagination', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   const data = [{ id: 1, title: 'Новина', desc: 'News' }];
 
   test('renders Pagination component', () => {
