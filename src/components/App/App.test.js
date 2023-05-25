@@ -22,7 +22,7 @@ describe('App', () => {
   test('renders App component', () => {
     const dispatch = jest.fn();
     useDispatch.mockReturnValue(dispatch);
-    useSelector.mockReturnValue({ isLoading: false, error: null });
+    // useSelector.mockReturnValue({ isLoading: false, error: null });
 
     const { container } = render(
       <Provider store={store}>

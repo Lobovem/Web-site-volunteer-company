@@ -31,43 +31,41 @@ export const contentSlice = createSlice({
     },
   },
 
-  extraReducers: {
-    [fetchMenu.pending]: (state) => {
-      state.isLoading = true;
-    },
-    [fetchMenu.fulfilled]: (state, action) => {
-      state.isLoading = false;
-      state.listMenu = action.payload;
-    },
-    [fetchMenu.rejected]: (state, action) => {
-      state.isLoading = false;
-      state.error = action.error.message;
-    },
-
-    [fetchNews.pending]: (state) => {
-      state.isLoading = true;
-    },
-    [fetchNews.fulfilled]: (state, action) => {
-      state.isLoading = false;
-      state.listNews = action.payload;
-    },
-    [fetchNews.rejected]: (state, action) => {
-      state.isLoading = false;
-      state.error = action.error.message;
-    },
-
-    //TODO don't work, need fix
-    [fetchOneNews.pending]: (state) => {
-      // state.isLoading = true;
-    },
-    [fetchOneNews.fulfilled]: (state, action) => {
-      // state.isLoading = false;
-      state.oneNews = action.payload;
-    },
-    [fetchOneNews.rejected]: (state, action) => {
-      // state.isLoading = false;
-      state.error = action.error.message;
-    },
+  extraReducers: (builder) => {
+    builder
+      .addCase('content/fetchMenu/pending', (state) => {
+        state.isLoading = true;
+      })
+      .addCase('content/fetchMenu/fulfilled', (state, action) => {
+        state.isLoading = false;
+        state.listMenu = action.payload;
+      })
+      .addCase('content/fetchMenu/rejected', (state, action) => {
+        state.isLoading = false;
+        state.error = action.error.message;
+      })
+      .addCase('content/fetchNews/pending', (state) => {
+        state.isLoading = true;
+      })
+      .addCase('content/fetchNews/fulfilled', (state, action) => {
+        state.isLoading = false;
+        state.listNews = action.payload;
+      })
+      .addCase('content/fetchNews/rejected', (state, action) => {
+        state.isLoading = false;
+        state.error = action.error.message;
+      })
+      // .addCase('content/fetchOneNews/pending', (state) => {
+      //   state.isLoading = true;
+      // })
+      .addCase('content/fetchOneNews/fulfilled', (state, action) => {
+        state.isLoading = false;
+        state.oneNews = action.payload;
+      })
+      .addCase('content/fetchOneNews/rejected', (state, action) => {
+        state.isLoading = false;
+        state.error = action.error.message;
+      });
   },
 });
 
