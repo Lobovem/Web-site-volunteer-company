@@ -13,17 +13,10 @@ import { PageContacts } from '../PageContacts/PageContacts';
 import { PageDonate } from '../PageDonate/PageDonate';
 import { Loader } from '../Loader/Loader';
 import s from './app.module.scss';
-import { Outlet, Route, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
-import { fetchMenu } from '../Menu/Menu';
-import { fetchNews } from '../Pagination/Pagination';
-import { fetchOneNews } from '../OneNews/OneNews';
+import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { fetchMenu, fetchNews, fetchOneNews } from '../../api/api';
 
 export const App = () => {
-  // useEffect(() => {
-  //   // dispatch(fetchMenu());
-  //   // dispatch(fetchNews());
-  // }, [dispatch]);
-
   const isLoading = useSelector((state) => state.content.isLoading);
   const error = useSelector((state) => state.content.error);
 
@@ -42,14 +35,20 @@ export const App = () => {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Root />,
+      element: <Layout />,
       loader: fetchMenu,
       children: [
-        { path: '/', element: <PageHome /> },
+        { path: '/', element: <PageHome />, loader: fetchNews },
         { path: '/about-us', element: <PageAboutUs /> },
         { path: '/about-us', element: <PageAboutUs /> },
         { path: '/news', element: <PageNews />, loader: fetchNews },
-        { path: '/news/:id', element: <PageOneNews />, loader: fetchOneNews },
+        {
+          path: '/news/:id',
+          element: <PageOneNews />,
+          loader: ({ params }) => {
+            return fetchOneNews(params.id);
+          },
+        },
         { path: '/get-help', element: <PageGetHelp /> },
         { path: '/donate', element: <PageDonate /> },
         { path: '/contacts', element: <PageContacts /> },
@@ -60,20 +59,19 @@ export const App = () => {
   ]);
 
   return (
-    <div>
-      {/* <ScrollToTop /> */}
+    <>
       <RouterProvider router={router} />
-    </div>
+    </>
   );
 };
 
-export const Root = () => {
+export const Layout = () => {
   return (
-    <div>
+    <>
       <ScrollToTop />
       <Header />
       <Outlet />
       <Footer />
-    </div>
+    </>
   );
 };

@@ -4,15 +4,6 @@ import { NewsList } from '../NewsList/NewsList';
 import s from './Pagination.module.scss';
 import { useLoaderData } from 'react-router-dom';
 
-export const fetchNews = async () => {
-  try {
-    const response = await fetch('https://base-twmn.onrender.com/news').then((data) => data.json());
-    return response;
-  } catch (error) {
-    throw new Error(error.message);
-  }
-};
-
 export const Pagination = ({ itemsPerPage }) => {
   const listNews = useLoaderData();
 

@@ -6,7 +6,7 @@ import 'swiper/scss/navigation';
 import s from './SliderFirst.module.scss';
 import { useRef, useState } from 'react';
 import { BtnSliders } from '../../kit/BtnSliders/BtnSliders';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { listNewsSelector } from '../../../redux/slice/contentSlice';
 
@@ -15,7 +15,7 @@ export const SliderFirst = () => {
   const nextRef = useRef(null);
 
   const [init, setInit] = useState();
-  const listNews = useSelector(listNewsSelector);
+  const listNews = useLoaderData();
 
   return (
     <>

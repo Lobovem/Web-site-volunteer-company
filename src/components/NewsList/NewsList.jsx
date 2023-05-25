@@ -4,19 +4,6 @@ import s from './NewsList.module.scss';
 // import { Loader } from '../Loader/Loader';
 
 export const NewsList = ({ currentItems }) => {
-  // const dispatch = useDispatch();
-
-  //I done useMemo that don't render often the component
-  // const fetchData = useMemo(() => {
-  //   return () => {
-  //     dispatch(fetchNews());
-  //   };
-  // }, [dispatch]);
-
-  // useEffect(() => {
-  //   fetchData();
-  // }, [fetchData]);
-
   return (
     <div className={s.news}>
       <h3 className={s.news__decor}>Новини</h3>

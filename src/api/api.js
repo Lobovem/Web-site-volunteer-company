@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { addFormData } from '../redux/slice/contentSlice';
 
 //example fetch response
-export const fetchMenu = createAsyncThunk('content/fetchMenu', async () => {
+export const fetchMenu = async () => {
   try {
     const response = await fetch('https://base-twmn.onrender.com/listMenu');
     if (!response.status === 200) {
@@ -13,17 +13,17 @@ export const fetchMenu = createAsyncThunk('content/fetchMenu', async () => {
   } catch (error) {
     throw new Error(error.message);
   }
-});
+};
 
 //example response with .then
-export const fetchNews = createAsyncThunk('content/fetchNews', async () => {
+export const fetchNews = async () => {
   try {
     const response = await fetch('https://base-twmn.onrender.com/news').then((data) => data.json());
     return response;
   } catch (error) {
     throw new Error(error.message);
   }
-});
+};
 
 //large example response with .then
 // export const fetchNews = createAsyncThunk('content/fetchNews', async () => {
@@ -45,7 +45,7 @@ export const fetchNews = createAsyncThunk('content/fetchNews', async () => {
 // });
 
 //example axios response
-export const fetchOneNews = createAsyncThunk('content/fetchOneNews', async (id) => {
+export const fetchOneNews = async (id) => {
   try {
     const response = await fetch(`https://base-twmn.onrender.com/news/${id}`);
     if (!response.status === 200) {
@@ -56,7 +56,7 @@ export const fetchOneNews = createAsyncThunk('content/fetchOneNews', async (id) 
   } catch (error) {
     throw new Error(error.message);
   }
-});
+};
 
 export const postFormData = createAsyncThunk('content/postFormData', async (imputDataForm, { dispatch }) => {
   try {
