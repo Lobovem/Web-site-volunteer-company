@@ -1,13 +1,28 @@
 import { useDispatch, useSelector } from 'react-redux';
 import s from './Menu.module.scss';
 import './style.scss';
-import { NavLink } from 'react-router-dom';
-import { listMenuSelector, burgerMenuSelector, changeBurgerState } from '../../redux/slice/contentSlice';
+import { NavLink, useLoaderData } from 'react-router-dom';
+import { burgerMenuSelector, changeBurgerState } from '../../redux/slice/contentSlice';
+
+export const fetchMenu = async () => {
+  try {
+    const response = await fetch('https://base-twmn.onrender.com/listMenu');
+    if (!response.status === 200) {
+      throw new Error('Error fetching news list');
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
 
 export const Menu = () => {
   const dispatch = useDispatch();
   const burgerMenu = useSelector(burgerMenuSelector);
-  const listMenu = useSelector(listMenuSelector);
+  // const listMenu = useSelector(listMenuSelector);
+
+  const listMenu = useLoaderData();
 
   return (
     <nav className={!burgerMenu ? s.menu : `${s.menu} ${s.active}`}>

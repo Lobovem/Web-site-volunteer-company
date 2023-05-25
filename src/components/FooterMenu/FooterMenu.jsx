@@ -1,10 +1,8 @@
-import { useSelector } from 'react-redux';
-import { listMenuSelector } from '../../redux/slice/contentSlice';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import s from './FooterMenu.module.scss';
 
 export const FooterMenu = () => {
-  const listMenu = useSelector(listMenuSelector);
+  const listMenu = useLoaderData();
 
   return (
     <nav className={s.menu}>

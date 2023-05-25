@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import { NewsList } from '../NewsList/NewsList';
-import { useSelector } from 'react-redux';
-import { listNewsSelector } from '../../redux/slice/contentSlice';
 import s from './Pagination.module.scss';
+import { useLoaderData } from 'react-router-dom';
+
+export const fetchNews = async () => {
+  try {
+    const response = await fetch('https://base-twmn.onrender.com/news').then((data) => data.json());
+    return response;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
 
 export const Pagination = ({ itemsPerPage }) => {
-  const listNews = useSelector(listNewsSelector);
+  const listNews = useLoaderData();
 
   // Here we use item offsets; we could also use page offsets
   // following the API or data you're working with.
