@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
-import { SliderFifth } from '../Sliders/SliderFifth/SliderFifth';
 import { YoutubeVideo } from '../YoutubeVideo/YoutubeVideo';
 import { oneNewsSelector } from '../../redux/slice/contentSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import { SliderFifth } from '../Sliders/SliderFifth/SliderFifth';
 import s from './OneNews.module.scss';
 import { Loader } from '../Loader/Loader';
 import { fetchOneNews } from '../../api/api';
