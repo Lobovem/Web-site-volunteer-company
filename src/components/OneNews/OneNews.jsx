@@ -1,22 +1,20 @@
 import { useParams } from 'react-router-dom';
-import { SliderFifth } from '../Sliders/SliderFifth/SliderFifth';
 import { YoutubeVideo } from '../YoutubeVideo/YoutubeVideo';
 import { oneNewsSelector } from '../../redux/slice/contentSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import s from './OneNews.module.scss';
-import { Loader } from '../Loader/Loader';
+import { SliderFifth } from '../Sliders/SliderFifth/SliderFifth';
 import { fetchOneNews } from '../../api/api';
+import s from './OneNews.module.scss';
 
 export const OneNews = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchOneNews(id)); // Dispatch the action to fetch news data by ID
+    dispatch(fetchOneNews(id));
   }, [id]);
 
-  //selector for simple news data
   const oneNews = useSelector(oneNewsSelector);
 
   return (

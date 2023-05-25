@@ -11,7 +11,7 @@ Object {
         <img
           alt=""
           class="banner__img"
-          src="./img/ukraine-flag.png"
+          src="/img/ukraine-flag.png"
         />
         <div
           class="banner__textWrap"
@@ -141,7 +141,7 @@ Object {
       <img
         alt=""
         class="banner__img"
-        src="./img/ukraine-flag.png"
+        src="/img/ukraine-flag.png"
       />
       <div
         class="banner__textWrap"

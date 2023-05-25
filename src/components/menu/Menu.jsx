@@ -1,15 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
-import s from './Menu.module.scss';
-import './style.scss';
 import { NavLink } from 'react-router-dom';
 import { listMenuSelector, burgerMenuSelector, changeBurgerState } from '../../redux/slice/contentSlice';
+import './style.scss';
+import s from './Menu.module.scss';
 
 export const Menu = () => {
   const dispatch = useDispatch();
   const burgerMenu = useSelector(burgerMenuSelector);
   const listMenu = useSelector(listMenuSelector);
-
-  console.log('listMenu', listMenu);
 
   return (
     <nav className={!burgerMenu ? s.menu : `${s.menu} ${s.active}`}>

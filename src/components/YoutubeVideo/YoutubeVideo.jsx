@@ -12,6 +12,7 @@ export const YoutubeVideo = () => {
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
+          data-testid="map-iframe"
         ></iframe>
       </div>
 

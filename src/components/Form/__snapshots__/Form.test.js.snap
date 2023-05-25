@@ -17,7 +17,7 @@ Object {
             <img
               alt=""
               class="form__img"
-              src="./img/form-photo.jpg"
+              src="/img/form-photo.jpg"
             />
           </div>
           <form
@@ -113,7 +113,7 @@ Object {
           <img
             alt=""
             class="form__img"
-            src="./img/form-photo.jpg"
+            src="/img/form-photo.jpg"
           />
         </div>
         <form

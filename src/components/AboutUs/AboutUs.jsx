@@ -6,7 +6,7 @@ export const AboutUs = () => {
     <section className={s.aboutUs}>
       <div className={s.aboutUs__contentWrap}>
         <div className={s.aboutUs__imgWrap}>
-          <img className={s.aboutUs__img} src="./img/aboutUs.jpg" alt="aboutUs.jpg" />
+          <img className={s.aboutUs__img} src="/img/aboutUs.jpg" alt="aboutUs.jpg" />
         </div>
         <div className={s.aboutUs__textWrap}>
           <TitleMain title="UkrHumBat - команда людей, які діють" />

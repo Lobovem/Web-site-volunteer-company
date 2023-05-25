@@ -5,7 +5,6 @@ export const PageNews = () => {
   return (
     <>
       <Breadcrumbs></Breadcrumbs>
-
       <PaginationWithLayout
         titleSection="новини"
         classNameSectionWrap="sectionWrapShort"

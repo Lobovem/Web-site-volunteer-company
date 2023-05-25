@@ -5,8 +5,9 @@ export const GetHelp = () => {
     <section className={s.getHelp}>
       <div className={s.getHelp__contentWrap}>
         <div className={s.getHelp__imgWrap}>
-          <img className={s.getHelp__img} src="./img/get-help.jpg" alt="get-help.jpg" />
+          <img className={s.getHelp__img} src="/img/get-help.jpg" alt="get-help.jpg" />
         </div>
+
         <div className={s.getHelp__textWrap}>
           <h2 className={s.getHelp__title}>Хто може отримати допомогу від нашого фонду?</h2>
 
@@ -30,7 +31,6 @@ export const GetHelp = () => {
           </ul>
 
           <h2 className={s.getHelp__title}>Як отримати допомогу від нашого фонду?</h2>
-
           <p className={s.getHelp__desc}>
             Для того щоб записатись на отримання допомоги, та не вистоювати у чергах, потрібно заповнити реєстраційну форму. Вона
             автоматично реєструє заявку, та надсилає вам на пошту підтвердження реєстрації.{' '}

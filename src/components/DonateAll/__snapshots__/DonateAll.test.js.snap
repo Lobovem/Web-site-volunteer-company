@@ -30,7 +30,7 @@ Object {
               <img
                 alt="icon-privat-bank.svg"
                 class="donateAll__img"
-                src="./img/icon-privat-bank.svg"
+                src="/img/icon-privat-bank.svg"
               />
               <p
                 class="donateAll__text"
@@ -69,7 +69,7 @@ Object {
               <img
                 alt="icon-mono.png"
                 class="donateAll__img"
-                src="./img/icon-mono.png"
+                src="/img/icon-mono.png"
               />
               <p
                 class="donateAll__text"
@@ -88,7 +88,7 @@ Object {
               <img
                 alt="icon-swift.svg"
                 class="donateAll__img"
-                src="./img/icon-swift.svg"
+                src="/img/icon-swift.svg"
               />
               <p
                 class="donateAll__text"
@@ -107,7 +107,7 @@ Object {
               <img
                 alt="icon-pay-pal.svg"
                 class="donateAll__img"
-                src="./img/icon-pay-pal.svg"
+                src="/img/icon-pay-pal.svg"
               />
               <p
                 class="donateAll__text"
@@ -126,7 +126,7 @@ Object {
               <img
                 alt="icon-bitcoin.svg"
                 class="donateAll__img"
-                src="./img/icon-bitcoin.svg"
+                src="/img/icon-bitcoin.svg"
               />
               <div
                 class="donateAll__wrapText"
@@ -145,7 +145,7 @@ Object {
               <img
                 alt="icon-ethereum.svg"
                 class="donateAll__img"
-                src="./img/icon-ethereum.svg"
+                src="/img/icon-ethereum.svg"
               />
               <div
                 class="donateAll__wrapText"
@@ -164,7 +164,7 @@ Object {
               <img
                 alt="icon-tether.svg"
                 class="donateAll__img"
-                src="./img/icon-tether.svg"
+                src="/img/icon-tether.svg"
               />
               <div
                 class="donateAll__wrapText"
@@ -212,7 +212,7 @@ Object {
             <img
               alt="icon-privat-bank.svg"
               class="donateAll__img"
-              src="./img/icon-privat-bank.svg"
+              src="/img/icon-privat-bank.svg"
             />
             <p
               class="donateAll__text"
@@ -251,7 +251,7 @@ Object {
             <img
               alt="icon-mono.png"
               class="donateAll__img"
-              src="./img/icon-mono.png"
+              src="/img/icon-mono.png"
             />
             <p
               class="donateAll__text"
@@ -270,7 +270,7 @@ Object {
             <img
               alt="icon-swift.svg"
               class="donateAll__img"
-              src="./img/icon-swift.svg"
+              src="/img/icon-swift.svg"
             />
             <p
               class="donateAll__text"
@@ -289,7 +289,7 @@ Object {
             <img
               alt="icon-pay-pal.svg"
               class="donateAll__img"
-              src="./img/icon-pay-pal.svg"
+              src="/img/icon-pay-pal.svg"
             />
             <p
               class="donateAll__text"
@@ -308,7 +308,7 @@ Object {
             <img
               alt="icon-bitcoin.svg"
               class="donateAll__img"
-              src="./img/icon-bitcoin.svg"
+              src="/img/icon-bitcoin.svg"
             />
             <div
               class="donateAll__wrapText"
@@ -327,7 +327,7 @@ Object {
             <img
               alt="icon-ethereum.svg"
               class="donateAll__img"
-              src="./img/icon-ethereum.svg"
+              src="/img/icon-ethereum.svg"
             />
             <div
               class="donateAll__wrapText"
@@ -346,7 +346,7 @@ Object {
             <img
               alt="icon-tether.svg"
               class="donateAll__img"
-              src="./img/icon-tether.svg"
+              src="/img/icon-tether.svg"
             />
             <div
               class="donateAll__wrapText"

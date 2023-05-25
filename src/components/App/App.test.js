@@ -19,10 +19,14 @@ jest.mock('react-redux', () => {
 });
 
 describe('App', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   test('renders App component', () => {
     const dispatch = jest.fn();
     useDispatch.mockReturnValue(dispatch);
-    useSelector.mockReturnValue({ isLoading: false, error: null });
+    // useSelector.mockReturnValue({ isLoading: false, error: null });
 
     const { container } = render(
       <Provider store={store}>
