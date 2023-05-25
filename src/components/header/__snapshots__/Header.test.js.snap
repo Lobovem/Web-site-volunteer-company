@@ -17,7 +17,7 @@ Object {
           >
             <img
               alt="ukraine-flag.png"
-              src="./img/logo-main.svg"
+              src="/img/logo-main.svg"
             />
           </a>
           <div
@@ -81,7 +81,7 @@ Object {
         >
           <img
             alt="ukraine-flag.png"
-            src="./img/logo-main.svg"
+            src="/img/logo-main.svg"
           />
         </a>
         <div

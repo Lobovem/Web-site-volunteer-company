@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 export const Footer = () => {
   return (
     <footer className={s.footer}>
-      <img className={s.footer__img} src="./img/logo-second.png" alt="logo-second.png" />
+      <img className={s.footer__img} src="/img/logo-second.png" alt="logo-second.png" />
       <div className={s.footer__wrap}>
         <div className={s.footer__inner}>
           <FooterMenu />

@@ -32,12 +32,12 @@ export const Form = () => {
     <div className={s.form}>
       <div className={s.form__wrap}>
         <div className={s.form__imgWrap}>
-          <img className={s.form__img} src="./img/form-photo.jpg" alt="" />
+          <img className={s.form__img} src="/img/form-photo.jpg" alt="" />
         </div>
 
         {sendState ? (
           <div className={s.form__sending}>
-            <img className={s.form__sendingImg} src="./img/form-sending.svg" alt="form-sending.svg" />
+            <img className={s.form__sendingImg} src="/img/form-sending.svg" alt="form-sending.svg" />
             <p className={s.form__sendingTitle}>
               <span>вітаємо!</span> дані успішно відправлені!
             </p>

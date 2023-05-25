@@ -17,7 +17,7 @@ Object {
             <img
               alt="get-help.jpg"
               class="getHelp__img"
-              src="./img/get-help.jpg"
+              src="/img/get-help.jpg"
             />
           </div>
           <div
@@ -115,7 +115,7 @@ Object {
           <img
             alt="get-help.jpg"
             class="getHelp__img"
-            src="./img/get-help.jpg"
+            src="/img/get-help.jpg"
           />
         </div>
         <div

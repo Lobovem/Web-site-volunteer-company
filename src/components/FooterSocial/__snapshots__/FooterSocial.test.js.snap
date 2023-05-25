@@ -24,7 +24,7 @@ Object {
             <img
               alt="icon-instagram.svg"
               class="social__img"
-              src="./img/icon-instagram.svg"
+              src="/img/icon-instagram.svg"
             />
             <p
               class="social__desc"
@@ -40,7 +40,7 @@ Object {
             <img
               alt="icon-facebook.svg"
               class="social__img"
-              src="./img/icon-facebook.svg"
+              src="/img/icon-facebook.svg"
             />
             <p
               class="social__desc"
@@ -72,7 +72,7 @@ Object {
           <img
             alt="icon-instagram.svg"
             class="social__img"
-            src="./img/icon-instagram.svg"
+            src="/img/icon-instagram.svg"
           />
           <p
             class="social__desc"
@@ -88,7 +88,7 @@ Object {
           <img
             alt="icon-facebook.svg"
             class="social__img"
-            src="./img/icon-facebook.svg"
+            src="/img/icon-facebook.svg"
           />
           <p
             class="social__desc"

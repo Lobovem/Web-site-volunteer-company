@@ -11,7 +11,7 @@ Object {
         <img
           alt="logo-second.png"
           class="footer__img"
-          src="./img/logo-second.png"
+          src="/img/logo-second.png"
         />
         <div
           class="footer__wrap"
@@ -52,7 +52,7 @@ Object {
                   <img
                     alt="icon-phone.svg"
                     class="contacts__img"
-                    src="./img/icon-phone.svg"
+                    src="/img/icon-phone.svg"
                   />
                   <a
                     class="contacts__link"
@@ -73,7 +73,7 @@ Object {
                   <img
                     alt="icon-adress.svg"
                     class="contacts__img"
-                    src="./img/icon-adress.svg"
+                    src="/img/icon-adress.svg"
                   />
                   <a
                     class="contacts__link"
@@ -108,7 +108,7 @@ Object {
                   <img
                     alt="icon-instagram.svg"
                     class="social__img"
-                    src="./img/icon-instagram.svg"
+                    src="/img/icon-instagram.svg"
                   />
                   <p
                     class="social__desc"
@@ -124,7 +124,7 @@ Object {
                   <img
                     alt="icon-facebook.svg"
                     class="social__img"
-                    src="./img/icon-facebook.svg"
+                    src="/img/icon-facebook.svg"
                   />
                   <p
                     class="social__desc"
@@ -174,7 +174,7 @@ Object {
       <img
         alt="logo-second.png"
         class="footer__img"
-        src="./img/logo-second.png"
+        src="/img/logo-second.png"
       />
       <div
         class="footer__wrap"
@@ -215,7 +215,7 @@ Object {
                 <img
                   alt="icon-phone.svg"
                   class="contacts__img"
-                  src="./img/icon-phone.svg"
+                  src="/img/icon-phone.svg"
                 />
                 <a
                   class="contacts__link"
@@ -236,7 +236,7 @@ Object {
                 <img
                   alt="icon-adress.svg"
                   class="contacts__img"
-                  src="./img/icon-adress.svg"
+                  src="/img/icon-adress.svg"
                 />
                 <a
                   class="contacts__link"
@@ -271,7 +271,7 @@ Object {
                 <img
                   alt="icon-instagram.svg"
                   class="social__img"
-                  src="./img/icon-instagram.svg"
+                  src="/img/icon-instagram.svg"
                 />
                 <p
                   class="social__desc"
@@ -287,7 +287,7 @@ Object {
                 <img
                   alt="icon-facebook.svg"
                   class="social__img"
-                  src="./img/icon-facebook.svg"
+                  src="/img/icon-facebook.svg"
                 />
                 <p
                   class="social__desc"

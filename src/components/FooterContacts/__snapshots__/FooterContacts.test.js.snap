@@ -22,7 +22,7 @@ Object {
             <img
               alt="icon-phone.svg"
               class="contacts__img"
-              src="./img/icon-phone.svg"
+              src="/img/icon-phone.svg"
             />
             <a
               class="contacts__link"
@@ -43,7 +43,7 @@ Object {
             <img
               alt="icon-adress.svg"
               class="contacts__img"
-              src="./img/icon-adress.svg"
+              src="/img/icon-adress.svg"
             />
             <a
               class="contacts__link"
@@ -79,7 +79,7 @@ Object {
           <img
             alt="icon-phone.svg"
             class="contacts__img"
-            src="./img/icon-phone.svg"
+            src="/img/icon-phone.svg"
           />
           <a
             class="contacts__link"
@@ -100,7 +100,7 @@ Object {
           <img
             alt="icon-adress.svg"
             class="contacts__img"
-            src="./img/icon-adress.svg"
+            src="/img/icon-adress.svg"
           />
           <a
             class="contacts__link"

@@ -1,31 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LogoMain\` component renders LogoMain component 1`] = `
+exports[`Breadcrumbs component renders Breadcrumbs component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <a
-        class="logoMain"
-        href="/"
+      <nav
+        class="breadcrumbs"
       >
-        <img
-          alt="ukraine-flag.png"
-          src="/img/logo-main.svg"
-        />
-      </a>
+        <a
+          class="breadcrumbs__link breadcrumbs__link_active"
+          href="/"
+        >
+          <span>
+            Home
+          </span>
+        </a>
+      </nav>
     </div>
   </body>,
   "container": <div>
-    <a
-      class="logoMain"
-      href="/"
+    <nav
+      class="breadcrumbs"
     >
-      <img
-        alt="ukraine-flag.png"
-        src="/img/logo-main.svg"
-      />
-    </a>
+      <a
+        class="breadcrumbs__link breadcrumbs__link_active"
+        href="/"
+      >
+        <span>
+          Home
+        </span>
+      </a>
+    </nav>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

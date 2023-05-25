@@ -9,6 +9,8 @@ export const Breadcrumbs = () => {
   const listMenu = useSelector(listMenuSelector);
   const breadcrumbs = useBreadcrumbs(listMenu);
 
+  console.log(breadcrumbs);
+
   return (
     <nav className={s.breadcrumbs}>
       {breadcrumbs &&
