@@ -20,7 +20,7 @@ describe('TitleMain', () => {
     const title = 'Title';
 
     render(<TitleMain title={title} />);
-    const h3Element = screen.getByRole('heading', { name: /title/i });
-    expect(h3Element).toBeInTheDocument();
+    const titleElem = screen.getByRole('heading', { name: /title/i });
+    expect(titleElem).toBeInTheDocument();
   });
 });
