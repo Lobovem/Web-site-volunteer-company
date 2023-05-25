@@ -18,9 +18,9 @@ jest.mock('react-redux', () => {
 
 describe('OneNews', () => {
   const dispatch = jest.fn();
+  const oneNews = { id: 1, title: 'Новина', desc: 'News' };
 
   test('renders OneNews component', () => {
-    const oneNews = { id: 1, title: 'Новина', desc: 'News' };
     useDispatch.mockReturnValue(dispatch);
     useSelector.mockReturnValue(oneNews);
 
@@ -28,9 +28,33 @@ describe('OneNews', () => {
     expect(container).toMatchSnapshot();
   });
 
-  test('search tag h3 (decor)', () => {
-    render(<oneNews />);
-    const h3Element = screen.getByRole('heading', { level: 1 });
+  test('renders the title correctly', () => {
+    const oneNews = { id: 1, title: 'Новина', desc: 'News' };
+    useDispatch.mockReturnValue(dispatch);
+    useSelector.mockReturnValue(oneNews);
+
+    render(<OneNews />);
+    const titleElement = screen.getByText('Новина');
+    expect(titleElement).toBeInTheDocument();
+  });
+
+  test('renders the "Новини" heading', () => {
+    const oneNews = { id: 1, title: 'Новина', desc: 'News' };
+    useDispatch.mockReturnValue(dispatch);
+    useSelector.mockReturnValue(oneNews);
+
+    render(<OneNews />);
+    const h3Element = screen.getByRole('heading', { name: 'Новини' });
     expect(h3Element).toBeInTheDocument();
+  });
+
+  test('renders the description correctly', () => {
+    const oneNews = { id: 1, title: 'Новина', desc: 'News' };
+    useDispatch.mockReturnValue(dispatch);
+    useSelector.mockReturnValue(oneNews);
+
+    render(<OneNews />);
+    const descElement = screen.getByText('News');
+    expect(descElement).toBeInTheDocument();
   });
 });
